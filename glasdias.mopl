@@ -1,0 +1,219 @@
+#!/usr/bin/env perl
+use Mojolicious::Lite;
+use Mojo::URL;
+use DDP;
+
+# install perl (should be already installed on a Linux machine)
+
+# install Mojolicious:
+#   cpan App::cpanminus
+#   cpanm Mojolicious
+
+# set up the server starting this script:
+#   morbo glasdias.mopl
+
+# surf to: http://localhost:3000/
+
+# Google Custom Search Engine
+# configuration: https://cse.google.com/cse/setup/basic?cx=013480587332708740449:k8-td6ptbg8
+use constant CSE_URL => "https://www.googleapis.com/customsearch/v1";
+
+# my personal access data
+use constant CSE_PARAMS => {
+  key => 'AIzaSyBG5HSkzOxKIO9W5284hvYtlgaaqAHm8d8',
+  cx => '013480587332708740449:k8-td6ptbg8',
+  searchType => 'image',
+  searchSite => 'wikipedia.org',
+  searchSiteFilter => 'i',
+  filter => 0,
+  };
+
+# Wikidata SPARQL endpoint
+use constant WD_URL => "https://query.wikidata.org/sparql";
+
+# query for wikipedia sites about some item
+use constant WD_SPARQL_WP => 'prefix schema:<http://schema.org/>SELECT * WHERE{<%s> schema:about ?item.}';
+
+# query for wikimedia commons depicting some item
+use constant WD_SPARQL_WM => 'SELECT * WHERE {?item wdt:P18 <http://commons.wikimedia.org/wiki/Special:FilePath/%s>}';
+
+# ugly hack, Wikidata SPARQL needs double encoding for some characters in URL strings
+sub wiki_encode {
+  my $link = shift;
+  $link =~ s/_/%20/g;
+  $link =~ s/,/%2C/g;
+  $link =~ s/\(/%28/g;
+  $link =~ s/\)/%29/g;
+  return $link;
+};
+
+helper DEBUG => sub {
+  my $c = shift;
+  $c->app->log->debug(@_);
+  };
+
+# construct Wikidata SPARQL query from Google search result
+helper wikidata => sub {
+  my ($c, $delay, $item) = @_;
+  my $display = $item->{displayLink};
+  my $link = $item->{image}->{contextLink};
+  my $url;
+  if ($display =~ /wikipedia/) {
+    # say "opening $display";
+    $url = Mojo::URL->new(WD_URL)->query(
+      format => 'json',
+#      query => sprintf(WD_SPARQL_WP, wiki_encode($link)),
+      query => sprintf(WD_SPARQL_WP, $link),
+      );
+    }
+  elsif ($display =~ /wikimedia/) {
+    my ($filename) = ($link =~ /File:(.+)$/);
+    # say "opening $display";
+    $url = Mojo::URL->new(WD_URL)->query(
+      format => 'json',
+#      query => sprintf(WD_SPARQL_WM, wiki_encode($filename)),
+      query => sprintf(WD_SPARQL_WM, $filename),
+      );
+    }
+  else {
+    return;
+    }
+  my $end = $delay->begin;
+  # send the Wikidata query
+  p $url->to_string;
+  $c->ua->get($url => sub{
+    my ($ua, $tx) = @_;
+    my $json = $tx->res->json;
+    p $json;
+    if (my $res = $tx->res->json('/results/bindings/0/item/value')) {
+      $item->{wikidata} = $res;
+      $item->{wiki_id} = (split(/\//, $res))[-1];
+      say "found " . $item->{wiki_id};
+      }
+    $end->();
+    });
+  };
+
+# start page (index.html includes the search form)
+get '/' => sub {
+  my $c = shift;
+  $c->render(template => 'index');
+};
+
+# search results
+get '/search' => sub {
+  my $c = shift;
+  say CSE_PARAMS->{q} = $c->param('query');
+  say CSE_PARAMS->{start} = $c->param('start') // 1;
+  my $url = Mojo::URL->new(CSE_URL)->query(CSE_PARAMS);
+  my ($items, $next, $prev);
+  # $c->DEBUG($url);
+  $c->delay(
+    sub {
+      my $delay = shift;
+      # say $url; # send the Google query
+      $c->ua->get($url => $delay->begin);
+    },
+    sub {
+      my ($delay, $tx) = @_;
+      my $res = $tx->res;
+      $items = $res->json('/items'); # the Google result
+      $next = $res->json('/queries/nextPage/0/startIndex');
+      $prev = $res->json('/queries/previousPage/0/startIndex');
+      # send Wikidata queries for all result items
+      $c->wikidata($delay, $_) for @$items;
+    },
+    sub {
+      # collect the results
+      $c->render(template => 'search', img => $items, prev => $prev, next => $next);
+    },
+  );
+};
+
+app->start;
+
+# the DATA section consists of virtual files (the name starts with '@@')
+# these are the HTML templates referenced above.
+# .html.ep is "embedded perl", a template language
+# templates can include perl code snippets and logic
+
+__DATA__
+@@ index.html.ep
+% layout 'default';
+% title 'Glasdias';
+%= include 'searchform'
+
+@@ css.html.ep
+  <style type="text/css">
+    body { font-family: Verdana; }
+    div { display: flex; margin: 5px; }
+    .container { flex-flow: row wrap; justify-content: space-between; }
+    .item { flex-flow: column; align-items: center; flex-basis: 18%; background-color: silver; border: 1px solid grey; }
+    .thumb { text-align: center; }
+    .nav { margin: 5px; background-color: silver; border: 1px solid grey; }
+    img { width: auto; height : auto; max-height: 300px; max-width: 100%; }
+    a { padding: 0px 5px; color: lightcyan; }
+  </style>
+
+@@ layouts/default.html.ep
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    %= include 'css'
+  </head>
+  <body>
+    <h1>Glasdias</h1>
+    <%= content %>
+  </body>
+</html>
+
+@@ searchform.html.ep
+<h2>Suchbegriff</h2>
+<form action="search">
+  <input name="query" type="text"></input>
+  <button type="submit">Suche</button>
+</form>
+
+@@ search.html.ep
+% layout 'default';
+% title 'Glasdias - Suche';
+<h2>Suche: <%= param 'query' %></h2>
+<div class="container">
+    % for my $item (@$img) {
+    <div class="item">
+      <div class="thumb">
+        <a href="<%= $item->{link} %>">
+          <!-- <img src="<%= $item->{image}->{thumbnailLink} %>" title="<%= $item->{title} %>"> -->
+          <img src="<%= $item->{link} %>" title="<%= $item->{title} %>">
+        </a>
+      </div>
+      <div class="title">
+        <%= $item->{title} %>
+      </div>
+      <div class="link">
+        <a href="<%= $item->{image}->{contextLink} %>">
+          <%= $item->{displayLink} %>
+          </a>
+      </div>
+      % if ($item->{wikidata}) {
+        <div class="wiki">Wikidata-ID: 
+          <a href="<%= $item->{wikidata} %>"><%= $item->{wiki_id} %></a>
+        </div>
+      % }
+    </div>
+    % }
+</div>
+<div class="nav">
+% if ($prev) {
+  <a href="/search?query=<%= param 'query' %>&start=<%= $prev %>">
+    < 10 Bilder
+    </a>
+% }
+% if ($next) {
+  <a href="/search?query=<%= param 'query' %>&start=<%= $next %>">
+    10 Bilder >
+    </a>
+% }
+</div>
+%= include 'searchform'

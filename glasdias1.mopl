@@ -1,0 +1,176 @@
+#!/usr/bin/env perl
+use Mojolicious::Lite;
+use Mojo::URL;
+use Mojo::Util qw(url_escape);
+use URI::Encode qw(uri_encode uri_decode);
+use DDP;
+
+# configuration: https://cse.google.com/cse/setup/basic?cx=013480587332708740449:k8-td6ptbg8
+use constant CSE_URL => "https://www.googleapis.com/customsearch/v1";
+use constant CSE_PARAMS => {
+  key => 'AIzaSyBG5HSkzOxKIO9W5284hvYtlgaaqAHm8d8',
+  cx => '013480587332708740449:k8-td6ptbg8',
+  searchType => 'image',
+  searchSite => 'wikipedia.org',
+  searchSiteFilter => 'i',
+  filter => 0,
+  };
+use constant WD_URL => "https://query.wikidata.org/sparql";
+use constant WD_SPARQL_WP => 'prefix schema:<http://schema.org/>SELECT * WHERE{<%s> schema:about ?item.}';
+use constant WD_SPARQL_WM => 'SELECT * WHERE {?item wdt:P18 <http://commons.wikimedia.org/wiki/Special:FilePath/%s>}';
+
+sub wiki_encode {
+  my $link = shift;
+  $link =~ s/_/%20/g;
+  $link =~ s/,/%2C/g;
+  $link =~ s/\(/%28/g;
+  $link =~ s/\)/%29/g;
+  return $link;
+};
+
+helper DEBUG => sub {
+  my $c = shift;
+  $c->app->log->debug(@_);
+  };
+
+helper wikidata => sub {
+  my ($c, $delay, $item) = @_;
+  my $display = $item->{displayLink};
+  my $link = $item->{image}->{contextLink};
+  my $url;
+  if ($display =~ /wikipedia/) {
+    $url = Mojo::URL->new(WD_URL)->query(
+      format => 'json',
+      query => sprintf(WD_SPARQL_WP, wiki_encode($link)),
+      );
+    }
+  elsif ($display =~ /wikimedia/) {
+    my ($filename) = ($link =~ /File:(.+)$/);
+    # say wiki_encode($filename);
+    $url = Mojo::URL->new(WD_URL)->query(
+      format => 'json',
+      query => sprintf(WD_SPARQL_WM, wiki_encode($filename)),
+      );
+    }
+  else {
+    return;
+    }
+  my $end = $delay->begin;
+  $c->ua->get($url => sub{
+    my ($ua, $tx) = @_;
+    if (my $res = $tx->res->json('/results/bindings/0/item/value')) {
+      $item->{wikidata} = $res;
+      $item->{wiki_id} = (split(/\//, $res))[-1];
+      }
+    $end->();
+    });
+  };
+
+get '/' => sub {
+  my $c = shift;
+  $c->render(template => 'index');
+};
+
+get '/search' => sub {
+  my $c = shift;
+  CSE_PARAMS->{q} = $c->param('query');
+  CSE_PARAMS->{start} = $c->param('start') if $c->param('start');
+  my $url = Mojo::URL->new(CSE_URL)->query(CSE_PARAMS);
+  my ($items, $next, $prev);
+  # $c->DEBUG($url);
+  $c->delay(
+    sub {
+      my $delay = shift;
+      # say $url;
+      $c->ua->get($url => $delay->begin);
+    },
+    sub {
+      my ($delay, $tx) = @_;
+      my $res = $tx->res;
+      $items = $res->json('/items');
+      $next = $res->json('/queries/nextPage/0/startIndex');
+      $prev = $res->json('/queries/previousPage/0/startIndex');
+      $c->wikidata($delay, $_) for @$items;
+    },
+    sub {
+      $c->render(template => 'search', img => $items, prev => $prev, next => $next);
+    },
+  );
+};
+
+app->start;
+
+__DATA__
+@@ index.html.ep
+% layout 'default';
+% title 'Glasdias';
+%= include 'searchform'
+
+@@ css.html.ep
+  <style type="text/css">
+    .container { display: flex; flex-wrap: wrap; }
+    .item { flex-basis: 19%; border: 1px solid grey; margin: 2px;}
+    .thumb { text-align: center; }
+  </style>
+
+@@ layouts/default.html.ep
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    %= include 'css'
+  </head>
+  <body>
+    <h1>Glasdias</h1>
+    <%= content %>
+  </body>
+</html>
+
+@@ searchform.html.ep
+<h2>Suchbegriff</h2>
+<form action="search">
+  <input name="query" type="text"></input>
+  <button type="submit">Suche</button>
+</form>
+
+@@ search.html.ep
+% layout 'default';
+% title 'Glasdias - Suche';
+<h2>Suche: <%= param 'query' %></h2>
+<div class="container">
+    % for my $item (@$img) {
+    <div class="item">
+      <div class="thumb">
+        <a href="<%= $item->{link} %>">
+          <img src="<%= $item->{image}->{thumbnailLink} %>" title="<%= $item->{title} %>">
+        </a>
+      </div>
+      <div>
+        <%= $item->{title} %>
+      </div>
+      <div>
+        <a href="<%= $item->{image}->{contextLink} %>">
+          <%= $item->{displayLink} %>
+          </a>
+      </div>
+      % if ($item->{wikidata}) {
+        <div>Wikidata-ID: 
+          <a href="<%= $item->{wikidata} %>"><%= $item->{wiki_id} %></a>
+        </div>
+      % }
+    </div>
+    % }
+</div>
+<div>
+% if ($prev) {
+  <a href="/search?query=<%= param 'query' %>&start=<%= $prev %>">
+    vorherige 10 Ergbnisse 
+    </a>
+% }
+% if ($next) {
+  <a href="/search?query=<%= param 'query' %>&start=<%= $next %>">
+    nächste 10 Ergbnisse 
+    </a>
+% }
+</div>
+%= include 'searchform'
