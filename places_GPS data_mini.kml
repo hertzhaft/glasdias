@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>GPS data_V01</name>
+	<open>1</open>
+	<Snippet maxLines="2"><![CDATA[created using <A href="http://www.gpsvisualizer.com/?ref=ge&time=20170927084417">GPS Visualizer</A>]]></Snippet>
+	<Style id="gv_waypoint_normal">
+		<IconStyle>
+			<color>ff0000ff</color>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pal4/icon56.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+		<LabelStyle>
+			<color>ff0000ff</color>
+		</LabelStyle>
+		<BalloonStyle>
+			<text><![CDATA[<div style="font-family:Arial,sans-serif; min-width:200px;"><h3>$[name]</h3> <div style="margin-top:8px;">$[description]</div></div>]]></text>
+		</BalloonStyle>
+	</Style>
+	<StyleMap id="gv_waypoint">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#gv_waypoint_normal</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#gv_waypoint_highlight</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="gv_waypoint_highlight">
+		<IconStyle>
+			<color>ff0000ff</color>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pal4/icon56.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+		<LabelStyle>
+			<color>ff0000ff</color>
+		</LabelStyle>
+		<BalloonStyle>
+			<text><![CDATA[<div style="font-family:Arial,sans-serif; min-width:200px;"><h3>$[name]</h3> <div style="margin-top:8px;">$[description]</div></div>]]></text>
+		</BalloonStyle>
+	</Style>
+	<Folder id="Waypoints">
+		<name>Waypoints</name>
+		<open>1</open>
+		<Placemark>
+			<name>Bad) Schussenried (Deutschland)</name>
+			<description>88427 Bad Schussenried, Deutschland</description>
+			<styleUrl>#gv_waypoint</styleUrl>
+			<Point>
+				<coordinates>9.6565073,48.00483239999999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>(Ober)Schleißheim (Deutschland)</name>
+			<description>Oberschleißheim, Deutschland (&lt;a href="http://imeji-mediathek.de/imeji/collection/hFfmQSuYGYX2mJzI/browse?q=%28%28bjPdsFEA_f4gqRo0%3Atext%3D%22schlei*heim%22%29%29"&gt;Glasdias in der Mediathek)&lt;/a&gt;</description>
+			<styleUrl>#gv_waypoint</styleUrl>
+			<Point>
+				<coordinates>11.559062,48.2522461,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>(Villeneuve-lès-) Maguelone</name>
+			<description>Domaine de la Maguelone, 34750 Villeneuve-lès-Maguelone, Frankreich  (&lt;a href="http://imeji-mediathek.de/imeji/collection/hFfmQSuYGYX2mJzI/browse?q=%28%28bjPdsFEA_f4gqRo0%3Atext%3D%22Maguelone%22%29%29"&gt;Glasdias in der Mediathek)&lt;/a&gt;</description>
+			<styleUrl>#gv_waypoint</styleUrl>
+			<Point>
+				<coordinates>3.8835483,43.5124531,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Aachen (Deutschland)</name>
+			<description>Aachen, Deutschland (&lt;a href="http://imeji-mediathek.de/imeji/collection/hFfmQSuYGYX2mJzI/browse?q=%28%28bjPdsFEA_f4gqRo0%3Atext%3D%22Aachen%22%29%29"&gt;Glasdias in der Mediathek)&lt;/a&gt;</description>
+			<styleUrl>#gv_waypoint</styleUrl>
+			<Point>
+				<coordinates>6.083886800000001,50.7753455,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Aachen-Kornelimünster (Deutschland) (&lt;a href="http://imeji-mediathek.de/imeji/collection/hFfmQSuYGYX2mJzI/browse?q=%28%28bjPdsFEA_f4gqRo0%3Atext%3D%22kornelim*%22%29%29"&gt;Glasdias in der Mediathek)&lt;/a&gt;</name>
+			<description>Kornelimünster, 52076 Aachen, Deutschland</description>
+			<styleUrl>#gv_waypoint</styleUrl>
+			<Point>
+				<coordinates>6.1779893,50.72891670000001,0</coordinates>
+			</Point>
+		</Placemark>
+		
+	</Folder>
+</Document>
+</kml>
