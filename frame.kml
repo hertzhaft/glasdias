@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml
+  xmlns="http://www.opengis.net/kml/2.2"
+  xmlns:kml="http://www.opengis.net/kml/2.2"
+  >
+<Document>
+	<name>GPS data_V01</name>
+	<open>1</open>
+	<Style id="gv_waypoint_normal">
+		<IconStyle>
+			<color>ff0000ff</color>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pal4/icon56.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+		<LabelStyle>
+			<color>ff0000ff</color>
+		</LabelStyle>
+		<BalloonStyle>
+			<text><![CDATA[<div style="font-family:Arial,sans-serif; min-width:200px;"><h3>$[name]</h3> <div style="margin-top:8px;">$[description]</div></div>]]></text>
+		</BalloonStyle>
+	</Style>
+	<StyleMap id="gv_waypoint">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#gv_waypoint_normal</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#gv_waypoint_highlight</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="gv_waypoint_highlight">
+		<IconStyle>
+			<color>ff0000ff</color>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pal4/icon56.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+		<LabelStyle>
+			<color>ff0000ff</color>
+		</LabelStyle>
+		<BalloonStyle>
+			<text><![CDATA[<div style="font-family:Arial,sans-serif; min-width:200px;"><h3>$[name]</h3> <div style="margin-top:8px;">$[description]</div></div>]]></text>
+		</BalloonStyle>
+	</Style>
+	<Folder id="Waypoints">
+		<name>Waypoints</name>
+		<open>1</open>
+		%s
+	</Folder>
+</Document>
+</kml>
