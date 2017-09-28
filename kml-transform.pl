@@ -20,7 +20,7 @@ const my $url_imeji => "http://imeji-mediathek.de/imeji/collection/hFfmQSuYGYX2m
 
 sub replace {
 	my ($name, $desc) = @_;
-	$desc .= sprintf('<br/><a href="%s&amp;q=%s">%s</a>', $url_imeji, url_escape(sprintf($imeji_query, $name)), $name);
+	$desc = sprintf('<a href="%s&amp;q=%s">%s</a>', $url_imeji, url_escape(sprintf($imeji_query, $name)), $desc);
 return qq|<name>$name</name>
 			<description>$desc</description>|;
 }
