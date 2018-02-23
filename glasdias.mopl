@@ -29,13 +29,16 @@ use constant CSE_PARAMS => {
   };
 
 # Wikidata SPARQL endpoint
-use constant WD_URL => "https://query.wikidata.org/sparql";
+use constant WD_URL
+  => "https://query.wikidata.org/sparql";
 
 # query for wikipedia sites about some item
-use constant WD_SPARQL_WP => 'prefix schema:<http://schema.org/>SELECT * WHERE{<%s> schema:about ?item.}';
+use constant WD_SPARQL_WP
+  => 'prefix schema:<http://schema.org/>SELECT * WHERE{<%s> schema:about ?item.}';
 
 # query for wikimedia commons depicting some item
-use constant WD_SPARQL_WM => 'SELECT * WHERE {?item wdt:P18 <http://commons.wikimedia.org/wiki/Special:FilePath/%s>}';
+use constant WD_SPARQL_WM
+  => 'SELECT * WHERE {?item wdt:P18 <http://commons.wikimedia.org/wiki/Special:FilePath/%s>}';
 
 # ugly hack, Wikidata SPARQL needs double encoding for some characters in URL strings
 sub wiki_encode {
@@ -80,11 +83,11 @@ helper wikidata => sub {
     }
   my $end = $delay->begin;
   # send the Wikidata query
-  p $url->to_string;
+  # p $url->to_string;
   $c->ua->get($url => sub{
     my ($ua, $tx) = @_;
     my $json = $tx->res->json;
-    p $json;
+    # p $json;
     if (my $res = $tx->res->json('/results/bindings/0/item/value')) {
       $item->{wikidata} = $res;
       $item->{wiki_id} = (split(/\//, $res))[-1];
