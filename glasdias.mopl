@@ -87,11 +87,11 @@ helper wikidata => sub {
   $c->ua->get($url => sub{
     my ($ua, $tx) = @_;
     my $json = $tx->res->json;
-    # p $json;
+    p $json;
     if (my $res = $tx->res->json('/results/bindings/0/item/value')) {
       $item->{wikidata} = $res;
       $item->{wiki_id} = (split(/\//, $res))[-1];
-      say "found " . $item->{wiki_id};
+      say "Found " . $item->{wiki_id};
       }
     $end->();
     });
@@ -114,20 +114,28 @@ get '/search' => sub {
   $c->delay(
     sub {
       my $delay = shift;
-      # say $url; # send the Google query
+      say "Sending Google query";
+      say $url; # send the Google query
       $c->ua->get($url => $delay->begin);
     },
     sub {
       my ($delay, $tx) = @_;
       my $res = $tx->res;
+      if (my $err = $tx->error) {
+        die "$err->{code} response: $err->{message}" if $err->{code};
+        die "Connection error: $err->{message}";
+      }
       $items = $res->json('/items'); # the Google result
       $next = $res->json('/queries/nextPage/0/startIndex');
       $prev = $res->json('/queries/previousPage/0/startIndex');
+      say "Received Google query";
+      p $items;
       # send Wikidata queries for all result items
       $c->wikidata($delay, $_) for @$items;
     },
     sub {
       # collect the results
+      say "All Wiki queries finished";
       $c->render(template => 'search', img => $items, prev => $prev, next => $next);
     },
   );
