@@ -1,0 +1,116 @@
+Recht gute Übersicht über die Struktur des Wikidata-Datenmodells
+ https://www.mediawiki.org/wiki/Wikibase/Indexing/RDF_Dump_Format
+
+SPARQL
+ https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/queries#Understanding_SPARQL 
+
+Label Service
+ https://en.wikibooks.org/wiki/SPARQL/SERVICE_-_Label
+
+ [AUTO_LANGUAGE] uses the language code of current user's interface 
+
+Geo Service
+ https://addshore.com/2016/05/geospatial-search-for-wikidata-query-service/
+
+SELECT ?place ?placeLabel ?location WHERE {
+ # Select the coordinate location(P625) of Berlin(Q64) as the centeral coordinate ?mainLoc
+ wd:Q64 wdt:P625 ?mainLoc . 
+ # Use the around service
+ SERVICE wikibase:around { 
+ # Looking for items with coordinate locations(P625)
+ ?place wdt:P625 ?location . 
+ # That are in a circle with a centre of ?mainLoc(The coordinate location of Berlin)
+ bd:serviceParam wikibase:center ?mainLoc . 
+ # Where the circle has a radius of 20km
+ bd:serviceParam wikibase:radius "20" . 
+ }
+ # Use the label service to get the English label
+ SERVICE wikibase:label {
+ bd:serviceParam wikibase:language "en" . 
+ }
+}
+
+ 
+Prefixe:
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX schema: <http://schema.org/>
+PREFIX cc: <http://creativecommons.org/ns#>
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX wikibase: <http://wikiba.se/ontology#>
+PREFIX wdata: <http://www.wikidata.org/wiki/Special:EntityData/>
+
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX wdtn: <http://www.wikidata.org/prop/direct-normalized/>
+
+PREFIX wds: <http://www.wikidata.org/entity/statement/>
+PREFIX p: <http://www.wikidata.org/prop/>
+PREFIX wdref: <http://www.wikidata.org/reference/>
+PREFIX wdv: <http://www.wikidata.org/value/>
+PREFIX ps: <http://www.wikidata.org/prop/statement/>
+PREFIX psv: <http://www.wikidata.org/prop/statement/value/>
+PREFIX psn: <http://www.wikidata.org/prop/statement/value-normalized/>
+PREFIX pq: <http://www.wikidata.org/prop/qualifier/>
+PREFIX pqv: <http://www.wikidata.org/prop/qualifier/value/>
+PREFIX pqn: <http://www.wikidata.org/prop/qualifier/value-normalized/>
+PREFIX pr: <http://www.wikidata.org/prop/reference/>
+PREFIX prv: <http://www.wikidata.org/prop/reference/value/>
+PREFIX prn: <http://www.wikidata.org/prop/reference/value-normalized/>
+PREFIX wdno: <http://www.wikidata.org/prop/novalue/>
+
+Objects
+Name 	Usage 	Context
+wikibase:Item 	Wikibase item 	Type for wd:Q123 describing item
+wikibase:Property 	Wikibase property 	Type for wd:P123 describing property
+wikibase:Statement 	Statement about the entity 	Type for wds:1234 describing statement
+wikibase:Reference 	Reference node 	Type for wdref:1234 describing reference
+wikibase:TimeValue 	Value node representing time value 	Type for wdv:1234 describing time value
+wikibase:QuantityValue 	Value node representing quantity value 	Type for wdv:1234 describing quantity value
+wikibase:GlobecoordinateValue 	Value node representing coordinate value 	Value node representing coordinate value
+wikibase:Dump 	Node describing the dump datatset 	Used in dump header to describe metadata for whole dump
+wikibase:PreferredRank 	Represents preferred rank for the statement 	Used as object of wikibase:rank
+wikibase:NormalRank 	Represents normal rank for the statement 	Used as object of wikibase:rank
+wikibase:DeprecatedRank 	Represents deprecated rank for the statement 	Used as object of wikibase:rank
+wikibase:BestRank 	Represents statement that has best rank for the property - i.e. suitable for inclusion as truthy statement 	Used as type of wikibase:Statement
+wikibase:WikibaseItem 	Entity reference type 	Used as object of wikibase:propertyType
+wikibase:CommonsMedia 	Commons media reference type 	Used as object of wikibase:propertyType
+wikibase:GlobeCoordinate 	Geo coordinate type 	Used as object of wikibase:propertyType
+wikibase:Monolingualtext 	Single language text value 	Used as object of wikibase:propertyType
+wikibase:Quantity 	Quantity type 	Used as object of wikibase:propertyType
+wikibase:String 	String value 	Used as object of wikibase:propertyType
+wikibase:Time 	Time value 	Used as object of wikibase:propertyType
+wikibase:Url 	URL reference type 	Used as object of wikibase:propertyType
+
+Predicates
+wdt:P123 	Link entity to truthy statement value 	wikibase:Item|wikibase:Property 	Simple value
+wdtn:P123 	Link entity to normalized truthy statement value 	wikibase:Item|wikibase:Property 	Simple value
+p:P123 	Link entity to statement 	wikibase:Item|wikibase:Property 	wikibase:Statement
+ps:P123 	Link statement to simple value 	wikibase:Statement 	Simple value
+pr:P123 	Link reference to simple value 	wikibase:Reference 	Simple value
+pq:P123 	Link statement to qualifier value 	wikibase:Statement 	Simple value
+psv:P123 	Link statement to value node 	wikibase:Statement 	wikibase:Value
+psn:P123 	Link statement to normalized value node 	wikibase:Statement 	wikibase:Value
+prv:P123 	Link reference to value node 	wikibase:Reference 	wikibase:Value
+prn:P123 	Link reference to normalized value node 	wikibase:Reference 	wikibase:Value
+pqv:P123 	Link statement to qualifier value node 	wikibase:Statement 	wikibase:Value
+pqn:P123 	Link statement to normalized qualifier value node 	wikibase:Statement 	wikibase:Value
+wikibase:rank 	Specifies rank of the statement 	wikibase:Statement 	One of the rank objects above
+wikibase:badge 	Badge attached to a sitelink 	schema:Article 	wikibase:Item - URL of the badge
+wikibase:propertyType 	Property type of the property entity 	wikibase:Property 	One of the property type objects above
+wikibase:directClaim 	Links property entity to direct claim predicate 	wikibase:Property 	wdt:P123
+wikibase:directClaimNormalized 	Links property entity to normalized direct claim predicate 	wikibase:Property 	wdtn:P123
+wikibase:claim 	Links property entity to claim/statement predicate 	wikibase:Property 	p:P123
+wikibase:statementProperty 	Links property entity to statement simple value predicate 	wikibase:Property 	ps:P123
+wikibase:statementValue 	Links property entity to statement full value predicate 	wikibase:Property 	psv:P123
+wikibase:statementValueNormalized 	Links property entity to statement normalized value predicate 	wikibase:Property 	psn:P123
+wikibase:qualifier 	Links property entity to qualifier simple value predicate 	wikibase:Property 	pq:P123
+wikibase:qualifierValue 	Links property entity to qualifier full value predicate 	wikibase:Property 	pqv:P123
+wikibase:qualifierValueNormalized 	Links property entity to qualifier normalized value predicate 	wikibase:Property 	pqn:P123
+wikibase:reference 	Links property entity to reference simple value predicate 	wikibase:Property 	pr:P123
+wikibase:referenceValue 	Links property entity to reference full value predicate 	wikibase:Property 	prv:P123
+wikibase:referenceValueNormalized 	Links property entity to reference normalized value predicate 	wikibase:Property 	prn:P123
