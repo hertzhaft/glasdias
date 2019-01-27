@@ -1,7 +1,7 @@
 {
    "1995-01" : {
       "year" : "1995",
-      "nr" : "01",
+      "film" : "01",
       "product" : "",
       "camera" : "",
       "developer" : "",
@@ -274,7 +274,7 @@
    },
    "1995-02" : {
       "year" : "1995",
-      "nr" : "02",
+      "film" : "02",
       "product" : "Agfa CT100",
       "camera" : "Nikon",
       "developer" : "Sauter",
@@ -547,7 +547,7 @@
    },
    "1995-03" : {
       "year" : "1995",
-      "nr" : "03",
+      "film" : "03",
       "product" : "Agfa CT 100i",
       "camera" : "Nikon",
       "developer" : "Sauter",
@@ -820,7 +820,7 @@
    },
    "1995-04" : {
       "year" : "1995",
-      "nr" : "04",
+      "film" : "04",
       "product" : "Agfa CT100i",
       "camera" : "Nikon",
       "developer" : "Sauter",
@@ -1093,7 +1093,7 @@
    },
    "1995-05" : {
       "year" : "1995",
-      "nr" : "05",
+      "film" : "05",
       "product" : "Fuji RD 100",
       "camera" : "Nikon",
       "developer" : "Sauter",
@@ -1366,7 +1366,7 @@
    },
    "1995-06" : {
       "year" : "1995",
-      "nr" : "06",
+      "film" : "06",
       "product" : "Fuji RD 100",
       "camera" : "Nikon",
       "developer" : "Sauter",
@@ -1639,7 +1639,7 @@
    },
    "1995-07" : {
       "year" : "1995",
-      "nr" : "07",
+      "film" : "07",
       "product" : "Fuji RD 100",
       "camera" : "Nikon",
       "developer" : "Sauter",
@@ -1912,7 +1912,7 @@
    },
    "1995-08" : {
       "year" : "1995",
-      "nr" : "08",
+      "film" : "08",
       "product" : "",
       "camera" : "",
       "developer" : "",
@@ -2185,7 +2185,7 @@
    },
    "1995-09" : {
       "year" : "1995",
-      "nr" : "09",
+      "film" : "09",
       "product" : "Konica",
       "camera" : "Nikon",
       "developer" : "Sauter",
@@ -2458,11 +2458,11 @@
    },
    "1995-10" : {
       "year" : "1995",
-      "nr" : "10",
+      "film" : "10",
       "product" : "",
       "camera" : "",
       "developer" : "",
-      "addinfo" : "(Salzburg Sa 24.6.96); ",
+      "addinfo" : "(Salzburg Sa 24.6.96)/",
       "0" : {
          "place" : "Salzburg",
          "building" : "Kajetanerkirche",
@@ -2732,7 +2732,7 @@
    },
    "1996-01" : {
       "year" : "1996",
-      "nr" : "01",
+      "film" : "01",
       "product" : "Fuji RD 100",
       "camera" : "Nikon",
       "developer" : "Sauter",
@@ -3005,7 +3005,7 @@
    },
    "1996-02" : {
       "year" : "1996",
-      "nr" : "02",
+      "film" : "02",
       "product" : "Fuji RD 100",
       "camera" : "Nikon",
       "developer" : "Sauter",
@@ -3271,7 +3271,7 @@
    },
    "1996-03" : {
       "year" : "1996",
-      "nr" : "03",
+      "film" : "03",
       "product" : "Turachrome 100",
       "camera" : "Nikon",
       "developer" : "Sauter",
@@ -3544,23 +3544,23 @@
    },
    "1996-04" : {
       "year" : "1996",
-      "nr" : "04",
+      "film" : "04",
       "product" : null,
       "camera" : null,
       "developer" : null,
-      "addinfo" : "Inhalt: Reutlingen, Pfaffenhofen, München; 1  Reutlingen; Marienkirche; Ansicht von Nordost; (Di. 30.01.); 2   Reutlingen; Marienkirche; Ansicht von West; 3   Reutlingen; Marienkirche; Ansicht von Ost; 4   Reutlingen; Marktplatz; 5   Reutlingen; Horten; (SD); 6   Pfaffenhofen; Sparkasse; Do 01.02.; 7   Pfaffenhofen; Marktplatz; 8   Pfaffenhofen; Pfarrkirche; Innenraum nach Osten; 9   Pfaffenhofen; Sparkasse; 10  Ilmmünster; Stiftskirche; Krypta; 11  Ilmmünster; Stiftskirche; Chor; (Doubl.v. 12); 12  Ilmmünster; Stiftskirche; Chor; 13  Ilmmünster; Stiftskirche; Ansicht von Nordwest; 14  München; Nordendstraße; Sa. 02.03.; 15  München; Nordendstraße; 16  München; Dreifaltigkeitskirche; Fr. 08.03.; 17  München; Promenadeplatz; 18  München; Promenadeplatz; Gunetzrhainerhaus; 19 München; Karmelitenkirche; ehem. Sakristei; 20 München; Karmelitenkirche; ehem. Sakristei; 21 München; Karmelitenkirche; ehem. Sakristei; 22 München; Karmelitenkirche; ehem. Sakristei; 23 München; Karmelitenkirche; ehem. Sakristei; 24 München; Karmelitenkirche; ehem. Kapitelsaal; 25 München; Karmelitenkirche; ehem. Kapitelsaal; 26 München; Karmelitenkirche; ehem. Kapitelsaal; 27 München; Karmelitenkirche; Pilaster im Querhaus; 28 München; St. Michael; Kreuzkapelle; 29 München; St. Michael; Kreuzkapelle; 30 München; St. Michael; Kreuzkapelle; 31 München; St. Michael; Kreuzkapelle; 32 München; St. Michael; Kreuzkapelle; 33 München; St. Michael; Kreuzkapelle; 34 München; St. Michael; Kreuzkapelle; 35 München; St. Michael; Kreuzkapelle; 36 München; St. Michael; Choransicht; 37 ; "
+      "addinfo" : "Inhalt: Reutlingen, Pfaffenhofen, München/1  Reutlingen/Marienkirche/Ansicht von Nordost/(Di. 30.01.)/2   Reutlingen/Marienkirche/Ansicht von West/3   Reutlingen/Marienkirche/Ansicht von Ost/4   Reutlingen/Marktplatz/5   Reutlingen/Horten/(SD)/6   Pfaffenhofen/Sparkasse/Do 01.02./7   Pfaffenhofen/Marktplatz/8   Pfaffenhofen/Pfarrkirche/Innenraum nach Osten/9   Pfaffenhofen/Sparkasse/10  Ilmmünster/Stiftskirche/Krypta/11  Ilmmünster/Stiftskirche/Chor/(Doubl.v. 12)/12  Ilmmünster/Stiftskirche/Chor/13  Ilmmünster/Stiftskirche/Ansicht von Nordwest/14  München/Nordendstraße/Sa. 02.03./15  München/Nordendstraße/16  München/Dreifaltigkeitskirche/Fr. 08.03./17  München/Promenadeplatz/18  München/Promenadeplatz/Gunetzrhainerhaus/19 München/Karmelitenkirche/ehem. Sakristei/20 München/Karmelitenkirche/ehem. Sakristei/21 München/Karmelitenkirche/ehem. Sakristei/22 München/Karmelitenkirche/ehem. Sakristei/23 München/Karmelitenkirche/ehem. Sakristei/24 München/Karmelitenkirche/ehem. Kapitelsaal/25 München/Karmelitenkirche/ehem. Kapitelsaal/26 München/Karmelitenkirche/ehem. Kapitelsaal/27 München/Karmelitenkirche/Pilaster im Querhaus/28 München/St. Michael/Kreuzkapelle/29 München/St. Michael/Kreuzkapelle/30 München/St. Michael/Kreuzkapelle/31 München/St. Michael/Kreuzkapelle/32 München/St. Michael/Kreuzkapelle/33 München/St. Michael/Kreuzkapelle/34 München/St. Michael/Kreuzkapelle/35 München/St. Michael/Kreuzkapelle/36 München/St. Michael/Choransicht/37 /"
    },
    "1996-05" : {
       "year" : "1996",
-      "nr" : "05",
+      "film" : "05",
       "product" : "Turachrome 100",
       "camera" : "Nikon",
       "developer" : "Sauter",
-      "addinfo" : "1  München; St. Michael; Fassade; (Fr. 08.03.); 2  München; St. Michael; 3  München; St. Michael; 4  München; St. Michael; 5 München; St. Michael; 6 München; St. Michael; 7 München; St. Michael; 8 München; St. Michael; 9 München; Augustinerkirche; 10 München; Augustinerkirche; 11 München; Augustinerkirche; 12 München; Augustinerkirche; 13 München; Augustinerkirche; 14  München; Augustinerkirche; 15  München; Augustinerkirche; 16  München; Augustinerkirche; 17  München; Augustinerkirche; 18  München; Augustinerkirche; 19 München; St. Michael; 20 München; St. Michael; 21 München; St. Peter; E. Grasser, 1482; 22 München; St. Peter; nördliches Seitenschiff; Altäre v. Max Schinnagl; 23 ?; 24 ?; 25 ?; 26 ?; 27 Bernried; Klosterkirche; 28 Bernried; Klosterkirche; 29 Bernried; Klosterkirche; 30 Bernried; Klosterkirche; 31 Bernried; Klosterkirche; 32 ?; 33 ?; 34 ?; 35 ?; 36 ?; 37 ; "
+      "addinfo" : "1  München/St. Michael/Fassade/(Fr. 08.03.)/2  München/St. Michael/3  München/St. Michael/4  München/St. Michael/5 München/St. Michael/6 München/St. Michael/7 München/St. Michael/8 München/St. Michael/9 München/Augustinerkirche/10 München/Augustinerkirche/11 München/Augustinerkirche/12 München/Augustinerkirche/13 München/Augustinerkirche/14  München/Augustinerkirche/15  München/Augustinerkirche/16  München/Augustinerkirche/17  München/Augustinerkirche/18  München/Augustinerkirche/19 München/St. Michael/20 München/St. Michael/21 München/St. Peter/E. Grasser, 1482/22 München/St. Peter/nördliches Seitenschiff/Altäre v. Max Schinnagl/23 ?/24 ?/25 ?/26 ?/27 Bernried/Klosterkirche/28 Bernried/Klosterkirche/29 Bernried/Klosterkirche/30 Bernried/Klosterkirche/31 Bernried/Klosterkirche/32 ?/33 ?/34 ?/35 ?/36 ?/37 /"
    },
    "1996-06" : {
       "year" : "1996",
-      "nr" : "06",
+      "film" : "06",
       "product" : "Turachrome 100",
       "camera" : "Konica (snapshot)",
       "developer" : "Sauter",
@@ -3819,7 +3819,7 @@
    },
    "1996-07" : {
       "year" : "1996",
-      "nr" : "07",
+      "film" : "07",
       "product" : "Kodak ED 200",
       "camera" : "Konica (snapshot)",
       "developer" : "Sauter",
@@ -4078,11 +4078,11 @@
    },
    "1996-08" : {
       "year" : "1996",
-      "nr" : "08",
+      "film" : "08",
       "product" : null,
       "camera" : null,
       "developer" : null,
-      "addinfo" : "Entwicklung; ",
+      "addinfo" : "Entwicklung/",
       "1" : {
          "place" : "Washington DC",
          "building" : "",
@@ -4345,7 +4345,7 @@
    },
    "1996-09" : {
       "year" : "1996",
-      "nr" : "09",
+      "film" : "09",
       "product" : "Turachrome 100",
       "camera" : "Konica (snapshot)",
       "developer" : "Sauter",
@@ -4604,7 +4604,7 @@
    },
    "1996-10" : {
       "year" : "1996",
-      "nr" : "10",
+      "film" : "10",
       "product" : "Turachrome",
       "camera" : "Olympus Stylus",
       "developer" : "Sauter",
@@ -4870,7 +4870,7 @@
    },
    "1996-11" : {
       "year" : "1996",
-      "nr" : "11",
+      "film" : "11",
       "product" : "Turachrome",
       "camera" : "Olympus stylus",
       "developer" : "Sauter",
@@ -5143,7 +5143,7 @@
    },
    "1996-12" : {
       "year" : "1996",
-      "nr" : "12",
+      "film" : "12",
       "product" : "Turachrome",
       "camera" : "Olympus stylus",
       "developer" : "Sauter",
@@ -5409,7 +5409,7 @@
    },
    "1996-13" : {
       "year" : "1996",
-      "nr" : "13",
+      "film" : "13",
       "product" : "Turachrome 100",
       "camera" : "Olympus Stylus",
       "developer" : "Sauter",
@@ -5675,7 +5675,7 @@
    },
    "1996-14" : {
       "year" : "1996",
-      "nr" : "14",
+      "film" : "14",
       "product" : "Turachrome",
       "camera" : "Olympus Stylus",
       "developer" : "Sauter",
@@ -5948,7 +5948,7 @@
    },
    "1996-15" : {
       "year" : "1996",
-      "nr" : "15",
+      "film" : "15",
       "product" : "Turachrome 100",
       "camera" : "Olympus Stylus",
       "developer" : "Sauter",
@@ -6221,7 +6221,7 @@
    },
    "1996-16" : {
       "year" : "1996",
-      "nr" : "16",
+      "film" : "16",
       "product" : "Fuji RD 100",
       "camera" : "Olympus stylus",
       "developer" : "Sauter",
@@ -6487,7 +6487,7 @@
    },
    "1996-17" : {
       "year" : "1996",
-      "nr" : "17",
+      "film" : "17",
       "product" : "Kodak EB 100",
       "camera" : "Olympus stylus",
       "developer" : "Sauter",
@@ -6753,7 +6753,7 @@
    },
    "1996-18" : {
       "year" : "1996",
-      "nr" : "18",
+      "film" : "18",
       "product" : "Agfa Ctx 100",
       "camera" : "Nikon",
       "developer" : "Sauter",
@@ -7019,7 +7019,7 @@
    },
    "1996-19" : {
       "year" : "1996",
-      "nr" : "19",
+      "film" : "19",
       "product" : "Agfa Ctx 100",
       "camera" : "Nikon",
       "developer" : "Sauter",
@@ -7278,7 +7278,7 @@
    },
    "1996-20" : {
       "year" : "1996",
-      "nr" : "20",
+      "film" : "20",
       "product" : "Agfa Ctx 100",
       "camera" : "Nikon",
       "developer" : "Sauter",
@@ -7537,7 +7537,7 @@
    },
    "1996-21" : {
       "year" : "1996",
-      "nr" : "21",
+      "film" : "21",
       "product" : "Agfa CTx 100",
       "camera" : "Nikon",
       "developer" : "Sauter",
@@ -7789,7 +7789,7 @@
    },
    "1996-22" : {
       "year" : "1996",
-      "nr" : "22",
+      "film" : "22",
       "product" : "Agfa Ctx 100",
       "camera" : "Nikon",
       "developer" : "Sauter",
@@ -8048,11 +8048,11 @@
    },
    "1996-23" : {
       "year" : "1996",
-      "nr" : "23",
+      "film" : "23",
       "product" : null,
       "camera" : null,
       "developer" : null,
-      "addinfo" : ":Entwicklung: Sauter; 1a = 1; ",
+      "addinfo" : ":Entwicklung: Sauter/1a = 1/",
       "0" : {
          "place" : "Hörgersdorf",
          "building" : "Pfarrkirche",
@@ -8322,7 +8322,7 @@
    },
    "1996-24" : {
       "year" : "1996",
-      "nr" : "24",
+      "film" : "24",
       "product" : "Agfa Ctx 100i",
       "camera" : "Nikon",
       "developer" : "Sauter",
@@ -8581,7 +8581,7 @@
    },
    "1996-25" : {
       "year" : "1996",
-      "nr" : "25",
+      "film" : "25",
       "product" : "Agfa Cts 100",
       "camera" : "Nikon",
       "developer" : "Sauter",
@@ -8840,11 +8840,11 @@
    },
    "1996-26" : {
       "year" : "1996",
-      "nr" : "26",
+      "film" : "26",
       "product" : "Konica",
       "camera" : "Nikon",
       "developer" : "Sauter",
-      "addinfo" : " 1=1a; ",
+      "addinfo" : " 1=1a/",
       "1" : {
          "place" : "",
          "building" : "(Pers.)",
@@ -9100,11 +9100,11 @@
    },
    "1996-27" : {
       "year" : "1996",
-      "nr" : "27",
+      "film" : "27",
       "product" : null,
       "camera" : null,
       "developer" : null,
-      "addinfo" : "Entwicklung Sauter; ",
+      "addinfo" : "Entwicklung Sauter/",
       "1" : {
          "place" : "Nürnberg",
          "building" : "St. Lorenz",
@@ -9367,7 +9367,7 @@
    },
    "1996-28" : {
       "year" : "1996",
-      "nr" : "28",
+      "film" : "28",
       "product" : "Konica Chrome 100",
       "camera" : "Nikon",
       "developer" : "Sauter",
@@ -9626,7 +9626,7 @@
    },
    "1996-29" : {
       "year" : "1996",
-      "nr" : "29",
+      "film" : "29",
       "product" : "Konica Chrome 100",
       "camera" : "Nikon",
       "developer" : "Sauter",
@@ -9892,7 +9892,7 @@
    },
    "1996-30" : {
       "year" : "1996",
-      "nr" : "30",
+      "film" : "30",
       "product" : "Agfa Ctx 100",
       "camera" : "Nikon",
       "developer" : "Sauter",
@@ -10151,7 +10151,7 @@
    },
    "1996-31" : {
       "year" : "1996",
-      "nr" : "31",
+      "film" : "31",
       "product" : "Konicachrome 100",
       "camera" : "Nikon",
       "developer" : "Sauter",
@@ -10417,7 +10417,7 @@
    },
    "1996-32" : {
       "year" : "1996",
-      "nr" : "32",
+      "film" : "32",
       "product" : "Agfa Ctx",
       "camera" : "Nikon",
       "developer" : "Sauter",
@@ -10683,7 +10683,7 @@
    },
    "1996-33" : {
       "year" : "1996",
-      "nr" : "33",
+      "film" : "33",
       "product" : "Agfa Ctx 100",
       "camera" : "Nikon",
       "developer" : "Sauter",
@@ -10935,7 +10935,7 @@
    },
    "1996-34" : {
       "year" : "1996",
-      "nr" : "34",
+      "film" : "34",
       "product" : "Agfa Ctx 100",
       "camera" : "Nikon",
       "developer" : "Sauter",
@@ -11194,7 +11194,7 @@
    },
    "1996-35" : {
       "year" : "1996",
-      "nr" : "35",
+      "film" : "35",
       "product" : "Agfa Ctx 100",
       "camera" : "Nikon",
       "developer" : "Sauter",
@@ -11460,7 +11460,7 @@
    },
    "1996-36" : {
       "year" : "1996",
-      "nr" : "36",
+      "film" : "36",
       "product" : "Konica R-100",
       "camera" : "Nikon",
       "developer" : "Sauter",
@@ -11719,7 +11719,7 @@
    },
    "1996-37" : {
       "year" : "1996",
-      "nr" : "37",
+      "film" : "37",
       "product" : "Agfa Ctx 100",
       "camera" : "Nikon",
       "developer" : "Sauter",
@@ -11954,7 +11954,7 @@
    },
    "1996-38" : {
       "year" : "1996",
-      "nr" : "38",
+      "film" : "38",
       "product" : "Agfa Ctx 100",
       "camera" : "Nikon",
       "developer" : "Sauter",
@@ -12213,7 +12213,7 @@
    },
    "1996-39" : {
       "year" : "1996",
-      "nr" : "39",
+      "film" : "39",
       "product" : "Agfa Ctx 100",
       "camera" : "Nikon",
       "developer" : "Sauter",
@@ -12465,7 +12465,7 @@
    },
    "1996-40" : {
       "year" : "1996",
-      "nr" : "40",
+      "film" : "40",
       "product" : "Agfa Ctx 100",
       "camera" : "Nikon",
       "developer" : "Sauter",
@@ -12717,7 +12717,7 @@
    },
    "1996-41" : {
       "year" : "1996",
-      "nr" : "41",
+      "film" : "41",
       "product" : "Agfa Ctx 100",
       "camera" : "Nikon",
       "developer" : "Sauter",
@@ -12983,7 +12983,7 @@
    },
    "1996-42" : {
       "year" : "1996",
-      "nr" : "42",
+      "film" : "42",
       "product" : "Agfa Ctx 100",
       "camera" : "Nikon",
       "developer" : "Sauter",
@@ -13235,7 +13235,7 @@
    },
    "1996-43" : {
       "year" : "1996",
-      "nr" : "43",
+      "film" : "43",
       "product" : "Konica R-100",
       "camera" : "Nikon",
       "developer" : "Sauter",
@@ -13501,7 +13501,7 @@
    },
    "1996-44" : {
       "year" : "1996",
-      "nr" : "44",
+      "film" : "44",
       "product" : "Konica R-100",
       "camera" : "Nikon",
       "developer" : "Sauter",
@@ -13753,7 +13753,7 @@
    },
    "1996-45" : {
       "year" : "1996",
-      "nr" : "45",
+      "film" : "45",
       "product" : "Konica R-100",
       "camera" : "Nikon",
       "developer" : "Sauter",
@@ -14012,7 +14012,7 @@
    },
    "1996-46" : {
       "year" : "1996",
-      "nr" : "46",
+      "film" : "46",
       "product" : "Konica R-100",
       "camera" : "Nikon",
       "developer" : "Sauter",
@@ -14268,7 +14268,7 @@
    },
    "1996-47" : {
       "year" : "1996",
-      "nr" : "47",
+      "film" : "47",
       "product" : "Konica R-100",
       "camera" : "Nikon",
       "developer" : "Sauter",
@@ -14527,7 +14527,7 @@
    },
    "1996-48" : {
       "year" : "1996",
-      "nr" : "48",
+      "film" : "48",
       "product" : "Konica R-100",
       "camera" : "Nikon",
       "developer" : "Sauter",
@@ -14779,7 +14779,7 @@
    },
    "1996-49" : {
       "year" : "1996",
-      "nr" : "49",
+      "film" : "49",
       "product" : "Konica R-100",
       "camera" : "Nikon",
       "developer" : "Sauter",
@@ -15031,7 +15031,7 @@
    },
    "1996-50" : {
       "year" : "1996",
-      "nr" : "50",
+      "film" : "50",
       "product" : "Konica R-100",
       "camera" : "Nikon",
       "developer" : "Sauter",
@@ -15283,11 +15283,11 @@
    },
    "1996-51" : {
       "year" : "1996",
-      "nr" : "51",
+      "film" : "51",
       "product" : "Konica R-100",
       "camera" : "Nikon",
       "developer" : "Sauter",
-      "addinfo" : "2a = 2; ",
+      "addinfo" : "2a = 2/",
       "2" : {
          "place" : "Frankenhausen",
          "building" : "Pfarrkirche",
@@ -15536,11 +15536,11 @@
    },
    "1996-52" : {
       "year" : "1996",
-      "nr" : "52",
+      "film" : "52",
       "product" : "Konica R-100",
       "camera" : "Nikon",
       "developer" : "Saturn",
-      "addinfo" : "1 = 1a; ",
+      "addinfo" : "1 = 1a/",
       "1" : {
          "place" : "Lauenhain",
          "building" : "Pfarrkirche",
@@ -15796,7 +15796,7 @@
    },
    "1996-53" : {
       "year" : "1996",
-      "nr" : "53",
+      "film" : "53",
       "product" : "Agfa Ctx 100",
       "camera" : "Nikon",
       "developer" : "Saturn",
@@ -16048,7 +16048,7 @@
    },
    "1996-54" : {
       "year" : "1996",
-      "nr" : "54",
+      "film" : "54",
       "product" : "Agfa Dtx 100",
       "camera" : "Nikon",
       "developer" : "Saturn",
@@ -16293,7 +16293,7 @@
    },
    "1996-55" : {
       "year" : "1996",
-      "nr" : "55",
+      "film" : "55",
       "product" : "Agfa Ctx 100",
       "camera" : "Nikon",
       "developer" : "Saturn",
@@ -16545,7 +16545,7 @@
    },
    "1996-56" : {
       "year" : "1996",
-      "nr" : "56",
+      "film" : "56",
       "product" : "Agfa Ctx 100",
       "camera" : "Nikon",
       "developer" : "Saturn",
@@ -16811,7 +16811,7 @@
    },
    "1996-57" : {
       "year" : "1996",
-      "nr" : "57",
+      "film" : "57",
       "product" : "Kodak Ektachrome",
       "camera" : "Nikon",
       "developer" : "Saturn",
@@ -17077,7 +17077,7 @@
    },
    "1996-58" : {
       "year" : "1996",
-      "nr" : "58",
+      "film" : "58",
       "product" : "Agfa Ctx 100",
       "camera" : "Nikon",
       "developer" : "Saturn",
@@ -17336,11 +17336,11 @@
    },
    "1996-59" : {
       "year" : "1996",
-      "nr" : "59",
+      "film" : "59",
       "product" : "Agfa Ctx 100",
       "camera" : "Nikon",
       "developer" : "Sauter",
-      "addinfo" : "1a = 1; ",
+      "addinfo" : "1a = 1/",
       "1" : {
          "place" : "Caprarola",
          "building" : "Pal. Farnese",
@@ -17596,11 +17596,11 @@
    },
    "1996-60" : {
       "year" : "1996",
-      "nr" : "60",
+      "film" : "60",
       "product" : "Konica R-100",
       "camera" : "Nikon",
       "developer" : "Sauter",
-      "addinfo" : "1a = 1; ",
+      "addinfo" : "1a = 1/",
       "1" : {
          "place" : "Repros f. Reinhards Geb. (ganzer Film, ohne Nummern)",
          "building" : "",
@@ -17863,11 +17863,11 @@
    },
    "1996-61" : {
       "year" : "1996",
-      "nr" : "61",
+      "film" : "61",
       "product" : "Konica R-100",
       "camera" : "Nikon",
       "developer" : "Sauter",
-      "addinfo" : "3a = 3; ",
+      "addinfo" : "3a = 3/",
       "4" : {
          "place" : "Repro f. Reinhards Geb.",
          "building" : "",
@@ -18109,7 +18109,7 @@
    },
    "1996-62" : {
       "year" : "1996",
-      "nr" : "62",
+      "film" : "62",
       "product" : "Konica R 100",
       "camera" : "Nikon",
       "developer" : "Sauter",
@@ -18361,7 +18361,7 @@
    },
    "1996-63" : {
       "year" : "1996",
-      "nr" : "63",
+      "film" : "63",
       "product" : "Agfa Ctx",
       "camera" : "Nikon",
       "developer" : "Sauter",
@@ -18613,7 +18613,7 @@
    },
    "1996-64" : {
       "year" : "1996",
-      "nr" : "64",
+      "film" : "64",
       "product" : "Agfa Ctx 100",
       "camera" : "Nikon",
       "developer" : "Sauter",
@@ -18879,7 +18879,7 @@
    },
    "1996-65" : {
       "year" : "1996",
-      "nr" : "65",
+      "film" : "65",
       "product" : "Agfa Ctx 100",
       "camera" : "Nikon",
       "developer" : "Sauter",
@@ -19145,7 +19145,7 @@
    },
    "1996-66" : {
       "year" : "1996",
-      "nr" : "66",
+      "film" : "66",
       "product" : "Agfa Ctx 100",
       "camera" : "Nikon",
       "developer" : "Sauter",
@@ -19404,7 +19404,7 @@
    },
    "1996-67" : {
       "year" : "1996",
-      "nr" : "67",
+      "film" : "67",
       "product" : "Agfa Ctx 100",
       "camera" : "Nikon",
       "developer" : "Sauter",
@@ -19656,7 +19656,7 @@
    },
    "1996-68" : {
       "year" : "1996",
-      "nr" : "68",
+      "film" : "68",
       "product" : "Agfa Ctx 100",
       "camera" : "Nikon",
       "developer" : "Sauter",
@@ -19915,7 +19915,7 @@
    },
    "1996-69" : {
       "year" : "1996",
-      "nr" : "69",
+      "film" : "69",
       "product" : "Agfa Ctx 100",
       "camera" : "Nikon",
       "developer" : "Sauter",
@@ -20174,7 +20174,7 @@
    },
    "1997-01" : {
       "year" : "1997",
-      "nr" : "01",
+      "film" : "01",
       "product" : "Agfa Ctx 100",
       "camera" : "Nikon",
       "developer" : "Sauter",
@@ -20426,7 +20426,7 @@
    },
    "1997-02" : {
       "year" : "1997",
-      "nr" : "02",
+      "film" : "02",
       "product" : "Agfa Ctx 100",
       "camera" : "Nikon",
       "developer" : "Sauter",
@@ -20685,7 +20685,7 @@
    },
    "1997-03" : {
       "year" : "1997",
-      "nr" : "03",
+      "film" : "03",
       "product" : "Konica",
       "camera" : "Olympus (Hubertus)",
       "developer" : "",
@@ -20825,11 +20825,11 @@
    },
    "1997-04" : {
       "year" : "1997",
-      "nr" : "04",
+      "film" : "04",
       "product" : null,
       "camera" : null,
       "developer" : null,
-      "addinfo" : "Entwicklung Sauter;  1 = 1a; ",
+      "addinfo" : "Entwicklung Sauter/ 1 = 1a/",
       "1" : {
          "place" : "Weimar",
          "building" : "Goethes Gartenhaus",
@@ -21092,7 +21092,7 @@
    },
    "1997-05" : {
       "year" : "1997",
-      "nr" : "05",
+      "film" : "05",
       "product" : "Konica",
       "camera" : "Nikon",
       "developer" : "",
@@ -21253,8 +21253,8 @@
    },
    "1997-06" : {
       "year" : "1997",
-      "nr" : "06",
-      "addinfo" : "anschl. an 9702 beg., nach 9710 fortgef. ; ",
+      "film" : "06",
+      "addinfo" : "anschl. an 9702 beg., nach 9710 fortgef. /",
       "product" : " Agfa Ctx 100",
       "camera" : "Nikon",
       "developer" : "Sauter",
@@ -21499,7 +21499,7 @@
    },
    "1997-07" : {
       "year" : "1997",
-      "nr" : "07",
+      "film" : "07",
       "product" : "Agfa Ctx 100",
       "camera" : "Canon A1",
       "developer" : "Sauter",
@@ -21751,7 +21751,7 @@
    },
    "1997-08" : {
       "year" : "1997",
-      "nr" : "08",
+      "film" : "08",
       "product" : "Agfa Ctx 100",
       "camera" : "Braun (Kompakt)",
       "developer" : "Sauter",
@@ -22017,7 +22017,7 @@
    },
    "1997-09" : {
       "year" : "1997",
-      "nr" : "09",
+      "film" : "09",
       "product" : "Agfa Ctx 100",
       "camera" : "Braun (Kompakt)",
       "developer" : "Sauter",
@@ -22248,8 +22248,8 @@
    },
    "1997-10" : {
       "year" : "1997",
-      "nr" : "10",
-      "addinfo" : "nach 9705 begonnen, nach 9706 fortges.; ",
+      "film" : "10",
+      "addinfo" : "nach 9705 begonnen, nach 9706 fortges./",
       "product" : "",
       "camera" : "Nikon",
       "developer" : "",
@@ -22459,7 +22459,7 @@
    },
    "1997-11" : {
       "year" : "1997",
-      "nr" : "11",
+      "film" : "11",
       "product" : "Agfa Ctx",
       "camera" : "Nikon",
       "developer" : "Sauter",
@@ -22704,11 +22704,11 @@
    },
    "1997-12" : {
       "year" : "1997",
-      "nr" : "12",
+      "film" : "12",
       "product" : "Agfa Ctx",
       "camera" : "Nikon",
       "developer" : "Sauter",
-      "addinfo" : "2a=2; ",
+      "addinfo" : "2a=2/",
       "2" : {
          "place" : "(Mittenwald)",
          "building" : "Bergtour mit Nikola, Max, Sibylle, Edgar zum Dammkar und Predigtstuhl",
@@ -22922,11 +22922,11 @@
    },
    "1997-13" : {
       "year" : "1997",
-      "nr" : "13",
+      "film" : "13",
       "product" : "",
       "camera" : "",
       "developer" : "",
-      "addinfo" : "(in Lars); ",
+      "addinfo" : "(in Lars)/",
       "1" : {
          "place" : "",
          "building" : "",
@@ -23189,7 +23189,7 @@
    },
    "1997-14" : {
       "year" : "1997",
-      "nr" : "14",
+      "film" : "14",
       "product" : "Kodak Ektachrome Elite II 100",
       "camera" : "Nikon",
       "developer" : "foto uno",
@@ -23455,7 +23455,7 @@
    },
    "1997-15" : {
       "year" : "1997",
-      "nr" : "15",
+      "film" : "15",
       "product" : "Agfa Ctx 100",
       "camera" : "Nikon",
       "developer" : "foto uno",
@@ -23721,7 +23721,7 @@
    },
    "1998-01" : {
       "year" : "1998",
-      "nr" : "01",
+      "film" : "01",
       "product" : "Agfa Ctx 100",
       "camera" : "Nikon",
       "developer" : "foto uno",
@@ -23987,7 +23987,7 @@
    },
    "1998-02" : {
       "year" : "1998",
-      "nr" : "02",
+      "film" : "02",
       "product" : "",
       "camera" : "",
       "developer" : "",
@@ -24253,11 +24253,11 @@
    },
    "1998-03" : {
       "year" : "1998",
-      "nr" : "03",
+      "film" : "03",
       "product" : "Agfa Ctx 100",
       "camera" : "Nikon",
       "developer" : "fcl Roma",
-      "addinfo" : "2a = 2; ",
+      "addinfo" : "2a = 2/",
       "2" : {
          "place" : "S. Galgano",
          "building" : "Ruine der Klosterkirche",
@@ -24492,7 +24492,7 @@
    },
    "1998-04" : {
       "year" : "1998",
-      "nr" : "04",
+      "film" : "04",
       "product" : "",
       "camera" : "",
       "developer" : "",
@@ -24758,7 +24758,7 @@
    },
    "1998-05" : {
       "year" : "1998",
-      "nr" : "05",
+      "film" : "05",
       "product" : "Agfa Ctx 100",
       "camera" : "Nikon",
       "developer" : "Sauter",
@@ -25024,7 +25024,7 @@
    },
    "1998-06" : {
       "year" : "1998",
-      "nr" : "06",
+      "film" : "06",
       "product" : "Agfa Ctx 100",
       "camera" : "Nikon",
       "developer" : "Foto uno",
@@ -25283,7 +25283,7 @@
    },
    "1998-07" : {
       "year" : "1998",
-      "nr" : "07",
+      "film" : "07",
       "product" : "Agfa Ctx 100",
       "camera" : "Nikon",
       "developer" : "Foto uno",
@@ -25549,7 +25549,7 @@
    },
    "1998-08" : {
       "year" : "1998",
-      "nr" : "08",
+      "film" : "08",
       "product" : "Agfa Ctx",
       "camera" : "Nikon",
       "developer" : "Foto uno",
@@ -25815,7 +25815,7 @@
    },
    "1998-09" : {
       "year" : "1998",
-      "nr" : "09",
+      "film" : "09",
       "product" : "Agfa Ctx 100",
       "camera" : "Nikon",
       "developer" : "Foto uno",
@@ -26081,7 +26081,7 @@
    },
    "1998-10" : {
       "year" : "1998",
-      "nr" : "10",
+      "film" : "10",
       "product" : "Kodak hc 100",
       "camera" : "Nikon",
       "developer" : "Foto uno",
@@ -26312,7 +26312,7 @@
    },
    "1998-11" : {
       "year" : "1998",
-      "nr" : "11",
+      "film" : "11",
       "product" : "Kodak hc 100",
       "camera" : "Nikon",
       "developer" : "foto uno",
@@ -26445,11 +26445,11 @@
    },
    "1998-12" : {
       "year" : "1998",
-      "nr" : "12",
+      "film" : "12",
       "product" : "Agfa Ctx 100",
       "camera" : "Nikon",
       "developer" : "foto uno",
-      "addinfo" : "(in Lars); ",
+      "addinfo" : "(in Lars)/",
       "1" : {
          "place" : "Rom ",
          "building" : "Via dei piceni",
@@ -26712,11 +26712,11 @@
    },
    "1998-14" : {
       "year" : "1998",
-      "nr" : "14",
+      "film" : "14",
       "product" : "",
       "camera" : "",
       "developer" : "",
-      "addinfo" : "in Lars; ",
+      "addinfo" : "in Lars/",
       "1" : {
          "place" : "",
          "building" : "",
@@ -26979,11 +26979,11 @@
    },
    "1998-17" : {
       "year" : "1998",
-      "nr" : "17",
+      "film" : "17",
       "product" : "",
       "camera" : "",
       "developer" : "foto uno",
-      "addinfo" : "in Lars; Pfingsttour I; ",
+      "addinfo" : "in Lars; Pfingsttour I/",
       "1" : {
          "place" : "",
          "building" : "",
@@ -27246,11 +27246,11 @@
    },
    "1998-18" : {
       "year" : "1998",
-      "nr" : "18",
+      "film" : "18",
       "product" : "",
       "camera" : "Nikon",
       "developer" : "foto uno",
-      "addinfo" : "Pfingsttour II; ",
+      "addinfo" : "Pfingsttour II/",
       "1" : {
          "place" : "",
          "building" : "",
@@ -27513,11 +27513,11 @@
    },
    "1998-19" : {
       "year" : "1998",
-      "nr" : "19",
+      "film" : "19",
       "product" : "",
       "camera" : "Nikon",
       "developer" : "foto uno",
-      "addinfo" : "Pfingsttour III; ",
+      "addinfo" : "Pfingsttour III/",
       "1" : {
          "place" : "",
          "building" : "",
@@ -27780,11 +27780,11 @@
    },
    "1998-20" : {
       "year" : "1998",
-      "nr" : "20",
+      "film" : "20",
       "product" : "",
       "camera" : "Nikon",
       "developer" : "foto uno",
-      "addinfo" : "Pfingsttour IV; ",
+      "addinfo" : "Pfingsttour IV/",
       "1" : {
          "place" : "",
          "building" : "",
@@ -28047,11 +28047,11 @@
    },
    "1998-21" : {
       "year" : "1998",
-      "nr" : "21",
+      "film" : "21",
       "product" : "",
       "camera" : "Nikon",
       "developer" : "foto uno",
-      "addinfo" : "S. Urbano, Frascati; ",
+      "addinfo" : "S. Urbano, Frascati/",
       "1" : {
          "place" : "",
          "building" : "",
@@ -28314,11 +28314,11 @@
    },
    "1998-22" : {
       "year" : "1998",
-      "nr" : "22",
+      "film" : "22",
       "product" : "",
       "camera" : "Nikon",
       "developer" : "foto uno",
-      "addinfo" : "in Lars, Rom; ",
+      "addinfo" : "in Lars, Rom/",
       "1" : {
          "place" : "",
          "building" : "",
@@ -28581,11 +28581,11 @@
    },
    "1998-23" : {
       "year" : "1998",
-      "nr" : "23",
+      "film" : "23",
       "product" : "",
       "camera" : "",
       "developer" : "",
-      "addinfo" : "Rom (Forum) Anagni, Ferentino, Alatri; ",
+      "addinfo" : "Rom (Forum) Anagni, Ferentino, Alatri/",
       "1" : {
          "place" : "Rom",
          "building" : "Forum",
@@ -28827,7 +28827,7 @@
    },
    "1998-24" : {
       "year" : "1998",
-      "nr" : "24",
+      "film" : "24",
       "product" : "Agfa Ctx 100",
       "camera" : "Nikon",
       "developer" : "Sauter",
@@ -29086,11 +29086,11 @@
    },
    "1998-25" : {
       "year" : "1998",
-      "nr" : "25",
+      "film" : "25",
       "product" : "(s/w Bilderfilm)",
       "camera" : "",
       "developer" : "",
-      "addinfo" : "Rompläne, Rimini; ",
+      "addinfo" : "Rompläne, Rimini/",
       "1" : {
          "place" : "",
          "building" : "",
@@ -29353,11 +29353,11 @@
    },
    "1998-26" : {
       "year" : "1998",
-      "nr" : "26",
+      "film" : "26",
       "product" : "Agfa Ctx 100",
       "camera" : "Nikon",
       "developer" : "Sauter",
-      "addinfo" : "1a = 1; ",
+      "addinfo" : "1a = 1/",
       "1" : {
          "place" : "Rimini",
          "building" : "Augustusbogen",
@@ -29613,7 +29613,7 @@
    },
    "1998-27" : {
       "year" : "1998",
-      "nr" : "27",
+      "film" : "27",
       "product" : "Agfa CTx 100",
       "camera" : "Nikon",
       "developer" : "Foto uno",
@@ -29830,7 +29830,7 @@
    },
    "1998-28" : {
       "year" : "1998",
-      "nr" : "28",
+      "film" : "28",
       "product" : "Agfa Ctx 100",
       "camera" : "Olympus",
       "developer" : "Foto uno",
@@ -30075,7 +30075,7 @@
    },
    "1998-29" : {
       "year" : "1998",
-      "nr" : "29",
+      "film" : "29",
       "product" : "Agfa Ctx 100",
       "camera" : "olympus",
       "developer" : "foto uno",
@@ -30285,7 +30285,7 @@
    },
    "1998-30" : {
       "year" : "1998",
-      "nr" : "30",
+      "film" : "30",
       "product" : "Agfa Ctx 100",
       "camera" : "Olympus",
       "developer" : "Sauter",
@@ -30544,7 +30544,7 @@
    },
    "1998-31" : {
       "year" : "1998",
-      "nr" : "31",
+      "film" : "31",
       "product" : "Agfa Ctx 100",
       "camera" : "Olympus",
       "developer" : "Sauter",
@@ -30803,7 +30803,7 @@
    },
    "1998-32" : {
       "year" : "1998",
-      "nr" : "32",
+      "film" : "32",
       "product" : "Agfa Ctprecisa",
       "camera" : "Olympus",
       "developer" : "Sauter",
@@ -31062,7 +31062,7 @@
    },
    "1998-33" : {
       "year" : "1998",
-      "nr" : "33",
+      "film" : "33",
       "product" : "Agfa ctx precisa",
       "camera" : "Nikon",
       "developer" : " Janni",
@@ -31300,7 +31300,7 @@
    },
    "1998-34" : {
       "year" : "1998",
-      "nr" : "34",
+      "film" : "34",
       "product" : "Agfa precisa 100",
       "camera" : "Olympus",
       "developer" : "Jenni",
@@ -31545,7 +31545,7 @@
    },
    "1998-35" : {
       "year" : "1998",
-      "nr" : "35",
+      "film" : "35",
       "product" : "Kodak Elite 200",
       "camera" : "Olympus",
       "developer" : "Janny",
@@ -31797,11 +31797,11 @@
    },
    "1998-36" : {
       "year" : "1998",
-      "nr" : "36",
+      "film" : "36",
       "product" : "Ilfordcolor 100",
       "camera" : "Olympus",
       "developer" : "",
-      "addinfo" : "(Quirinal); ",
+      "addinfo" : "(Quirinal)/",
       "1" : {
          "place" : "",
          "building" : "",
@@ -32064,7 +32064,7 @@
    },
    "1998-37" : {
       "year" : "1998",
-      "nr" : "37",
+      "film" : "37",
       "product" : "Agfa ctx precisa 100",
       "camera" : "(Reproanlage)",
       "developer" : "",
@@ -32330,11 +32330,11 @@
    },
    "1998-38" : {
       "year" : "1998",
-      "nr" : "38",
+      "film" : "38",
       "product" : "Agfa ctx precisa",
       "camera" : "Nikon",
       "developer" : "",
-      "addinfo" : "(schließt an 9833 an); ",
+      "addinfo" : "(schließt an 9833 an)/",
       "1" : {
          "place" : "Rom",
          "building" : "S. Agnese",
@@ -32597,7 +32597,7 @@
    },
    "1998-39" : {
       "year" : "1998",
-      "nr" : "39",
+      "film" : "39",
       "product" : "Kodak 100",
       "camera" : "Olympus",
       "developer" : "Fotocolor di Crinelli",
@@ -32863,11 +32863,11 @@
    },
    "1998-40" : {
       "year" : "1998",
-      "nr" : "40",
+      "film" : "40",
       "product" : "Agfa CTx 100 precisa",
       "camera" : "Nikon",
       "developer" : "",
-      "addinfo" : "Sonnenuntergänge, Repros; ",
+      "addinfo" : "Sonnenuntergänge, Repros/",
       "1" : {
          "place" : "",
          "building" : "",
@@ -33088,7 +33088,7 @@
    },
    "1999-01" : {
       "year" : "1999",
-      "nr" : "01",
+      "film" : "01",
       "product" : "Agfa Ctx 100 precisa",
       "camera" : "Olympus",
       "developer" : "Janny",
@@ -33347,7 +33347,7 @@
    },
    "1999-02" : {
       "year" : "1999",
-      "nr" : "02",
+      "film" : "02",
       "product" : "Agfa",
       "camera" : "Nikon",
       "developer" : "",
@@ -33585,11 +33585,11 @@
    },
    "1999-03" : {
       "year" : "1999",
-      "nr" : "03",
+      "film" : "03",
       "product" : "Agfa Ctxprecisa 100",
       "camera" : "Olympus",
       "developer" : "Kodak p.le Flaminio",
-      "addinfo" : "(Radtour mit Golo); ",
+      "addinfo" : "(Radtour mit Golo)/",
       "1" : {
          "place" : "Rom",
          "building" : "(Radtour mit Golo)",
@@ -33838,7 +33838,7 @@
    },
    "1999-04" : {
       "year" : "1999",
-      "nr" : "04",
+      "film" : "04",
       "product" : "Agfa CTX precisa",
       "camera" : "Leica (v. Manfred Luchterhandt)",
       "developer" : "Janny",
@@ -34104,7 +34104,7 @@
    },
    "1999-05" : {
       "year" : "1999",
-      "nr" : "05",
+      "film" : "05",
       "product" : "Agfa Ctx precisa 100",
       "camera" : "Olympus",
       "developer" : "Janny",
@@ -34363,11 +34363,11 @@
    },
    "1999-06" : {
       "year" : "1999",
-      "nr" : "06",
+      "film" : "06",
       "product" : "Agfa CTx precisa 100",
       "camera" : "Olympus",
       "developer" : "Janny",
-      "addinfo" : "Künstlerfest Villa Medici; ",
+      "addinfo" : "Künstlerfest Villa Medici/",
       "1" : {
          "place" : "",
          "building" : "",
@@ -34595,11 +34595,11 @@
    },
    "1999-07" : {
       "year" : "1999",
-      "nr" : "07",
+      "film" : "07",
       "product" : "Agfa Precisa Ctx 100",
       "camera" : "Reproanlage",
       "developer" : "Janny",
-      "addinfo" : "Repros; ",
+      "addinfo" : "Repros/",
       "1" : {
          "place" : "",
          "building" : "",
@@ -34862,7 +34862,7 @@
    },
    "1999-08" : {
       "year" : "1999",
-      "nr" : "08",
+      "film" : "08",
       "product" : "Agfa Ctx precisa 100",
       "camera" : "Olympus",
       "developer" : "Kodak express",
@@ -35105,7 +35105,7 @@
    },
    "1999-09" : {
       "year" : "1999",
-      "nr" : "09",
+      "film" : "09",
       "product" : "Agfa CTPrecisa 100",
       "camera" : "Nikon",
       "developer" : "De Bernardis",
@@ -35371,11 +35371,11 @@
    },
    "1999-10" : {
       "year" : "1999",
-      "nr" : "10",
+      "film" : "10",
       "product" : "Agfa CTPrecisa 100",
       "camera" : "Reproanlage",
       "developer" : "Kodak express",
-      "addinfo" : "Repros; ",
+      "addinfo" : "Repros/",
       "1" : {
          "place" : "",
          "building" : "Plan Pal. S. Maria Maggiore",
@@ -35554,11 +35554,11 @@
    },
    "1999-11" : {
       "year" : "1999",
-      "nr" : "11",
+      "film" : "11",
       "product" : "Agfa CTPrecisa 100",
       "camera" : "Nikon",
       "developer" : "De Bernardis",
-      "addinfo" : "Sizilien 1; ",
+      "addinfo" : "Sizilien 1/",
       "1" : {
          "place" : "Neapel",
          "building" : "",
@@ -35779,11 +35779,11 @@
    },
    "1999-12" : {
       "year" : "1999",
-      "nr" : "12",
+      "film" : "12",
       "product" : "Kodak 200 professional",
       "camera" : "Nikon",
       "developer" : "De Bernardis",
-      "addinfo" : "Sizilien 2; ",
+      "addinfo" : "Sizilien 2/",
       "1" : {
          "place" : "Palermo",
          "building" : "Martorana/S. Maria dell'Ammiraglio",
@@ -35990,11 +35990,11 @@
    },
    "1999-13" : {
       "year" : "1999",
-      "nr" : "13",
+      "film" : "13",
       "product" : "Agfa CTPrecisa 100",
       "camera" : "Nikon",
       "developer" : "De Bernardis",
-      "addinfo" : "Sizilien 3; ",
+      "addinfo" : "Sizilien 3/",
       "1" : {
          "place" : "Palermo",
          "building" : "",
@@ -36208,11 +36208,11 @@
    },
    "1999-14" : {
       "year" : "1999",
-      "nr" : "14",
+      "film" : "14",
       "product" : "Agfa CTPrecisa 100",
       "camera" : "Nikon",
       "developer" : "De Bernardis",
-      "addinfo" : "Sizilien 4; ",
+      "addinfo" : "Sizilien 4/",
       "1" : {
          "place" : "Palermo",
          "building" : "S. Giovanni degli Eremitani",
@@ -36419,11 +36419,11 @@
    },
    "1999-15" : {
       "year" : "1999",
-      "nr" : "15",
+      "film" : "15",
       "product" : "Agfa CTPrecisa 100",
       "camera" : "Nikon",
       "developer" : "De Bernardis",
-      "addinfo" : "Sizilien 5; ",
+      "addinfo" : "Sizilien 5/",
       "1" : {
          "place" : "Palermo",
          "building" : "Museo Archeologico",
@@ -36630,11 +36630,11 @@
    },
    "1999-16" : {
       "year" : "1999",
-      "nr" : "16",
+      "film" : "16",
       "product" : "Agfa CTPrecisa 100",
       "camera" : "Nikon",
       "developer" : "De Bernardis",
-      "addinfo" : "Sizilien 6; ",
+      "addinfo" : "Sizilien 6/",
       "1" : {
          "place" : "Palermo",
          "building" : "S. Maria della Catena",
@@ -36827,11 +36827,11 @@
    },
    "1999-17" : {
       "year" : "1999",
-      "nr" : "17",
+      "film" : "17",
       "product" : "Agfa CTPrecisa 100",
       "camera" : "Nikon",
       "developer" : "De Bernardis",
-      "addinfo" : "Sizilien 7; ",
+      "addinfo" : "Sizilien 7/",
       "1" : {
          "place" : "Palermo",
          "building" : "SS. Trinità/La Magione",
@@ -37045,11 +37045,11 @@
    },
    "1999-18" : {
       "year" : "1999",
-      "nr" : "18",
+      "film" : "18",
       "product" : "Agfa CTPrecisa",
       "camera" : "Nikon",
       "developer" : "De Bernardis",
-      "addinfo" : "Sizilien 8; ",
+      "addinfo" : "Sizilien 8/",
       "1" : {
          "place" : "Bagheria",
          "building" : "(Statue Padre Pio)",
@@ -37263,11 +37263,11 @@
    },
    "1999-19" : {
       "year" : "1999",
-      "nr" : "19",
+      "film" : "19",
       "product" : "Agfa CTPrecisa 100",
       "camera" : "Nikon",
       "developer" : "De Bernardis",
-      "addinfo" : "Sizilien 9; ",
+      "addinfo" : "Sizilien 9/",
       "1" : {
          "place" : "Cefalù",
          "building" : "Dom",
@@ -37481,11 +37481,11 @@
    },
    "1999-20" : {
       "year" : "1999",
-      "nr" : "20",
+      "film" : "20",
       "product" : "Agfa",
       "camera" : "Nikon",
       "developer" : "De Bernardis",
-      "addinfo" : "Sizilien 10; ",
+      "addinfo" : "Sizilien 10/",
       "1" : {
          "place" : "Monreale",
          "building" : "Dom",
@@ -37713,11 +37713,11 @@
    },
    "1999-21" : {
       "year" : "1999",
-      "nr" : "21",
+      "film" : "21",
       "product" : "Agfa",
       "camera" : "Nikon",
       "developer" : "De Bernardis",
-      "addinfo" : "Sizilien 11; ",
+      "addinfo" : "Sizilien 11/",
       "1" : {
          "place" : "Monreale",
          "building" : "Dom",
@@ -37959,11 +37959,11 @@
    },
    "1999-22" : {
       "year" : "1999",
-      "nr" : "22",
+      "film" : "22",
       "product" : "Kodak Ektachrome 100",
       "camera" : "Nikon",
       "developer" : "De Bernardis",
-      "addinfo" : "Sizilien 12; ",
+      "addinfo" : "Sizilien 12/",
       "1" : {
          "place" : "Segeste",
          "building" : "Tempel",
@@ -38205,11 +38205,11 @@
    },
    "1999-23" : {
       "year" : "1999",
-      "nr" : "23",
+      "film" : "23",
       "product" : "Kodak Ektachrome",
       "camera" : "Nikon",
       "developer" : "De Bernardis",
-      "addinfo" : "Sizilien 13; ",
+      "addinfo" : "Sizilien 13/",
       "1" : {
          "place" : "Trapani",
          "building" : "SS. Annunziata",
@@ -38423,7 +38423,7 @@
    },
    "1999-24" : {
       "year" : "1999",
-      "nr" : "24",
+      "film" : "24",
       "product" : "Kodak Ektachrome 100",
       "camera" : "Nikon",
       "developer" : "De Bernardis",
@@ -38640,11 +38640,11 @@
    },
    "1999-25" : {
       "year" : "1999",
-      "nr" : "25",
+      "film" : "25",
       "product" : "Kodak Ektachrome 100",
       "camera" : "Nikon",
       "developer" : "De Bernardis",
-      "addinfo" : "Sizilien 15; ",
+      "addinfo" : "Sizilien 15/",
       "1" : {
          "place" : "Mazara",
          "building" : "S. Veneranda",
@@ -38872,11 +38872,11 @@
    },
    "1999-26" : {
       "year" : "1999",
-      "nr" : "26",
+      "film" : "26",
       "product" : "Agfa CTPrecisa 100 ",
       "camera" : "Nikon",
       "developer" : "De Bernardis",
-      "addinfo" : "Sizilien 16; ",
+      "addinfo" : "Sizilien 16/",
       "1" : {
          "place" : "Selinunt",
          "building" : "Tempel C(?)",
@@ -39097,11 +39097,11 @@
    },
    "1999-27" : {
       "year" : "1999",
-      "nr" : "27",
+      "film" : "27",
       "product" : "Agfa CTPrecisa 100",
       "camera" : "Nikon",
       "developer" : "De Bernardis",
-      "addinfo" : "Sizilien 17; ",
+      "addinfo" : "Sizilien 17/",
       "1" : {
          "place" : "Eraclea minoa",
          "building" : "(geolog. Formationen)",
@@ -39308,11 +39308,11 @@
    },
    "1999-28" : {
       "year" : "1999",
-      "nr" : "28",
+      "film" : "28",
       "product" : "Agfa CTPrecisa 100",
       "camera" : "Nikon",
       "developer" : "De Bernardis",
-      "addinfo" : "Sizilien 18; ",
+      "addinfo" : "Sizilien 18/",
       "1" : {
          "place" : "Agrigent",
          "building" : "Concordiatempel",
@@ -39547,11 +39547,11 @@
    },
    "1999-29" : {
       "year" : "1999",
-      "nr" : "29",
+      "film" : "29",
       "product" : "Agfa CTPrecisa 100",
       "camera" : "Nikon",
       "developer" : "De Bernardis",
-      "addinfo" : "Sizilien 19; ",
+      "addinfo" : "Sizilien 19/",
       "1" : {
          "place" : "Enna",
          "building" : "",
@@ -39772,11 +39772,11 @@
    },
    "1999-30" : {
       "year" : "1999",
-      "nr" : "30",
+      "film" : "30",
       "product" : "Agfa CTPrecisa 100",
       "camera" : "Nikon",
       "developer" : "De Bernardis",
-      "addinfo" : "Sizilien 20; ",
+      "addinfo" : "Sizilien 20/",
       "1" : {
          "place" : "Piazza Amerina",
          "building" : "Villa Casale",
@@ -40011,11 +40011,11 @@
    },
    "1999-31" : {
       "year" : "1999",
-      "nr" : "31",
+      "film" : "31",
       "product" : "Agfa CTPrecisa 100",
       "camera" : "Nikon",
       "developer" : "De Bernardis",
-      "addinfo" : "Sizilien 21; ",
+      "addinfo" : "Sizilien 21/",
       "1" : {
          "place" : "Piazza Amerina",
          "building" : "Villa Casale",
@@ -40250,11 +40250,11 @@
    },
    "1999-32" : {
       "year" : "1999",
-      "nr" : "32",
+      "film" : "32",
       "product" : "Agfa CTPrecisa 100",
       "camera" : "Nikon",
       "developer" : "De Bernardis",
-      "addinfo" : "Sizilien 22; ",
+      "addinfo" : "Sizilien 22/",
       "1" : {
          "place" : "Ragusa",
          "building" : "Dom",
@@ -40468,11 +40468,11 @@
    },
    "1999-33" : {
       "year" : "1999",
-      "nr" : "33",
+      "film" : "33",
       "product" : "Agfa CTPrecisa 100",
       "camera" : "Nikon",
       "developer" : "De Bernardis",
-      "addinfo" : "Sizilien 23; ",
+      "addinfo" : "Sizilien 23/",
       "1" : {
          "place" : "Noto",
          "building" : "Corso Vitt. Emanuele (Collegio?)",
@@ -40679,11 +40679,11 @@
    },
    "1999-34" : {
       "year" : "1999",
-      "nr" : "34",
+      "film" : "34",
       "product" : "Agfa CTPrecisa 100",
       "camera" : "Nikon",
       "developer" : "De Bernardis",
-      "addinfo" : "Sizilien 24; ",
+      "addinfo" : "Sizilien 24/",
       "1" : {
          "place" : "Syrakus",
          "building" : "Piazza Duomo",
@@ -40904,11 +40904,11 @@
    },
    "1999-35" : {
       "year" : "1999",
-      "nr" : "35",
+      "film" : "35",
       "product" : "Agfa CTPrecisa 100",
       "camera" : "Nikon",
       "developer" : "De Bernardis",
-      "addinfo" : "Sizilien 25; ",
+      "addinfo" : "Sizilien 25/",
       "1" : {
          "place" : "Ätna",
          "building" : "",
@@ -41101,11 +41101,11 @@
    },
    "1999-36" : {
       "year" : "1999",
-      "nr" : "36",
+      "film" : "36",
       "product" : "Fujichrome 100",
       "camera" : "Nikon",
       "developer" : "De Bernardis",
-      "addinfo" : "Sizilien 26; ",
+      "addinfo" : "Sizilien 26/",
       "1" : {
          "place" : "Alcantaraschlucht",
          "building" : "",
@@ -41298,7 +41298,7 @@
    },
    "1999-37" : {
       "year" : "1999",
-      "nr" : "37",
+      "film" : "37",
       "product" : "Kodak Ektachrome 100",
       "camera" : "Nikon",
       "developer" : "De Bernardis",
@@ -41501,7 +41501,7 @@
    },
    "1999-38" : {
       "year" : "1999",
-      "nr" : "38",
+      "film" : "38",
       "product" : "Agfa Ctprecisa 100",
       "camera" : "Olympus",
       "developer" : "De Bernardis",
@@ -41739,7 +41739,7 @@
    },
    "1999-39" : {
       "year" : "1999",
-      "nr" : "39",
+      "film" : "39",
       "product" : "Kodak Ektachrome 200",
       "camera" : "Nikon",
       "developer" : "De Bernardis",
@@ -41956,11 +41956,11 @@
    },
    "1999-40" : {
       "year" : "1999",
-      "nr" : "40",
+      "film" : "40",
       "product" : "Agfa Ctx100",
       "camera" : "Olympus",
       "developer" : "",
-      "addinfo" : "Batteriewechsel; ",
+      "addinfo" : "Batteriewechsel/",
       "1" : {
          "place" : "Rom",
          "building" : "Pal. Rivaldi",
@@ -42195,11 +42195,11 @@
    },
    "1999-41" : {
       "year" : "1999",
-      "nr" : "41",
+      "film" : "41",
       "product" : "Agfa CTPrecisa 100",
       "camera" : "Nikon",
       "developer" : "De Bernardis",
-      "addinfo" : "(überwiegend vor 9940); ",
+      "addinfo" : "(überwiegend vor 9940)/",
       "1" : {
          "place" : "Rom",
          "building" : "piazza del Popolo",
@@ -42434,7 +42434,7 @@
    },
    "1999-42" : {
       "year" : "1999",
-      "nr" : "42",
+      "film" : "42",
       "product" : "Agfa Ctprecisa 100",
       "camera" : "Olympus",
       "developer" : "Kodak express",
@@ -42665,7 +42665,7 @@
    },
    "1999-43" : {
       "year" : "1999",
-      "nr" : "43",
+      "film" : "43",
       "product" : "Fujii s/w 400",
       "camera" : "Olympus",
       "developer" : "",
@@ -42931,7 +42931,7 @@
    },
    "1999-44" : {
       "year" : "1999",
-      "nr" : "44",
+      "film" : "44",
       "product" : "Kodak Ektachrome 100",
       "camera" : "Olympus",
       "developer" : "Kodak express",
@@ -43106,11 +43106,11 @@
    },
    "1999-45" : {
       "year" : "1999",
-      "nr" : "45",
+      "film" : "45",
       "product" : "Agfa CTprcisa 100",
       "camera" : "Canon",
       "developer" : "Kodak express",
-      "addinfo" : "(Rest von Film von Fichera); ",
+      "addinfo" : "(Rest von Film von Fichera)/",
       "22" : {
          "place" : "Rom",
          "building" : "(Pincio)",
@@ -43205,11 +43205,11 @@
    },
    "1999-46" : {
       "year" : "1999",
-      "nr" : "46",
+      "film" : "46",
       "product" : "Agfa CTprecisa 100",
       "camera" : "Olympus",
       "developer" : "De Bernardis",
-      "addinfo" : "Rom; ",
+      "addinfo" : "Rom/",
       "1" : {
          "place" : "Rom",
          "building" : "S. Maddalena",
@@ -43458,7 +43458,7 @@
    },
    "1999-47" : {
       "year" : "1999",
-      "nr" : "47",
+      "film" : "47",
       "product" : "Agfa Ctprecisa 100",
       "camera" : "Olympus",
       "developer" : "De Bernardis",
@@ -43703,7 +43703,7 @@
    },
    "1999-48" : {
       "year" : "1999",
-      "nr" : "48",
+      "film" : "48",
       "product" : "Agfa Ctprecisa 100",
       "camera" : "Nikon",
       "developer" : "De Bernardis",
@@ -43941,7 +43941,7 @@
    },
    "1999-49" : {
       "year" : "1999",
-      "nr" : "49",
+      "film" : "49",
       "product" : "Agfa Ct Precisa100",
       "camera" : "Nikon",
       "developer" : "De Bernardis",
@@ -44179,11 +44179,11 @@
    },
    "1999-50" : {
       "year" : "1999",
-      "nr" : "50",
+      "film" : "50",
       "product" : "Agfa Ctprecisa 100",
       "camera" : "Olympus",
       "developer" : "De Bernardis",
-      "addinfo" : "(Bilder 1-10 schließen an 9947 an, Bilder 11ff. an 9949); ",
+      "addinfo" : "(Bilder 1-10 schließen an 9947 an, Bilder 11ff. an 9949)/",
       "1" : {
          "place" : "Ostia",
          "building" : "Stabilmento Plinius",
@@ -44404,7 +44404,7 @@
    },
    "1999-51" : {
       "year" : "1999",
-      "nr" : "51",
+      "film" : "51",
       "product" : "Kodak 100 prof. sw",
       "camera" : "Nikon",
       "developer" : "De Bernardis",
@@ -44642,7 +44642,7 @@
    },
    "1999-52" : {
       "year" : "1999",
-      "nr" : "52",
+      "film" : "52",
       "product" : "Agfa Ctprecisa 100",
       "camera" : "Olympus",
       "developer" : "De Bernardis",
@@ -44873,7 +44873,7 @@
    },
    "1999-53" : {
       "year" : "1999",
-      "nr" : "53",
+      "film" : "53",
       "product" : "Agfa Ctprecisa 100",
       "camera" : "Olympus",
       "developer" : "De Bernardis",
@@ -45132,11 +45132,11 @@
    },
    "1999-54" : {
       "year" : "1999",
-      "nr" : "54",
+      "film" : "54",
       "product" : "",
       "camera" : "",
       "developer" : "",
-      "addinfo" : "(in Access); ",
+      "addinfo" : "(in Access)/",
       "1" : {
          "place" : "",
          "building" : "",
@@ -45399,11 +45399,11 @@
    },
    "1999-55" : {
       "year" : "1999",
-      "nr" : "55",
+      "film" : "55",
       "product" : "",
       "camera" : "",
       "developer" : "",
-      "addinfo" : "(in Access); ",
+      "addinfo" : "(in Access)/",
       "1" : {
          "place" : "",
          "building" : "",
@@ -45666,11 +45666,11 @@
    },
    "1999-56" : {
       "year" : "1999",
-      "nr" : "56",
+      "film" : "56",
       "product" : "Kodak",
       "camera" : "Nikon",
       "developer" : "Janny",
-      "addinfo" : "(Fassadenrestaurierungen I) Rest in Diathek Hertziana; ",
+      "addinfo" : "(Fassadenrestaurierungen I) Rest in Diathek Hertziana/",
       "3" : {
          "place" : "Rom",
          "building" : "Konservatorenpal.",
@@ -45807,11 +45807,11 @@
    },
    "1999-57" : {
       "year" : "1999",
-      "nr" : "57",
+      "film" : "57",
       "product" : "Kodak",
       "camera" : "Nikon",
       "developer" : "Janny",
-      "addinfo" : "(Fassadenrestaurierungen II, Rest in Diathek Hertziana); ",
+      "addinfo" : "(Fassadenrestaurierungen II, Rest in Diathek Hertziana)/",
       "5" : {
          "place" : "Rom",
          "building" : "Pal. Farnese",
@@ -45850,7 +45850,7 @@
    },
    "1999-58" : {
       "year" : "1999",
-      "nr" : "58",
+      "film" : "58",
       "product" : "Agfa Ctprecisa 100",
       "camera" : "Olympus",
       "developer" : "Janny",
@@ -46109,11 +46109,11 @@
    },
    "1999-59" : {
       "year" : "1999",
-      "nr" : "59",
+      "film" : "59",
       "product" : "Agfa Ctprecisa 100",
       "camera" : "Nikon /Reproanl.",
       "developer" : "Janni",
-      "addinfo" : "1 = 1a; ",
+      "addinfo" : "1 = 1a/",
       "1" : {
          "place" : "",
          "building" : "",
@@ -46376,7 +46376,7 @@
    },
    "1999-60" : {
       "year" : "1999",
-      "nr" : "60",
+      "film" : "60",
       "product" : "Agfa Ctprecisa 100",
       "camera" : "",
       "developer" : "Kodak express (Entwicklungsfehler, Schwarz wurde rot)",
@@ -46551,11 +46551,11 @@
    },
    "1999-61" : {
       "year" : "1999",
-      "nr" : "61",
+      "film" : "61",
       "product" : "Kodak TMX 100",
       "camera" : "Nikon",
       "developer" : "",
-      "addinfo" : "Pläne Pal. Nardini, S. Maria del Popolo; ",
+      "addinfo" : "Pläne Pal. Nardini, S. Maria del Popolo/",
       "1" : {
          "place" : "",
          "building" : "",
@@ -46818,7 +46818,7 @@
    },
    "1999-62" : {
       "year" : "1999",
-      "nr" : "62",
+      "film" : "62",
       "product" : "Kodak Elitechrome 100",
       "camera" : "Olympus",
       "developer" : "De Bernardis",
@@ -47063,11 +47063,11 @@
    },
    "1999-63" : {
       "year" : "1999",
-      "nr" : "63",
+      "film" : "63",
       "product" : "Kodak Elitechrome 100",
       "camera" : "Olympus",
       "developer" : "Sauter",
-      "addinfo" : "9963=B; ",
+      "addinfo" : "9963=B/",
       "0" : {
          "place" : "Tivoli",
          "building" : "Ansicht",
@@ -47323,11 +47323,11 @@
    },
    "1999-64" : {
       "year" : "1999",
-      "nr" : "64",
+      "film" : "64",
       "product" : "Kodak Elitechrome 100",
       "camera" : "Olympus",
       "developer" : "Sauter",
-      "addinfo" : "C Perugia; ",
+      "addinfo" : "C Perugia/",
       "0" : {
          "place" : "Perugia",
          "building" : "Porta S. ...",
@@ -47583,11 +47583,11 @@
    },
    "1999-65" : {
       "year" : "1999",
-      "nr" : "65",
+      "film" : "65",
       "product" : "Kodak Elitechrome 100",
       "camera" : "Olympus",
       "developer" : "Randazzo",
-      "addinfo" : "Foligno/Asisi; ",
+      "addinfo" : "Foligno/Asisi/",
       "0" : {
          "place" : "Foligno",
          "building" : "Via...",
@@ -47843,11 +47843,11 @@
    },
    "1999-66" : {
       "year" : "1999",
-      "nr" : "66",
+      "film" : "66",
       "product" : "Perutz CR 100",
       "camera" : "Olympus",
       "developer" : "Sauter",
-      "addinfo" : "D; ",
+      "addinfo" : "D/",
       "0" : {
          "place" : "Leipzig",
          "building" : "Härtelstr., Pers.",
@@ -48103,11 +48103,11 @@
    },
    "1999-67" : {
       "year" : "1999",
-      "nr" : "67",
+      "film" : "67",
       "product" : "Perutz CR 100",
       "camera" : "Olympus",
       "developer" : "Sauter",
-      "addinfo" : "E; ",
+      "addinfo" : "E/",
       "0" : {
          "place" : "Grimma",
          "building" : "Pfarrkirche",
@@ -48363,11 +48363,11 @@
    },
    "1999-68" : {
       "year" : "1999",
-      "nr" : "68",
+      "film" : "68",
       "product" : "Agfa Ctprecisa",
       "camera" : "Olympus",
       "developer" : "Sauter",
-      "addinfo" : "F; ",
+      "addinfo" : "F/",
       "0" : {
          "place" : "Berlin",
          "building" : "Dagmar",
@@ -48623,11 +48623,11 @@
    },
    "1999-69" : {
       "year" : "1999",
-      "nr" : "69",
+      "film" : "69",
       "product" : "Fuji RD 100",
       "camera" : "Olympus",
       "developer" : "Sauter",
-      "addinfo" : "G; ",
+      "addinfo" : "G/",
       "0" : {
          "place" : "Berlin",
          "building" : "Potsdamer Platz",
@@ -48883,11 +48883,11 @@
    },
    "1999-70" : {
       "year" : "1999",
-      "nr" : "70",
+      "film" : "70",
       "product" : "Fuij RD 100",
       "camera" : "Olympus",
       "developer" : "Sauter",
-      "addinfo" : "I; ",
+      "addinfo" : "I/",
       "0" : {
          "place" : "Potsdam",
          "building" : "Neues Palais",
@@ -49143,7 +49143,7 @@
    },
    "1999-71" : {
       "year" : "1999",
-      "nr" : "71",
+      "film" : "71",
       "product" : "Agfa Ctprecisa 100",
       "camera" : "Olympus",
       "developer" : "Sauter",
@@ -49388,11 +49388,11 @@
    },
    "1999-72" : {
       "year" : "1999",
-      "nr" : "72",
+      "film" : "72",
       "product" : "Agfa Ctprecisa",
       "camera" : "Olympus",
       "developer" : "Randazzo",
-      "addinfo" : "München, Prato; ",
+      "addinfo" : "München, Prato/",
       "0" : {
          "place" : "München",
          "building" : "Nordendstr.",
@@ -49648,11 +49648,11 @@
    },
    "1999-73" : {
       "year" : "1999",
-      "nr" : "73",
+      "film" : "73",
       "product" : "Agfa Ctprecisa 100",
       "camera" : "Olympus",
       "developer" : "Randazzo",
-      "addinfo" : "Poggio a Caiano; ",
+      "addinfo" : "Poggio a Caiano/",
       "0" : {
          "place" : "Prato",
          "building" : "S. Domenico",
@@ -49887,11 +49887,11 @@
    },
    "1999-74" : {
       "year" : "1999",
-      "nr" : "74",
+      "film" : "74",
       "product" : "Agfa RS 100",
       "camera" : "",
       "developer" : "",
-      "addinfo" : "(Filmnummer urspr. nicht belegt - jetzt für Neapeldias von M. Quast, also chronolog. nach 9978); ",
+      "addinfo" : "(Filmnummer urspr. nicht belegt - jetzt für Neapeldias von M. Quast, also chronolog. nach 9978)/",
       "3" : {
          "place" : "Neapel",
          "building" : "Capodimonte",
@@ -49965,7 +49965,7 @@
    },
    "1999-75" : {
       "year" : "1999",
-      "nr" : "75",
+      "film" : "75",
       "product" : "Kodak professional 100sw",
       "camera" : "Nikon",
       "developer" : "",
@@ -50203,11 +50203,11 @@
    },
    "1999-76" : {
       "year" : "1999",
-      "nr" : "76",
+      "film" : "76",
       "product" : "Agfa Ctprecisa",
       "camera" : "Olympus",
       "developer" : "",
-      "addinfo" : "Batteriewechsel ; ",
+      "addinfo" : "Batteriewechsel /",
       "1" : {
          "place" : "Rom",
          "building" : "Bibl. Hertziana",
@@ -50421,7 +50421,7 @@
    },
    "1999-77" : {
       "year" : "1999",
-      "nr" : "77",
+      "film" : "77",
       "product" : "Agfa Ctprecisa",
       "camera" : "Olympus",
       "developer" : "De Bernardis",
@@ -50673,7 +50673,7 @@
    },
    "1999-78" : {
       "year" : "1999",
-      "nr" : "78",
+      "film" : "78",
       "product" : "Agfa Ctprecisa",
       "camera" : "Olympus",
       "developer" : "De Bernardis",
@@ -50918,7 +50918,7 @@
    },
    "1999-79" : {
       "year" : "1999",
-      "nr" : "79",
+      "film" : "79",
       "product" : "Agfa Ctprecisa",
       "camera" : "Olympus",
       "developer" : "De Bernardis",
@@ -51156,7 +51156,7 @@
    },
    "1999-80" : {
       "year" : "1999",
-      "nr" : "80",
+      "film" : "80",
       "product" : "Agfa Ctprecisa",
       "camera" : "Olympus",
       "developer" : "De Bernardis",
@@ -51401,11 +51401,11 @@
    },
    "1999-81" : {
       "year" : "1999",
-      "nr" : "81",
+      "film" : "81",
       "product" : "Kodak professional 100 sw",
       "camera" : "Nikon",
       "developer" : "De Bernardis",
-      "addinfo" : "Vatikan, Belvedere Innozenz' VIII (schließt an 9976 an); ",
+      "addinfo" : "Vatikan, Belvedere Innozenz' VIII (schließt an 9976 an)/",
       "1" : {
          "place" : "Gaeta",
          "building" : "Monte spaccato",
@@ -51626,7 +51626,7 @@
    },
    "1999-82" : {
       "year" : "1999",
-      "nr" : "82",
+      "film" : "82",
       "product" : "Kodak 100",
       "camera" : "Nikon",
       "developer" : "janny",
@@ -51794,7 +51794,7 @@
    },
    "1999-83" : {
       "year" : "1999",
-      "nr" : "83",
+      "film" : "83",
       "product" : "Agfa Ctprecisa 100",
       "camera" : "Olympus",
       "developer" : "De Bernardis",
@@ -52018,11 +52018,11 @@
    },
    "1999-84" : {
       "year" : "1999",
-      "nr" : "84",
+      "film" : "84",
       "product" : "Agfa Ctprecisa 100",
       "camera" : "Olympus",
       "developer" : "De Bernardis",
-      "addinfo" : "(Rest des Films herausgenommen zum Fotografieren in der Ausstellung); ",
+      "addinfo" : "(Rest des Films herausgenommen zum Fotografieren in der Ausstellung)/",
       "1" : {
          "place" : "Mantova",
          "building" : "Pal. del Te",
@@ -52096,7 +52096,7 @@
    },
    "1999-85" : {
       "year" : "1999",
-      "nr" : "85",
+      "film" : "85",
       "product" : "Agfa Ctprecisa 100",
       "camera" : "Olympus",
       "developer" : "De Bernardis",
@@ -52348,7 +52348,7 @@
    },
    "1999-86" : {
       "year" : "1999",
-      "nr" : "86",
+      "film" : "86",
       "product" : "Kodak Ektachrome 100",
       "camera" : "Olympus",
       "developer" : "De Bernardis",
@@ -52586,11 +52586,11 @@
    },
    "1999-87" : {
       "year" : "1999",
-      "nr" : "87",
+      "film" : "87",
       "product" : "Kodak pc 100",
       "camera" : "Olympus",
       "developer" : "De Bernardis",
-      "addinfo" : "(im Fotoladen vergessen, erst 2.2000 abgeholt, deswegen a-Nummer); ",
+      "addinfo" : "(im Fotoladen vergessen, erst 2.2000 abgeholt, deswegen a-Nummer)/",
       "1" : {
          "place" : "Rom",
          "building" : "Vicolo Savelli(?)",
@@ -52825,7 +52825,7 @@
    },
    "1999-88" : {
       "year" : "1999",
-      "nr" : "88",
+      "film" : "88",
       "product" : "Kodak PC 100",
       "camera" : "Olympus",
       "developer" : "Sauter",
@@ -53070,7 +53070,7 @@
    },
    "1999-89" : {
       "year" : "1999",
-      "nr" : "89",
+      "film" : "89",
       "product" : "Kodak PC 100",
       "camera" : "Nikon",
       "developer" : "Sauter",
@@ -53287,7 +53287,7 @@
    },
    "1999-90" : {
       "year" : "1999",
-      "nr" : "90",
+      "film" : "90",
       "product" : "Kodak EL -2 400",
       "camera" : "Nikon",
       "developer" : "Sauter",
@@ -53539,11 +53539,11 @@
    },
    "1999-91" : {
       "year" : "1999",
-      "nr" : "91",
+      "film" : "91",
       "product" : "Fuji RD 200",
       "camera" : "",
       "developer" : "",
-      "addinfo" : "2a = 2; ",
+      "addinfo" : "2a = 2/",
       "2" : {
          "place" : "Gubbio",
          "building" : "S. Francesco",
@@ -53792,7 +53792,7 @@
    },
    "1999-92" : {
       "year" : "1999",
-      "nr" : "92",
+      "film" : "92",
       "product" : "Kodak Ektachrome 100",
       "camera" : "Nikon",
       "developer" : "De Bernardis",
@@ -54044,11 +54044,11 @@
    },
    "1999-93" : {
       "year" : "1999",
-      "nr" : "93",
+      "film" : "93",
       "product" : "",
       "camera" : "Olympus",
       "developer" : "",
-      "addinfo" : "(München, Modena); ",
+      "addinfo" : "(München, Modena)/",
       "1" : {
          "place" : "München",
          "building" : "Neuhauser Str.",
@@ -54276,7 +54276,7 @@
    },
    "1999-94" : {
       "year" : "1999",
-      "nr" : "94",
+      "film" : "94",
       "product" : "Agfa RSX 200",
       "camera" : "Nikon",
       "developer" : "De Bernardis",
@@ -54458,7 +54458,7 @@
    },
    "2000-01" : {
       "year" : "2000",
-      "nr" : "01",
+      "film" : "01",
       "product" : "Agfa RSX 200",
       "camera" : "Olympus",
       "developer" : "Janny",
@@ -54717,11 +54717,11 @@
    },
    "2000-02" : {
       "year" : "2000",
-      "nr" : "02",
+      "film" : "02",
       "product" : "",
       "camera" : "Olympus",
       "developer" : "",
-      "addinfo" : "Skifahren; ",
+      "addinfo" : "Skifahren/",
       "1" : {
          "place" : "Rom",
          "building" : "Via Domenichino",
@@ -54956,11 +54956,11 @@
    },
    "2000-03" : {
       "year" : "2000",
-      "nr" : "03",
+      "film" : "03",
       "product" : "Agfa Ctprecisa 100",
       "camera" : "Nikon",
       "developer" : "De Bernardis",
-      "addinfo" : "(durch falsche Entwicklung - als Negativfilm - ruiniert); ",
+      "addinfo" : "(durch falsche Entwicklung - als Negativfilm - ruiniert)/",
       "1" : {
          "place" : "S. Oreste",
          "building" : "Ansicht mit Monte Soratte",
@@ -55216,7 +55216,7 @@
    },
    "2000-04" : {
       "year" : "2000",
-      "nr" : "04",
+      "film" : "04",
       "product" : "Agfa Ctprecisa 100",
       "camera" : "Nikon",
       "developer" : "Janni",
@@ -55468,11 +55468,11 @@
    },
    "2000-05" : {
       "year" : "2000",
-      "nr" : "05",
+      "film" : "05",
       "product" : "Agfa CTXprecisa 100",
       "camera" : "Olympus",
       "developer" : "",
-      "addinfo" : "Skifahren 19.2.; ",
+      "addinfo" : "Skifahren 19.2./",
       "00" : {
          "place" : "Roccaraso",
          "building" : "",
@@ -55721,7 +55721,7 @@
    },
    "2000-06" : {
       "year" : "2000",
-      "nr" : "06",
+      "film" : "06",
       "product" : "Kodak 400",
       "camera" : "Olympus",
       "developer" : "Janni",
@@ -55952,7 +55952,7 @@
    },
    "2000-07" : {
       "year" : "2000",
-      "nr" : "07",
+      "film" : "07",
       "product" : "Kodak EC 100",
       "camera" : "Nikon",
       "developer" : "Janni",
@@ -56218,7 +56218,7 @@
    },
    "2000-08" : {
       "year" : "2000",
-      "nr" : "08",
+      "film" : "08",
       "product" : "Kodak professional VS 100",
       "camera" : "Nikon",
       "developer" : "Janni",
@@ -56477,7 +56477,7 @@
    },
    "2000-09" : {
       "year" : "2000",
-      "nr" : "09",
+      "film" : "09",
       "product" : "Kodak professional 100 VS",
       "camera" : "Nikon",
       "developer" : "Janni",
@@ -56743,11 +56743,11 @@
    },
    "2000-10" : {
       "year" : "2000",
-      "nr" : "10",
+      "film" : "10",
       "product" : "Kodak professional SW 100",
       "camera" : "Nikon",
       "developer" : "Janni",
-      "addinfo" : "schließt an 0007 und 0009 an (zwischendurch herausgenommen); ",
+      "addinfo" : "schließt an 0007 und 0009 an (zwischendurch herausgenommen)/",
       "1" : {
          "place" : "Siena",
          "building" : "Pal. delle Papesse",
@@ -56989,11 +56989,11 @@
    },
    "2000-11" : {
       "year" : "2000",
-      "nr" : "11",
+      "film" : "11",
       "product" : "Agfa Ctprecisa 100",
       "camera" : "Reproanlage",
       "developer" : "Janni",
-      "addinfo" : "Repros; ",
+      "addinfo" : "Repros/",
       "1" : {
          "place" : "Repro",
          "building" : "Pal. Venezia",
@@ -57214,7 +57214,7 @@
    },
    "2000-12" : {
       "year" : "2000",
-      "nr" : "12",
+      "film" : "12",
       "product" : "Agfa Ctprecisa 100",
       "camera" : "Olympus",
       "developer" : "Sauter",
@@ -57473,7 +57473,7 @@
    },
    "2000-13" : {
       "year" : "2000",
-      "nr" : "13",
+      "film" : "13",
       "product" : "Agfa Ctprecisa 100",
       "camera" : "Olympus",
       "developer" : "Sauter",
@@ -57732,7 +57732,7 @@
    },
    "2000-14" : {
       "year" : "2000",
-      "nr" : "14",
+      "film" : "14",
       "product" : "Agfa Ctprecisa 100",
       "camera" : "Olympus",
       "developer" : "De Bernardis",
@@ -57991,7 +57991,7 @@
    },
    "2000-15" : {
       "year" : "2000",
-      "nr" : "15",
+      "film" : "15",
       "product" : "Agfa CTprecisa",
       "camera" : "Nikon",
       "developer" : "De Bernardis",
@@ -58208,7 +58208,7 @@
    },
    "2000-16" : {
       "year" : "2000",
-      "nr" : "16",
+      "film" : "16",
       "product" : "Agfa Ctprecisa",
       "camera" : "Olympus",
       "developer" : "Sauter",
@@ -58467,7 +58467,7 @@
    },
    "2000-17" : {
       "year" : "2000",
-      "nr" : "17",
+      "film" : "17",
       "product" : "Agfa Ctprecisa 100",
       "camera" : "Nikon",
       "developer" : "Kodak express",
@@ -58733,11 +58733,11 @@
    },
    "2000-18" : {
       "year" : "2000",
-      "nr" : "18",
+      "film" : "18",
       "product" : "Agfa Ctprecisa 100",
       "camera" : "Olympus",
       "developer" : "Sauter",
-      "addinfo" : "(nur 10 Bilder, da vorzeitig herausgenommen); ",
+      "addinfo" : "(nur 10 Bilder, da vorzeitig herausgenommen)/",
       "0" : {
          "place" : "Rom",
          "building" : "S. Isidoro",
@@ -58811,11 +58811,11 @@
    },
    "2000-19" : {
       "year" : "2000",
-      "nr" : "19",
+      "film" : "19",
       "product" : "Agfa Ctprecisa",
       "camera" : "Nikon",
       "developer" : " Janni",
-      "addinfo" : "(Frascativillen); ",
+      "addinfo" : "(Frascativillen)/",
       "4" : {
          "place" : "Colonna",
          "building" : "Pal. Colonna",
@@ -59057,11 +59057,11 @@
    },
    "2000-20" : {
       "year" : "2000",
-      "nr" : "20",
+      "film" : "20",
       "product" : "Agfa Ctprecisa 100",
       "camera" : "Nikon",
       "developer" : "De Bernardis",
-      "addinfo" : "(Frascativillen II); ",
+      "addinfo" : "(Frascativillen II)/",
       "2" : {
          "place" : "Frascati",
          "building" : "Villa Falconieri",
@@ -59275,7 +59275,7 @@
    },
    "2000-21" : {
       "year" : "2000",
-      "nr" : "21",
+      "film" : "21",
       "product" : "Agfa CTprecisa 100",
       "camera" : "Nikon",
       "developer" : "De Bernardis",
@@ -59492,11 +59492,11 @@
    },
    "2000-22" : {
       "year" : "2000",
-      "nr" : "22",
+      "film" : "22",
       "product" : "Agfa Ctprecisa 100",
       "camera" : "Nikon",
       "developer" : "De Bernardis",
-      "addinfo" : "Spoleto 2.7./S. Pietro in Valle 3.7./S. Giovanni in Laterano 5.7.; ",
+      "addinfo" : "Spoleto 2.7./S. Pietro in Valle 3.7./S. Giovanni in Laterano 5.7./",
       "1" : {
          "place" : "Spoleto",
          "building" : "",
@@ -59745,11 +59745,11 @@
    },
    "2000-23" : {
       "year" : "2000",
-      "nr" : "23",
+      "film" : "23",
       "product" : "Agfa Ctprecisa 100",
       "camera" : "Nikon",
       "developer" : "Sauter",
-      "addinfo" : "Kaukasus 1; ",
+      "addinfo" : "Kaukasus 1/",
       "2" : {
          "place" : "Rom",
          "building" : "S. Giovanni in Laterano",
@@ -59998,11 +59998,11 @@
    },
    "2000-24" : {
       "year" : "2000",
-      "nr" : "24",
+      "film" : "24",
       "product" : "Agfa Ctprecisa 100",
       "camera" : "Nikon",
       "developer" : "De Bernardis",
-      "addinfo" : "Kaukasus 2; Trabzon; ",
+      "addinfo" : "Kaukasus 2/Trabzon/",
       "3" : {
          "place" : "Trabzon",
          "building" : "Aya Sofia",
@@ -60244,11 +60244,11 @@
    },
    "2000-25" : {
       "year" : "2000",
-      "nr" : "25",
+      "film" : "25",
       "product" : "Agfa Ctprecisa",
       "camera" : "Nikon",
       "developer" : "Sauter",
-      "addinfo" : "Kaukasus 3; Trabzon - Kutaissi; ",
+      "addinfo" : "Kaukasus 3/Trabzon - Kutaissi/",
       "3" : {
          "place" : "Trabzon",
          "building" : "",
@@ -60497,11 +60497,11 @@
    },
    "2000-26" : {
       "year" : "2000",
-      "nr" : "26",
+      "film" : "26",
       "product" : "Agfa Ctprecisa",
       "camera" : "Nikon",
       "developer" : "Sauter",
-      "addinfo" : "Kaukasus 4; Kutaissi - Gelati; ",
+      "addinfo" : "Kaukasus 4/Kutaissi - Gelati/",
       "4" : {
          "place" : "Kutaissi",
          "building" : "",
@@ -60743,11 +60743,11 @@
    },
    "2000-27" : {
       "year" : "2000",
-      "nr" : "27",
+      "film" : "27",
       "product" : "Agfa Ctprecisa",
       "camera" : "Nikon",
       "developer" : "Sauter",
-      "addinfo" : "Kaukasus 5; Gelati - Nikorzminda; ",
+      "addinfo" : "Kaukasus 5/Gelati - Nikorzminda/",
       "3" : {
          "place" : "Gelati",
          "building" : "",
@@ -60996,11 +60996,11 @@
    },
    "2000-28" : {
       "year" : "2000",
-      "nr" : "28",
+      "film" : "28",
       "product" : "Agfa Ctprecisa 100",
       "camera" : "Nikon",
       "developer" : "Sauter",
-      "addinfo" : "Kaukasus 6; Nikorzminda - Surami; ",
+      "addinfo" : "Kaukasus 6/Nikorzminda - Surami/",
       "1" : {
          "place" : "?",
          "building" : "Kühe auf der Straße",
@@ -61256,11 +61256,11 @@
    },
    "2000-29" : {
       "year" : "2000",
-      "nr" : "29",
+      "film" : "29",
       "product" : "Agfa Ctprecisa100",
       "camera" : "Nikon",
       "developer" : "Sauter",
-      "addinfo" : "Kaukasus 7; Zarsma - Safara; (1a = 1); ",
+      "addinfo" : "Kaukasus 7/Zarsma - Safara/(1a = 1)/",
       "3" : {
          "place" : "?",
          "building" : "",
@@ -61502,11 +61502,11 @@
    },
    "2000-30" : {
       "year" : "2000",
-      "nr" : "30",
+      "film" : "30",
       "product" : "Agfa CTprecisa 100",
       "camera" : "Nikon",
       "developer" : "Sauter",
-      "addinfo" : "Kaukasus 8; Kertvisi - Zromi; ",
+      "addinfo" : "Kaukasus 8/Kertvisi - Zromi/",
       "2" : {
          "place" : "Mtkvaratal",
          "building" : "",
@@ -61762,11 +61762,11 @@
    },
    "2000-31" : {
       "year" : "2000",
-      "nr" : "31",
+      "film" : "31",
       "product" : "Agfa CtPrecisa 100",
       "camera" : "Nikon",
       "developer" : "Sauter",
-      "addinfo" : "Kaukasus 9; Zromi - Urbnisi; ",
+      "addinfo" : "Kaukasus 9/Zromi - Urbnisi/",
       "1" : {
          "place" : "Zromi",
          "building" : "Erlöserkirche",
@@ -62029,11 +62029,11 @@
    },
    "2000-32" : {
       "year" : "2000",
-      "nr" : "32",
+      "film" : "32",
       "product" : "Agfa Ctprecisa 100",
       "camera" : "Nikon",
       "developer" : "Sauter",
-      "addinfo" : "Kaukasus 10; Tbilissi/Mzcheta - Ateni; (1a=1); ",
+      "addinfo" : "Kaukasus 10/Tbilissi/Mzcheta - Ateni/(1a=1)/",
       "3" : {
          "place" : "Tbilissi",
          "building" : "Straßenbauministerium",
@@ -62282,11 +62282,11 @@
    },
    "2000-33" : {
       "year" : "2000",
-      "nr" : "33",
+      "film" : "33",
       "product" : "Kodak PC 100",
       "camera" : "Nikon",
       "developer" : "Sauter",
-      "addinfo" : "Kaukasus 11; Ateni - Kaukasus; ",
+      "addinfo" : "Kaukasus 11/Ateni - Kaukasus/",
       "1" : {
          "place" : "Ateni",
          "building" : "",
@@ -62542,11 +62542,11 @@
    },
    "2000-34" : {
       "year" : "2000",
-      "nr" : "34",
+      "film" : "34",
       "product" : "Agfa Ctprecisa 100",
       "camera" : "Nikon",
       "developer" : "Sauter",
-      "addinfo" : "Kaukasus 12; Kaukasus - Tbilissi; ",
+      "addinfo" : "Kaukasus 12/Kaukasus - Tbilissi/",
       "1" : {
          "place" : "georg. Heerstraße",
          "building" : "Stände an Wasserstelle",
@@ -62802,11 +62802,11 @@
    },
    "2000-35" : {
       "year" : "2000",
-      "nr" : "35",
+      "film" : "35",
       "product" : "Agfa Ctprecisa 100",
       "camera" : "Nikon",
       "developer" : "Sauter",
-      "addinfo" : "Kaukasus 13; Tbilissi - Betania; ",
+      "addinfo" : "Kaukasus 13/Tbilissi - Betania/",
       "2" : {
          "place" : "Tbilissi",
          "building" : "",
@@ -63062,11 +63062,11 @@
    },
    "2000-36" : {
       "year" : "2000",
-      "nr" : "36",
+      "film" : "36",
       "product" : "Agfa Ctprecisa",
       "camera" : "Nikon",
       "developer" : "De Bernardis",
-      "addinfo" : "Kaukasus 14; Manglisi - Bolnisi; ",
+      "addinfo" : "Kaukasus 14/Manglisi - Bolnisi/",
       "1" : {
          "place" : "Manglisi",
          "building" : "Torturm",
@@ -63322,11 +63322,11 @@
    },
    "2000-37" : {
       "year" : "2000",
-      "nr" : "37",
+      "film" : "37",
       "product" : "Agfa Ctprecisa",
       "camera" : "Nikon",
       "developer" : "Sauter",
-      "addinfo" : "Kaukasus 15; Bolnisi - Gurdschani; ",
+      "addinfo" : "Kaukasus 15/Bolnisi - Gurdschani/",
       "3" : {
          "place" : "",
          "building" : "",
@@ -63575,11 +63575,11 @@
    },
    "2000-38" : {
       "year" : "2000",
-      "nr" : "38",
+      "film" : "38",
       "product" : "Agfa Ctprecisa 100",
       "camera" : "Nikon",
       "developer" : "De Bernardis",
-      "addinfo" : "Kaukasus 16; Gurdschani - Watschnadsiani; ",
+      "addinfo" : "Kaukasus 16/Gurdschani - Watschnadsiani/",
       "3" : {
          "place" : "Gurdschani",
          "building" : "",
@@ -63821,11 +63821,11 @@
    },
    "2000-39" : {
       "year" : "2000",
-      "nr" : "39",
+      "film" : "39",
       "product" : "Agfa Ctprecisa 100",
       "camera" : "Nikon",
       "developer" : "Sauter",
-      "addinfo" : "Kaukasus 17; Tbilissi - Edschmiadsin; ",
+      "addinfo" : "Kaukasus 17/Tbilissi - Edschmiadsin/",
       "2" : {
          "place" : "Schroma",
          "building" : "",
@@ -64081,11 +64081,11 @@
    },
    "2000-40" : {
       "year" : "2000",
-      "nr" : "40",
+      "film" : "40",
       "product" : "Agfa Ctprecisa 100",
       "camera" : "Nikon",
       "developer" : "Sauter",
-      "addinfo" : "Kaukasus 18; Edschmiadsin - Hagazin; (1a=1); ",
+      "addinfo" : "Kaukasus 18/Edschmiadsin - Hagazin/(1a=1)/",
       "1" : {
          "place" : "Edschmiadsin",
          "building" : "",
@@ -64341,11 +64341,11 @@
    },
    "2000-41" : {
       "year" : "2000",
-      "nr" : "41",
+      "film" : "41",
       "product" : "Agfa Ctprecisa 100",
       "camera" : "Nikon",
       "developer" : "Sauter",
-      "addinfo" : "Kaukasus 19; Hagazin - Geghart; (1a = 1); ",
+      "addinfo" : "Kaukasus 19/Hagazin - Geghart/(1a = 1)/",
       "2" : {
          "place" : "Hagazin",
          "building" : "",
@@ -64594,11 +64594,11 @@
    },
    "2000-42" : {
       "year" : "2000",
-      "nr" : "42",
+      "film" : "42",
       "product" : "Agfa Ctprecisa 100",
       "camera" : "Nikon",
       "developer" : "Sauter",
-      "addinfo" : "Kaukasus 20; Geghart - Hovannavank; ",
+      "addinfo" : "Kaukasus 20/Geghart - Hovannavank/",
       "2" : {
          "place" : "Geghart",
          "building" : "",
@@ -64847,11 +64847,11 @@
    },
    "2000-43" : {
       "year" : "2000",
-      "nr" : "43",
+      "film" : "43",
       "product" : "Agfa Ctprecisa 100",
       "camera" : "Nikon",
       "developer" : "Sauter",
-      "addinfo" : "Kaukasus 21; Hovannavank - Jerevan; ",
+      "addinfo" : "Kaukasus 21/Hovannavank - Jerevan/",
       "1" : {
          "place" : "Samoshavank",
          "building" : "",
@@ -65114,11 +65114,11 @@
    },
    "2000-44" : {
       "year" : "2000",
-      "nr" : "44",
+      "film" : "44",
       "product" : "Agfa Ctprecisa 100",
       "camera" : "Nikon",
       "developer" : "De Bernardis",
-      "addinfo" : "Kaukasus 22; Jerevan - Irind; ",
+      "addinfo" : "Kaukasus 22/Jerevan - Irind/",
       "2" : {
          "place" : "Jerevan",
          "building" : "",
@@ -65374,11 +65374,11 @@
    },
    "2000-45" : {
       "year" : "2000",
-      "nr" : "45",
+      "film" : "45",
       "product" : "Agfa Ctprecisa 100",
       "camera" : "Nikon",
       "developer" : "Sauter",
-      "addinfo" : "Kaukasus 23; Irind - Mastara; ",
+      "addinfo" : "Kaukasus 23/Irind - Mastara/",
       "2" : {
          "place" : "Talin",
          "building" : "",
@@ -65634,11 +65634,11 @@
    },
    "2000-46" : {
       "year" : "2000",
-      "nr" : "46",
+      "film" : "46",
       "product" : "Kodak PC 100 (superblaustichig!)",
       "camera" : "Nikon",
       "developer" : "Sauter",
-      "addinfo" : "Kaukasus 24; Artik - Sanahin; ",
+      "addinfo" : "Kaukasus 24/Artik - Sanahin/",
       "1" : {
          "place" : "?",
          "building" : "Kirche",
@@ -65901,11 +65901,11 @@
    },
    "2000-47" : {
       "year" : "2000",
-      "nr" : "47",
+      "film" : "47",
       "product" : "Konica 100 (grünstichig)",
       "camera" : "Nikon",
       "developer" : "Sauter",
-      "addinfo" : "Kaukasus 25; Dvin - (Sisian); ",
+      "addinfo" : "Kaukasus 25/Dvin - (Sisian)/",
       "2" : {
          "place" : "Dvin",
          "building" : "Patriarchenpalast",
@@ -66161,11 +66161,11 @@
    },
    "2000-48" : {
       "year" : "2000",
-      "nr" : "48",
+      "film" : "48",
       "product" : "Konica 100",
       "camera" : "Nikon",
       "developer" : "Sauter",
-      "addinfo" : "Kaukasus 26; (Sisian) - Noravank; (1a=1); ",
+      "addinfo" : "Kaukasus 26/(Sisian) - Noravank/(1a=1)/",
       "2" : {
          "place" : "(Fahrt nach Goris)",
          "building" : "",
@@ -66407,11 +66407,11 @@
    },
    "2000-49" : {
       "year" : "2000",
-      "nr" : "49",
+      "film" : "49",
       "product" : "Konica 100",
       "camera" : "Nikon",
       "developer" : "Sauter",
-      "addinfo" : "Kaukasus 27; Noravank - Sisian; ",
+      "addinfo" : "Kaukasus 27/Noravank - Sisian/",
       "1" : {
          "place" : "Tatev",
          "building" : "",
@@ -66674,11 +66674,11 @@
    },
    "2000-50" : {
       "year" : "2000",
-      "nr" : "50",
+      "film" : "50",
       "product" : "Konica 100",
       "camera" : "Nikon",
       "developer" : "Sauter",
-      "addinfo" : "Kaukasus 28; Jerevan - Istambul; ",
+      "addinfo" : "Kaukasus 28/Jerevan - Istambul/",
       "2" : {
          "place" : "Jerevan",
          "building" : "Blick aus dem Matenadaran",
@@ -66927,11 +66927,11 @@
    },
    "2000-51" : {
       "year" : "2000",
-      "nr" : "51",
+      "film" : "51",
       "product" : "Konica 100",
       "camera" : "Nikon",
       "developer" : "Sauter",
-      "addinfo" : "Kaukasus 29; Istambul; ",
+      "addinfo" : "Kaukasus 29/Istambul/",
       "2" : {
          "place" : "Istambul",
          "building" : "Topkapi",
@@ -67166,7 +67166,7 @@
    },
    "2000-52" : {
       "year" : "2000",
-      "nr" : "52",
+      "film" : "52",
       "product" : "Agfa Ctprecisa 100",
       "camera" : "Olympus",
       "developer" : "",
@@ -67425,7 +67425,7 @@
    },
    "2000-53" : {
       "year" : "2000",
-      "nr" : "53",
+      "film" : "53",
       "product" : "Konica",
       "camera" : "Nikon",
       "developer" : "De Bernardis",
@@ -67628,7 +67628,7 @@
    },
    "2000-54" : {
       "year" : "2000",
-      "nr" : "54",
+      "film" : "54",
       "product" : "Agfa Ctprecisa",
       "camera" : "Olympus",
       "developer" : "De Bernardis",
@@ -67880,7 +67880,7 @@
    },
    "2000-55" : {
       "year" : "2000",
-      "nr" : "55",
+      "film" : "55",
       "product" : "Agfa Ctprecisa 100",
       "camera" : "Olympus",
       "developer" : "De Bernardis",
@@ -68139,7 +68139,7 @@
    },
    "2000-56" : {
       "year" : "2000",
-      "nr" : "56",
+      "film" : "56",
       "product" : "Agfa Ctprecisa 100",
       "camera" : "Olympus",
       "developer" : "DeBernardis",
@@ -68370,7 +68370,7 @@
    },
    "2000-57" : {
       "year" : "2000",
-      "nr" : "57",
+      "film" : "57",
       "product" : "Agfa CTprecisa 100",
       "camera" : "Nikon",
       "developer" : "De Bernardis",
@@ -68538,7 +68538,7 @@
    },
    "2000-58" : {
       "year" : "2000",
-      "nr" : "58",
+      "film" : "58",
       "product" : "Agfa CTprecisa",
       "camera" : "Olympus",
       "developer" : "",
@@ -68748,7 +68748,7 @@
    },
    "2000-59" : {
       "year" : "2000",
-      "nr" : "59",
+      "film" : "59",
       "product" : "Agfa CTprecisa 100",
       "camera" : "Nikon",
       "developer" : "De Bernardis",
@@ -69007,7 +69007,7 @@
    },
    "2000-60" : {
       "year" : "2000",
-      "nr" : "60",
+      "film" : "60",
       "product" : "",
       "camera" : "",
       "developer" : "",
@@ -69266,7 +69266,7 @@
    },
    "2000-61" : {
       "year" : "2000",
-      "nr" : "61",
+      "film" : "61",
       "product" : "Kodakcolor 400",
       "camera" : "Olympus",
       "developer" : "",
@@ -69525,7 +69525,7 @@
    },
    "2000-62" : {
       "year" : "2000",
-      "nr" : "62",
+      "film" : "62",
       "product" : "Agfa Ctprecisa 100",
       "camera" : "Olympus",
       "developer" : "De Bernardis",
@@ -69784,11 +69784,11 @@
    },
    "2000-63" : {
       "year" : "2000",
-      "nr" : "63",
+      "film" : "63",
       "product" : "Agfa Ctprecisa 100",
       "camera" : "Nikon (Ulrike)",
       "developer" : "De Bernardis",
-      "addinfo" : "(eigentl. ca. 0020); ",
+      "addinfo" : "(eigentl. ca. 0020)/",
       "0" : {
          "place" : "Rom",
          "building" : "S. Giovanni in Laterano",
@@ -69890,11 +69890,11 @@
    },
    "2000-64" : {
       "year" : "2000",
-      "nr" : "64",
+      "film" : "64",
       "product" : "",
       "camera" : "",
       "developer" : "",
-      "addinfo" : "(Nr. nicht vergeben); ",
+      "addinfo" : "(Nr. nicht vergeben)/",
       "1" : {
          "place" : "",
          "building" : "",
@@ -70157,7 +70157,7 @@
    },
    "2000-65" : {
       "year" : "2000",
-      "nr" : "65",
+      "film" : "65",
       "product" : "Agfa Ctprecisa",
       "camera" : "Nikon",
       "developer" : "De Bernardis",
@@ -70416,7 +70416,7 @@
    },
    "2000-66" : {
       "year" : "2000",
-      "nr" : "66",
+      "film" : "66",
       "product" : "Agfa Ctprecisa",
       "camera" : "Nikon",
       "developer" : "De Bernardis",
@@ -70675,7 +70675,7 @@
    },
    "2000-67" : {
       "year" : "2000",
-      "nr" : "67",
+      "film" : "67",
       "product" : "Kodak EB-100",
       "camera" : "Nikon",
       "developer" : "De Bernardis",
@@ -70941,7 +70941,7 @@
    },
    "2000-68" : {
       "year" : "2000",
-      "nr" : "68",
+      "film" : "68",
       "product" : "Kodak Gold 400",
       "camera" : "Olympus",
       "developer" : "De Bernardis",
@@ -71200,11 +71200,11 @@
    },
    "2001-01" : {
       "year" : "2001",
-      "nr" : "01",
+      "film" : "01",
       "product" : "Fuji 400",
       "camera" : "Nikon (Ulrike)",
       "developer" : "De Bernardis",
-      "addinfo" : "Sylvester, Fernsehen mit Tobi; ",
+      "addinfo" : "Sylvester, Fernsehen mit Tobi/",
       "1" : {
          "place" : "Rom",
          "building" : "Via Domenichino",
@@ -71467,7 +71467,7 @@
    },
    "2001-02" : {
       "year" : "2001",
-      "nr" : "02",
+      "film" : "02",
       "product" : "Agfa Ctprecisa 100",
       "camera" : "Nikon",
       "developer" : "Randazzo",
@@ -71670,7 +71670,7 @@
    },
    "2001-03" : {
       "year" : "2001",
-      "nr" : "03",
+      "film" : "03",
       "product" : "Kodak Ed-3 200",
       "camera" : "Olympus",
       "developer" : "Randazzo",
@@ -71922,11 +71922,11 @@
    },
    "2001-04" : {
       "year" : "2001",
-      "nr" : "04",
+      "film" : "04",
       "product" : "Kodak EC 200",
       "camera" : "Olympus",
       "developer" : "De Bernardis",
-      "addinfo" : "Ente bei Golo; ",
+      "addinfo" : "Ente bei Golo/",
       "00" : {
          "place" : "Rom",
          "building" : "Ecke Via Dataria/Via S. Vincenzo",
@@ -72182,7 +72182,7 @@
    },
    "2001-05" : {
       "year" : "2001",
-      "nr" : "05",
+      "film" : "05",
       "product" : "Agfa Ctprecisa 100",
       "camera" : "Olympus",
       "developer" : "De Bernardis",
@@ -72441,7 +72441,7 @@
    },
    "2001-06" : {
       "year" : "2001",
-      "nr" : "06",
+      "film" : "06",
       "product" : "Kodak Gold 100",
       "camera" : "Olympus",
       "developer" : "De Bernardis",
@@ -72714,11 +72714,11 @@
    },
    "2001-07" : {
       "year" : "2001",
-      "nr" : "07",
+      "film" : "07",
       "product" : "Kodak EC 200",
       "camera" : "Nikon",
       "developer" : "",
-      "addinfo" : "Villa Giulia; ",
+      "addinfo" : "Villa Giulia/",
       "3" : {
          "place" : "Rom",
          "building" : "Villa Giulia",
@@ -72876,7 +72876,7 @@
    },
    "2001-08" : {
       "year" : "2001",
-      "nr" : "08",
+      "film" : "08",
       "product" : "Kodak Ektachrome 100",
       "camera" : "Olympus",
       "developer" : "De Bernardis",
@@ -73093,7 +73093,7 @@
    },
    "2001-09" : {
       "year" : "2001",
-      "nr" : "09",
+      "film" : "09",
       "product" : "Kodak Gold 400",
       "camera" : "Olympus",
       "developer" : "De Bernardis",
@@ -73345,7 +73345,7 @@
    },
    "2001-10" : {
       "year" : "2001",
-      "nr" : "10",
+      "film" : "10",
       "product" : "Kodak EB 100",
       "camera" : "Nikon",
       "developer" : "De Bernardis",
@@ -73590,7 +73590,7 @@
    },
    "2001-11" : {
       "year" : "2001",
-      "nr" : "11",
+      "film" : "11",
       "product" : "",
       "camera" : "Nikon",
       "developer" : "De Bernardis",
@@ -73849,7 +73849,7 @@
    },
    "2001-12" : {
       "year" : "2001",
-      "nr" : "12",
+      "film" : "12",
       "product" : "",
       "camera" : "Olympus",
       "developer" : "De Bernardis",
@@ -74080,7 +74080,7 @@
    },
    "2001-13" : {
       "year" : "2001",
-      "nr" : "13",
+      "film" : "13",
       "product" : "Agfa ctprecisa 100",
       "camera" : "Nikon",
       "developer" : "De Bernardis",
@@ -74325,11 +74325,11 @@
    },
    "2001-14" : {
       "year" : "2001",
-      "nr" : "14",
+      "film" : "14",
       "product" : "Kodak 100",
       "camera" : "Nikon",
       "developer" : "FCL",
-      "addinfo" : "nur bis ..., Rest für Frommel; ",
+      "addinfo" : "nur bis ..., Rest für Frommel/",
       "1" : {
          "place" : "Salone",
          "building" : "Villa Trivulzio",
@@ -74410,7 +74410,7 @@
    },
    "2001-15" : {
       "year" : "2001",
-      "nr" : "15",
+      "film" : "15",
       "product" : "",
       "camera" : "Olympus",
       "developer" : "De Bernardis",
@@ -74669,7 +74669,7 @@
    },
    "2001-16" : {
       "year" : "2001",
-      "nr" : "16",
+      "film" : "16",
       "product" : "Fuji",
       "camera" : "Nikon",
       "developer" : "De Bernardis",
@@ -74935,7 +74935,7 @@
    },
    "2001-17" : {
       "year" : "2001",
-      "nr" : "17",
+      "film" : "17",
       "product" : "Fuji",
       "camera" : "Nikon",
       "developer" : "De Bernardis",
@@ -75180,7 +75180,7 @@
    },
    "2001-18" : {
       "year" : "2001",
-      "nr" : "18",
+      "film" : "18",
       "product" : "Fuji",
       "camera" : "Nikon",
       "developer" : "De Bernardis",
@@ -75446,7 +75446,7 @@
    },
    "2001-19" : {
       "year" : "2001",
-      "nr" : "19",
+      "film" : "19",
       "product" : "Kodak 800",
       "camera" : "Nikon",
       "developer" : "Via Sistina",
@@ -75698,11 +75698,11 @@
    },
    "2001-20" : {
       "year" : "2001",
-      "nr" : "20",
+      "film" : "20",
       "product" : "200",
       "camera" : "Nikon",
       "developer" : "Foto Sistina",
-      "addinfo" : "Borromini-Seminar; ",
+      "addinfo" : "Borromini-Seminar/",
       "1" : {
          "place" : "",
          "building" : "",
@@ -75958,7 +75958,7 @@
    },
    "2001-21" : {
       "year" : "2001",
-      "nr" : "21",
+      "film" : "21",
       "product" : "Fuji 100",
       "camera" : "Olympus",
       "developer" : "Foto Sistina",
@@ -76224,7 +76224,7 @@
    },
    "2001-22" : {
       "year" : "2001",
-      "nr" : "22",
+      "film" : "22",
       "product" : "Fujichrome 100",
       "camera" : "Olympus",
       "developer" : "",
@@ -76490,7 +76490,7 @@
    },
    "2001-23" : {
       "year" : "2001",
-      "nr" : "23",
+      "film" : "23",
       "product" : "Kodak 400",
       "camera" : "Olympus",
       "developer" : "Foto Sistina",
@@ -76756,7 +76756,7 @@
    },
    "2001-24" : {
       "year" : "2001",
-      "nr" : "24",
+      "film" : "24",
       "product" : "Agfa vista 200",
       "camera" : "Olympus",
       "developer" : "Foto Sistina",
@@ -77015,7 +77015,7 @@
    },
    "2001-25" : {
       "year" : "2001",
-      "nr" : "25",
+      "film" : "25",
       "product" : "Kodak Gold 400",
       "camera" : "Nikon",
       "developer" : "Foto Sistina",
@@ -77281,7 +77281,7 @@
    },
    "2001-26" : {
       "year" : "2001",
-      "nr" : "26",
+      "film" : "26",
       "product" : "Kodak 400",
       "camera" : "Nikon",
       "developer" : "Foto Sistina",
@@ -77540,7 +77540,7 @@
    },
    "2001-27" : {
       "year" : "2001",
-      "nr" : "27",
+      "film" : "27",
       "product" : "Kodak 400",
       "camera" : "Olympus",
       "developer" : "",
@@ -77792,11 +77792,11 @@
    },
    "2001-28" : {
       "year" : "2001",
-      "nr" : "28",
+      "film" : "28",
       "product" : "Fuji 100",
       "camera" : "Nikon",
       "developer" : "Foto Sistina",
-      "addinfo" : "(bei 16 herausgenommen für 0126?); ",
+      "addinfo" : "(bei 16 herausgenommen für 0126?)/",
       "1" : {
          "place" : "Jesi",
          "building" : "Pal. ???",
@@ -78059,7 +78059,7 @@
    },
    "2001-29" : {
       "year" : "2001",
-      "nr" : "29",
+      "film" : "29",
       "product" : "Kodak 400",
       "camera" : "Olympus",
       "developer" : "Foto Sistina",
@@ -78304,7 +78304,7 @@
    },
    "2001-30" : {
       "year" : "2001",
-      "nr" : "30",
+      "film" : "30",
       "product" : "Fuji",
       "camera" : "Olympus",
       "developer" : "Foto Sistina",
@@ -78493,11 +78493,11 @@
    },
    "2001-31" : {
       "year" : "2001",
-      "nr" : "31",
+      "film" : "31",
       "product" : "Fuji 200",
       "camera" : "Olympus",
       "developer" : "",
-      "addinfo" : "Venedig; ",
+      "addinfo" : "Venedig/",
       "0" : {
          "place" : "Innsbruck",
          "building" : "",
@@ -78753,7 +78753,7 @@
    },
    "2001-32" : {
       "year" : "2001",
-      "nr" : "32",
+      "film" : "32",
       "product" : "Kodak gold 200",
       "camera" : "Nikon",
       "developer" : "Foto Sistina",
@@ -78949,7 +78949,7 @@
    },
    "2001-33" : {
       "year" : "2001",
-      "nr" : "33",
+      "film" : "33",
       "product" : "Agfacolor 200",
       "camera" : "Olympus",
       "developer" : "Foto Sistina",
@@ -79222,11 +79222,11 @@
    },
    "2001-34" : {
       "year" : "2001",
-      "nr" : "34",
+      "film" : "34",
       "product" : "",
       "camera" : "",
       "developer" : "",
-      "addinfo" : "Sommerfest; ",
+      "addinfo" : "Sommerfest/",
       "1" : {
          "place" : "",
          "building" : "",
@@ -79489,11 +79489,11 @@
    },
    "2001-35" : {
       "year" : "2001",
-      "nr" : "35",
+      "film" : "35",
       "product" : "",
       "camera" : "",
       "developer" : "",
-      "addinfo" : "Ponza I; ",
+      "addinfo" : "Ponza I/",
       "0" : {
          "place" : "Rom",
          "building" : "Pal. Colonna",
@@ -79672,11 +79672,11 @@
    },
    "2001-36" : {
       "year" : "2001",
-      "nr" : "36",
+      "film" : "36",
       "product" : "",
       "camera" : "",
       "developer" : "",
-      "addinfo" : "Ponza II; ",
+      "addinfo" : "Ponza II/",
       "0" : {
          "place" : "Ponza",
          "building" : "",
@@ -79904,7 +79904,7 @@
    },
    "2002-01" : {
       "year" : "2002",
-      "nr" : "01",
+      "film" : "01",
       "product" : "",
       "camera" : "",
       "developer" : "",
@@ -80128,4 +80128,3 @@
       "31" : {}
    }
 }
-

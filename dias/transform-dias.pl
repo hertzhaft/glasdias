@@ -45,7 +45,7 @@ $lines->each(sub {
     $name  = "$year-$lfd";
     $film = $FILMS->{$name} = {};
     tie %$film, 'Tie::IxHash';
-    @$film{qw(year nr)} = ($year, $lfd);
+    @$film{qw(year film)} = ($year, $lfd);
     $slide = undef;
     reset_last;
     say STDERR $name;
@@ -61,7 +61,7 @@ $lines->each(sub {
   # slide number
   if (/^\d+$/) {
     $slidenr = substr($_,-2,2);
-    $slide = $film->{$slidenr} = {};
+    $slide = $film->{$slidenr} = {nr => $slidenr};
     tie %$slide, 'Tie::IxHash';
     # say STDERR " $slidenr";
     $count = 0;
@@ -86,8 +86,19 @@ $lines->each(sub {
     }
 
   # additional content
-  $film->{addinfo} .= "$_; " if $_;
+  $film->{addinfo} .= "$_/" if $_;
   });
-my $coder = JSON::XS->new->pretty;
-say $coder->encode($FILMS);
 
+my $coder = JSON::XS->new->pretty;
+path('dias.json')->spurt($coder->encode($FILMS));
+
+my $handle = path('dias.tab')->open('w');
+$handle->say(join("\t", qw(year film nr place building detail date calc camera product)));
+for my $f (values %$FILMS) {
+  for my $s (1 .. 36) {
+    next unless exists($f->{$s}); 
+    my $d = $f->{$s};
+    $handle->say(join("\t", @$f{qw(year film)}, $s, @$d{qw(place building detail date calc)}, @$f{qw(camera product)}));
+  }
+}
+$handle->close;
