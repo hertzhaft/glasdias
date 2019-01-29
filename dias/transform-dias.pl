@@ -23,7 +23,7 @@ tie %$FILMS, 'Tie::IxHash';
 
 my $LAST;
 
-my ($film, $year, $lfd, $slide, $slidenr, $item, $name, $count);
+my ($film, $year, $lfd, $slide, $slidenr, $filename, $item, $name, $count);
 my $cols = [qw(place building detail date)];
 
 # raw data
@@ -41,7 +41,7 @@ $lines->each(sub {
   if (/^[09]\d\d\da?$/) {
     $year = /^0/ ? 2000 : 1900;
     $year += substr($_,0,2);
-    $lfd = substr($_,2,2);
+    $lfd = substr($_,2,3);
     $name  = "$year-$lfd";
     $film = $FILMS->{$name} = {};
     tie %$film, 'Tie::IxHash';
@@ -61,8 +61,10 @@ $lines->each(sub {
   # slide number
   if (/^\d+$/) {
     $slidenr = substr($_,-2,2);
-    $slide = $film->{$slidenr} = {nr => $slidenr};
+    $filename = sprintf("gsch-%d-%s-%02d", $year, $lfd, $slidenr);
+    $slide = $film->{$slidenr} = {};
     tie %$slide, 'Tie::IxHash';
+    @$slide{qw(filename nr)} = ($filename, $slidenr);
     # say STDERR " $slidenr";
     $count = 0;
     return
@@ -93,12 +95,12 @@ my $coder = JSON::XS->new->pretty;
 path('dias.json')->spurt($coder->encode($FILMS));
 
 my $handle = path('dias.tab')->open('w');
-$handle->say(join("\t", qw(year film nr place building detail date calc camera product)));
+$handle->say(join("\t", qw(filename place building detail date calc camera product year film nr)));
 for my $f (values %$FILMS) {
   for my $s (1 .. 36) {
     next unless exists($f->{$s}); 
     my $d = $f->{$s};
-    $handle->say(join("\t", @$f{qw(year film)}, $s, @$d{qw(place building detail date calc)}, @$f{qw(camera product)}));
+    $handle->say(join("\t", @$d{qw(filename place building detail date calc)}, @$f{qw(camera product year film)}, $s));
   }
 }
 $handle->close;
