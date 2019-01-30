@@ -2,10 +2,9 @@
 use Mojo::Base 'strict';
 use Mojo::File 'path';
 use Mojo::Collection 'c';
-use Hash::Ordered;
 use JSON::XS;
-use Text::Levenshtein::XS qw(distance);
-use Text::JaroWinkler qw( strcmp95 );
+# use Text::Levenshtein::XS qw(distance);
+# use Text::JaroWinkler qw( strcmp95 );
 use Tie::IxHash;
 
 no warnings 'uninitialized';
