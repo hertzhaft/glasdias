@@ -60,7 +60,7 @@ $lines->each(sub {
   # slide number
   if (/^\d+$/) {
     $slidenr = substr($_,-2,2);
-    $filename = sprintf("gsch-%d-%s-%02d", $year, $lfd, $slidenr);
+    $filename = sprintf("schg-%d-%s-%02d", $year, $lfd, $slidenr);
     $slide = $film->{$slidenr} = {};
     tie %$slide, 'Tie::IxHash';
     @$slide{qw(filename nr)} = ($filename, $slidenr);
