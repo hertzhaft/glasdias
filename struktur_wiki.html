@@ -1,183 +1,218 @@
-
+<!DOCTYPE html>
 <html>
 
   <head>
     <style>
-      h1 {width: auto; }
-			div {border-radius:10px; margin-top: 4px; padding: 10px; }
-			div.main {width: 90%; margin: auto; display: flex; justify-content: space-between;}
-			div.c1 {background-color: lightcyan; border: 2px dotted gray; width: 30%; }
-			div.c2 {background-color: lightblue; border: 1px solid gray; }
-			div.c3 {background-color: silver; border: 1px solid gray;  }
-			div.int {background-color: grey; opacity: 50%; border: 1px solid gray;  }
+      body { font-family: Sans-Serif,Helvetica; font-size: 80%; }
+			div { border-radius:10px; margin-top: 4px; padding: 4px 8px; }
+			div.main { width: 90%; margin: auto; display: flex; justify-content: space-between;}
+			div.c1 { background-color: lightcyan; border: 2px dotted gray; width: 30%; }
+			div.c2 { background-color: lightblue; border: 1px solid gray; }
+			div.c3 { background-color: silver; border: 1px solid gray;  }
+			div.c4 { background-color: steelblue; border: 1px solid gray;  }
+			div.int { background-color: darkgrey; border: 1px solid gray;  }
+      div.high { background-color: orange; }
+      h1 { width: auto; }
+			span.en a { background-color: darkred; color: white; opacity: 0.5; border: 1px solid gray; border-radius:8px; padding: 4px; }
+			a:link { text-decoration: none; }
 		</style>
+		<script >
+		  var groups = [
+		    ["x25", "x28", "x35", "x156", "x157", "x158"],
+		    ["x25", "x28", "x155", "x34"],
+		    ["x29", "x154", "x24"],
+		    ["x14", "x31", "x32", "x24", "x25"]
+		    ];
+
+		  function getIDs (id) {
+		    var result = [];
+        for (i = 0; i < groups.length; i++) {
+          var g = groups[i];
+          for (j = 0; j < g.length; j++) {
+            var t = g[j];
+            if (t == id) {
+              result = result.concat(g);
+              // console.log(result);
+              break;
+              }
+          }
+        }
+        return result;
+		  }
+		  function highlight () {
+		    var ids = getIDs(this.id);
+		    // console.log(ids);
+		    if (ids.length == 0) return;
+        for (i = 0; i < ids.length; i++) {
+          var id = ids[i];
+          var elem = document.getElementById(id);
+          // elem.className += " high";
+          elem.classList.add("high");
+          console.log(elem);
+          }
+        }
+
+		  function lowlight () {
+		    var ids = getIDs(this.id);
+		    if (ids == "") return;
+        for (i = 0; i < ids.length; i++) {
+          var id = ids[i];
+          var elem = document.getElementById(id);
+          elem.classList.remove("high");
+          }
+        }
+
+      function addhandlers () {
+		    var div = document.getElementsByTagName('DIV');
+        for (i = 0; i < div.length; i++) {
+          div[i].addEventListener("mouseover", highlight);
+            div[i].addEventListener("mouseout", lowlight);
+          }
+        }
+		</script>
   </head>
 
-  <body>
+  <body onload="addhandlers()">
 
     <h1>Mediathek</h1>
-    <div class="main">
+    <div id="x0" class="main"><a href="https://wikis.hu-berlin.de/mediathek/">
 
-      <div class="c1">
+      <div id="x1" class="c1"><a href="https://wikis.hu-berlin.de/mediathek/">
 
         <h2>Bestände</h2>
-        <div class="int">intern</div>
+        <div id="x11" class="int"><a href="https://wikis.hu-berlin.de/mediathek/">intern</a></div>
 
-        <div class="c2">Historische Fotoabzüge
-          <div class="c3">Bestandsübersicht</div>
-          <div class="c3">Bestandsentwicklung</div>
-        </div>
+        <div id="x12" class="c2"><a href="https://wikis.hu-berlin.de/mediathek/">Historische Fotoabzüge</a>
+          <div id="x121" class="c3"><a href="https://wikis.hu-berlin.de/mediathek/">Bestandsübersicht</a></div>
+          <div id="x122" class="c3"><a href="https://wikis.hu-berlin.de/mediathek/">Bestandsentwicklung</a></div>
+        </a></div>
 
-        <div class="c2">Negative
-          <div class="c3">Bestandsübersicht</div>
-        </div>
+        <div id="x13" class="c2"><a href="https://wikis.hu-berlin.de/mediathek/">Negative</a>
+          <div id="x131" class="c3"><a href="https://wikis.hu-berlin.de/mediathek/">Bestandsübersicht</a></div>
+        </a></div>
 
-        <div class="c2">Glasdias
-          <div class="c3">Bestandsübersicht
-            <div class="c4">visuell</div>
+        <div id="x14" class="c2"><a href="https://wikis.hu-berlin.de/mediathek/">Glasdias</a>
+          <div id="x141" class="c3"><a href="https://wikis.hu-berlin.de/mediathek/">Bestandsübersicht</a>
+          <span class="en"><a href="https://wikis.hu-berlin.de/mediathek/">en</a></span>
+            <div id="x142" class="c4"><a href="https://wikis.hu-berlin.de/mediathek/">visuell</a></div>
           </div>
 
-          <div class="c3">Beispielabfragen
-            <div class="int">intern</div>
+          <div id="x143" class="c3"><a href="https://wikis.hu-berlin.de/mediathek/">Beispielabfragen</a>
+            <div id="x1431" class="int"><a href="https://wikis.hu-berlin.de/mediathek/">intern</a></div>
           </div>
 
-          <div class="c3">  Hersteller
-          </div>
+          <div id="x144" class="c3"><a href="https://wikis.hu-berlin.de/mediathek/">Hersteller</a></div>
 
-          <div class="c3">  universitäre Sammlungen
-          </div>
+          <div id="x145" class="c3"><a href="https://wikis.hu-berlin.de/mediathek/">universitäre Sammlungen</a></div>
 
-          <div class="c3">  Bestandsentwicklung
-          </div>
+          <div id="x146" class="c3"><a href="https://wikis.hu-berlin.de/mediathek/">Bestandsentwicklung</a></div>
 
-          <div class="c3">  Inventarnummernsystem
-          </div>
+          <div id="x147" class="c3"><a href="https://wikis.hu-berlin.de/mediathek/">Inventarnummernsystem</a></div>
 
-          <div class="c3">  Anwendung in der Lehre
-          </div>
+          <div id="x148" class="c3"><a href="https://wikis.hu-berlin.de/mediathek/">Anwendung in der Lehre</a></div>
 
-          <div class="c3">  Seminarprojekt 2018
-          </div>
+          <div id="x149" class="c3"><a href="https://wikis.hu-berlin.de/mediathek/">Seminarprojekt 2018</a></div>
 
-          <div class="c3">  Events
-          </div>
+          <div id="x14a" class="c3"><a href="https://wikis.hu-berlin.de/mediathek/">Events</a></div>
 
         </div>
 
-        <div class="c2">Kleinbilddias
-          <div class="c3">  Bestandsübersicht
-        </div>
+        <div id="x15" class="c2"><a href="https://wikis.hu-berlin.de/mediathek/">Kleinbilddias</a>
+          <div id="x151" class="c3"><a href="https://wikis.hu-berlin.de/mediathek/">Bestandsübersicht</a></div>
 
-          <div class="c3">Dia-Magazine
-        </div>
+          <div id="x152" class="c3"><a href="https://wikis.hu-berlin.de/mediathek/">Dia-Magazine</a></div>
 
-          <div class="c3">  Projektoren
-        </div>
+          <div id="x153" class="c3"><a href="https://wikis.hu-berlin.de/mediathek/">Projektoren</a></div>
 
-          <div class="c3">Bredekamp
-          <div class="c4">   visuell
+          <div id="x154" class="c3"><a href="https://wikis.hu-berlin.de/mediathek/">Bredekamp</a>
+          <div id="x1541" class="c4"><a href="https://wikis.hu-berlin.de/mediathek/"> visuell</a>
           </div>
 
-            <div class="int">intern
-          </div>
+          <div id="x1542" class="int"><a href="https://wikis.hu-berlin.de/mediathek/">intern</a></div>
 
           </div>
 
-          <div class="c3">Feist
-            <div class="c4">    Beispielabfragen
-            <div class="int">      intern
-</div>
+          <div id="x155" class="c3"><a href="https://wikis.hu-berlin.de/mediathek/">Feist</a>
+            <div id="x1551" class="c4"><a href="https://wikis.hu-berlin.de/mediathek/">Beispielabfragen</a>
+              <div id="x1552" class="int"><a href="https://wikis.hu-berlin.de/mediathek/">intern</a></div>
             </div>
+            <div id="x1553" class="int"><a href="https://wikis.hu-berlin.de/mediathek/">intern</a></div>
           </div>
-          <div class="c3">Bernau
-            <div class="int">    intern
-            </div>
+          <div id="x156" class="c3"><a href="https://wikis.hu-berlin.de/mediathek/">Bernau</a>
+            <div id="x1561" class="int"><a href="https://wikis.hu-berlin.de/mediathek/">intern</a></div>
           </div>
-          <div class="c3">  Kappel
-  
-</div>
-          <div class="c3">Schelbert
-</div>
+          <div id="x157" class="c3"><a href="https://wikis.hu-berlin.de/mediathek/">Kappel</a></div>
+          <div id="x158" class="c3"><a href="https://wikis.hu-berlin.de/mediathek/">Schelbert</a></div>
         </div>
       </div>
 
-      <div class="c1">
+      <div id="x2" class="c1">
 
         <h2>Infrastruktur</h2>
-        <div class="c2">Konzept Digitalangebot
-</div>
-        <div class="c2">Bilddatenbanksysteme
-</div>
-        <div class="c2">IMAGO
-</div>
+        <div id="x21" class="c2"><a href="https://wikis.hu-berlin.de/mediathek/">Konzept Digitalangebot</a></div>
+        <div id="x22" class="c2"><a href="https://wikis.hu-berlin.de/mediathek/">Bilddatenbanksysteme</a></div>
+        <div id="x23" class="c2"><a href="https://wikis.hu-berlin.de/mediathek/">IMAGO</a></div>
 
-        <div class="c2">imeji
-  <div class="c3">Mediathek - IKB</div>
+        <div id="x24" class="c2"><a href="https://wikis.hu-berlin.de/mediathek/">imeji</a>
+        <div id="x241" class="c3"><a href="https://wikis.hu-berlin.de/mediathek/">Mediathek - IKB</a></div>
         </div>
 
-        <div class="c2">Medienrepositorium
-  <div class="c3">Bilddigitalisierung</div>
-          <div class="c3">Sammlungsdokumentation</div>
+        <div id="x25" class="c2"><a href="https://wikis.hu-berlin.de/mediathek/">Medienrepositorium</a>
+        <div id="x251" class="c3"><a href="https://wikis.hu-berlin.de/mediathek/">Bilddigitalisierung</a></div>
+          <div id="x2511" class="c3"><a href="https://wikis.hu-berlin.de/mediathek/">Sammlungsdokumentation</a></div>
         </div>
 
-        <div class="c2">ConedaKOR
-</div>
+        <div id="x26" class="c2"><a href="https://wikis.hu-berlin.de/mediathek/">ConedaKOR</a></div>
 
-        <div class="c2">CollectiveAccess
-</div>
+        <div id="x27" class="c2"><a href="https://wikis.hu-berlin.de/mediathek/">CollectiveAccess</a></div>
 
-        <div class="c2">digilib
-  <div class="c3">Installationsanleitung</div>
+        <div id="x28" class="c2"><a href="https://wikis.hu-berlin.de/mediathek/">digilib</a>
+        <div id="x281" class="c3"><a href="https://wikis.hu-berlin.de/mediathek/">Installationsanleitung</a></div>
         </div>
 
-        <div class="c2">Server (imagelab)</div>
+        <div id="x29" class="c2"><a href="https://wikis.hu-berlin.de/mediathek/">Server (imagelab)</a></div>
       </div>
 
-      <div class="c1">
+      <div id="x3" class="c1"><a href="https://wikis.hu-berlin.de/mediathek/">
 
         <h2>Projekte</h2>
-        <div class="c2">Lehrbildsammlung digital (2012)</div>
+        <div id="x31" class="c2"><a href="https://wikis.hu-berlin.de/mediathek/">Lehrbildsammlung digital (2012)</a></div>
 
-        <div class="c2">Durchblick (2016)
-  <div class="int">intern</div>
+        <div id="x32" class="c2"><a href="https://wikis.hu-berlin.de/mediathek/">Durchblick (2016)</a>
+        <div id="x321" class="int"><a href="https://wikis.hu-berlin.de/mediathek/">intern</a></div>
         </div>
 
-        <div class="c2">Diasammlung Bredekamp (2012)
-  <div class="int">intern</div>
+        <div id="x33" class="c2"><a href="https://wikis.hu-berlin.de/mediathek/">Diasammlung Bredekamp (2012)</a>
+        <div id="x331" class="int"><a href="https://wikis.hu-berlin.de/mediathek/">intern</a></div>
         </div>
 
-        <div class="c2">Denkmalbilder (2018)
-  <div class="int">intern</div>
+        <div id="x34" class="c2"><a href="https://wikis.hu-berlin.de/mediathek/">Denkmalbilder (2018)</a>
+        <div id="x341" class="int"><a href="https://wikis.hu-berlin.de/mediathek/">intern</a></div>
         </div>
 
-        <div class="c2">Architekturbild (2019)
-  <div class="int">intern</div>
+        <div id="x35" class="c2"><a href="https://wikis.hu-berlin.de/mediathek/">Architekturbild (2019)</a>
+        <div id="x351" class="int"><a href="https://wikis.hu-berlin.de/mediathek/">intern</a></div>
         </div>
 
-        <div class="c2">KunsthistorikerInnen als FotografInnen
-</div>
+        <div id="x36" class="c2"><a href="https://wikis.hu-berlin.de/mediathek/">KunsthistorikerInnen als FotografInnen</a></div>
 
-        <div class="c2">imagelab (2013/14)
-
-  <div class="c3">Bildwerkzeuge</div>
-        </div>
-        <div class="c2">Berliner Gespräche zur Digitalen Kunstgeschichte (2012 ff.)
-</div>
-
-        <div class="c2">ZUCCARO
-  <div class="c3">en</div>
+        <div id="x37" class="c2"><a href="https://wikis.hu-berlin.de/mediathek/">imagelab (2013/14)</a>
+        <div id="x371" class="c3"><a href="https://wikis.hu-berlin.de/mediathek/">Bildwerkzeuge</a></div>
         </div>
 
-        <div class="c2">Campus Artium
-</div>
+        <div id="x38" class="c2"><a href="https://wikis.hu-berlin.de/mediathek/">Berliner Gespräche zur Digitalen Kunstgeschichte (2012 ff.)</a></div>
 
-        <div class="c2">Fotografie Geschichte konkret
-</div>
+        <div id="x39" class="c2"><a href="https://wikis.hu-berlin.de/mediathek/">ZUCCARO</a> <span class="en"><a href="https://wikis.hu-berlin.de/mediathek/">en</a></span>
+        </div>
+
+        <div id="x3a" class="c2"><a href="https://wikis.hu-berlin.de/mediathek/">Campus Artium</a></div>
+
+        <div id="x3b" class="c2"><a href="https://wikis.hu-berlin.de/mediathek/">Fotografie Geschichte konkret</a></div>
 
       </div>
 
 
     </div>
-    <div class="footer">G. Schelbert 2019</div>
+    <div id="x4" class="footer"><a href="https://wikis.hu-berlin.de/mediathek/">G. Schelbert 2019</a></div>
   </body>
 </html>
