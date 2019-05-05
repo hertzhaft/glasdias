@@ -4,11 +4,11 @@
   <head>
     <style>
       body { font-family: Sans-Serif,Helvetica; font-size: 80%; }
-			div { border-radius:10px; margin-top: 4px; padding: 4px 8px; }
-			div.main { width: 90%; margin: auto; display: flex; justify-content: space-between;}
-			div.c1 { background-color: lightcyan; border: 2px dotted gray; width: 30%; }
+			div { border-radius:10px; margin-top: 4px; padding: 4px 8px; transition: all 0.7s ease; }
+			div.main { width: 90%; margin: auto; display: flex; justify-content: space-between; }
+			div.c1 { background-color: lightcyan; border: 2px dotted gray; width: 30%;  }
 			div.c2 { background-color: lightblue; border: 1px solid gray; }
-			div.c3 { background-color: silver; border: 1px solid gray;  }
+			div.c3 { background-color: silver; border: 1px solid gray; }
 			div.c4 { background-color: steelblue; border: 1px solid gray;  }
 			div.int { background-color: darkgrey; border: 1px solid gray;  }
       div.high { background-color: orange; }
@@ -17,6 +17,7 @@
 			a:link { text-decoration: none; }
 		</style>
 		<script >
+		  var lookup = {}; // cache sets of ids
 		  var groups = [
 		    ["x25", "x28", "x35", "x156", "x157", "x158"],
 		    ["x25", "x28", "x155", "x34"],
@@ -26,6 +27,9 @@
 
 		  function getIDs (id) {
 		    var result = [];
+		    if (id in lookup) {
+		      return lookup[id];
+		      }
         for (i = 0; i < groups.length; i++) {
           var g = groups[i];
           for (j = 0; j < g.length; j++) {
@@ -37,8 +41,10 @@
               }
           }
         }
+        lookup[id] = result;
         return result;
 		  }
+
 		  function highlight () {
 		    var ids = getIDs(this.id);
 		    // console.log(ids);
@@ -46,9 +52,8 @@
         for (i = 0; i < ids.length; i++) {
           var id = ids[i];
           var elem = document.getElementById(id);
-          // elem.className += " high";
           elem.classList.add("high");
-          console.log(elem);
+          // console.log(elem);
           }
         }
 
@@ -66,7 +71,7 @@
 		    var div = document.getElementsByTagName('DIV');
         for (i = 0; i < div.length; i++) {
           div[i].addEventListener("mouseover", highlight);
-            div[i].addEventListener("mouseout", lowlight);
+          div[i].addEventListener("mouseout", lowlight);
           }
         }
 		</script>
