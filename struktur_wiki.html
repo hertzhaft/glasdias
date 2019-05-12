@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html>
-
-  <head>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <style>
       body { font-family: Sans-Serif,Helvetica; font-size: 80%; }
 			div { border-radius:10px; margin-top: 4px; padding: 4px 8px; transition: all 0.7s ease; }
 			div.main { width: 90%; margin: auto; display: flex; justify-content: space-between; }
+			div.c0 { width: 85%; margin: auto; justify-content: space-between; }
 			div.c1 { background-color: lightcyan; border: 2px dotted gray; width: 30%;  }
 			div.c2 { background-color: lightblue; border: 1px solid gray; }
 			div.c3 { background-color: silver; border: 1px solid gray; }
@@ -13,18 +13,25 @@
 			div.int { background-color: darkgrey; border: 1px solid gray;  }
       div.high { background-color: orange; }
       h1 { width: auto; }
-      h3 { margin: 0px; padding: 0px; }
 			span.en a { background-color: darkred; color: white; opacity: 0.5; border: 1px solid gray; border-radius:8px; padding: 4px; }
 			a:link { text-decoration: none; }
 		</style>
-		<script >
+		<script>
 		  var lookup = {}; // cache sets of ids
 		  var groups = [
-		    ["x25", "x28", "x35", "x156", "x157", "x158"],
-		    ["x25", "x28", "x155", "x34"],
-		    ["x29", "x154", "x24"],
-		    ["x14", "x31", "x32", "x24", "x25"]
-		    ];
+		  // <!--Architekturbild-->
+		  ["x224", "x227", "x35", "x156", "x157", "x158", "x229", "x231", "x3c"],
+		  // <!--Denkmalbilder-->
+		  ["x224", "x227", "x155", "x34", "x229", "x231", "x3c"],
+		  // <!--Bredekamp-->
+		  ["x228", "x154", "x223", "x33"],
+			// <!--Durchblick-->
+			["x14", "x31", "x32", "x223", "x228", "x231", "x3c"],
+			// <!--Fotos-->
+			["x12", "x223", "x228", "x231", "x3c"],
+			// <!--Imagelab-->
+			["x37", "x221"],
+		  ];
 
 		  function getIDs (id) {
 		    var result = [];
@@ -80,145 +87,169 @@
 
   <body onload="addhandlers()">
 
-    <h1>Mediathek</h1>
-    <div id="x0" class="main"><a href="https://wikis.hu-berlin.de/mediathek/">
+<div class="c0">
+	<p style="text-align: right">
+	 <img src="struktur_wiki1-Dateien/hukombi_bbw.htm">
+	</p>
+    <h2><a href="http://www.kunstgeschichte.hu-berlin.de/institut/mediathek/">Institut für Kunst- und Bildgeschichte, Mediathek</a></h2>
+	Übersicht der Seiten zu Sammlungen, Infrastrukturen und Projekten im 
+Wiki der Mediathek (im Aufbau). Beim Überfahren der Felder mit der Maus 
+werden zugehörige Bereiche orange markiert. Das Klicken auf einzelne 
+Felder öffnet die jeweilige Wiki-Seite.
 
-      <div id="x1" class="c1"><a href="https://wikis.hu-berlin.de/mediathek/">
+</div>
+   
+
+	<div id="x0" class="main"><a href="https://wikis.hu-berlin.de/mediathek/">
+	
+      </a><div id="x1" class="c1"><a href="https://wikis.hu-berlin.de/mediathek/"></a><a href="https://wikis.hu-berlin.de/mediathek/Mediathek_Sammlungsbestand">
 
         <h2>Bestände</h2>
-        <div id="x11" class="int"><a href="https://wikis.hu-berlin.de/mediathek/">intern</a></div>
+        </a><div id="x11" class="int"><a href="https://wikis.hu-berlin.de/mediathek/Mediathek_Sammlungsbestand"></a><a href="https://wikis.hu-berlin.de/mediathek/">intern</a></div>
 
-        <div id="x12" class="c2"><a href="https://wikis.hu-berlin.de/mediathek/"><h3>Historische Fotoabzüge</h3></a>
-          <div id="x121" class="c3"><a href="https://wikis.hu-berlin.de/mediathek/">Bestandsübersicht</a></div>
-          <div id="x122" class="c3"><a href="https://wikis.hu-berlin.de/mediathek/">Bestandsentwicklung</a></div>
-        </a></div>
+        <div id="x12" class="c2"><a href="https://wikis.hu-berlin.de/mediathek/Bestands%C3%BCbersicht_Fotoabz%C3%BCge">Historische Fotoabzüge</a>
+          <div id="x121" class="c3"><a href="https://wikis.hu-berlin.de/mediathek/Bestands%C3%BCbersicht_Fotoabz%C3%BCge">Bestandsübersicht</a></div>
+          <div id="x122" class="c3"><a href="https://wikis.hu-berlin.de/mediathek/Bestandsentwicklung_Fotos">Bestandsentwicklung</a></div>
+        </div>
 
-        <div id="x13" class="c2"><a href="https://wikis.hu-berlin.de/mediathek/"><h3>Negative</h3></a>
-          <div id="x131" class="c3"><a href="https://wikis.hu-berlin.de/mediathek/">Bestandsübersicht</a></div>
-        </a></div>
+        <div id="x13" class="c2">Negative
+          <div id="x131" class="c3"><a href="https://wikis.hu-berlin.de/mediathek/Bestands%C3%BCbersicht_Negative">Bestandsübersicht</a></div>
+        </div>
 
-        <div id="x14" class="c2"><a href="https://wikis.hu-berlin.de/mediathek/"><h3>Glasdias</h3></a>
-          <div id="x141" class="c3"><a href="https://wikis.hu-berlin.de/mediathek/">Bestandsübersicht</a>
-          <span class="en"><a href="https://wikis.hu-berlin.de/mediathek/">en</a></span>
-            <div id="x142" class="c4"><a href="https://wikis.hu-berlin.de/mediathek/">visuell</a></div>
+        <div id="x14" class="c2">Glasdias
+          <div id="x141" class="c3"><a href="https://wikis.hu-berlin.de/mediathek/Bestands%C3%BCbersicht_Glasdias">Bestandsübersicht</a>
+          <span class="en"><a href="https://wikis.hu-berlin.de/mediathek/Glass_slide_collection">en</a></span>
+            <div id="x142" class="c4"><a href="https://wikis.hu-berlin.de/mediathek/Glasdiaschraenke_visuell">visuell</a></div>
           </div>
 
-          <div id="x143" class="c3"><a href="https://wikis.hu-berlin.de/mediathek/">Beispielabfragen</a>
+          <div id="x143" class="c3"><a href="https://wikis.hu-berlin.de/mediathek/Glasdias_Beispielabfragen">Beispielabfragen</a>
             <div id="x1431" class="int"><a href="https://wikis.hu-berlin.de/mediathek/">intern</a></div>
           </div>
 
-          <div id="x144" class="c3"><a href="https://wikis.hu-berlin.de/mediathek/">Hersteller</a></div>
+          <div id="x144" class="c3"><a href="https://wikis.hu-berlin.de/mediathek/Glasdias_Hersteller">Hersteller</a></div>
 
-          <div id="x145" class="c3"><a href="https://wikis.hu-berlin.de/mediathek/">universitäre Sammlungen</a></div>
+          <div id="x145" class="c3"><a href="https://wikis.hu-berlin.de/mediathek/Glasdiasammlungen">universitäre Sammlungen</a></div>
 
-          <div id="x146" class="c3"><a href="https://wikis.hu-berlin.de/mediathek/">Bestandsentwicklung</a></div>
+          <div id="x146" class="c3"><a href="https://wikis.hu-berlin.de/mediathek/Bestandsentwicklung_Glasdias">Bestandsentwicklung</a></div>
 
-          <div id="x147" class="c3"><a href="https://wikis.hu-berlin.de/mediathek/">Inventarnummernsystem</a></div>
+          <div id="x147" class="c3"><a href="https://wikis.hu-berlin.de/mediathek/Inventarnummernsystem_Glasdias">Inventarnummernsystem</a></div>
 
-          <div id="x148" class="c3"><a href="https://wikis.hu-berlin.de/mediathek/">Anwendung in der Lehre</a></div>
+          <div id="x148" class="c3"><a href="https://wikis.hu-berlin.de/mediathek/Vorlesungen">Anwendung in der Lehre</a></div>
 
-          <div id="x149" class="c3"><a href="https://wikis.hu-berlin.de/mediathek/">Seminarprojekt 2018</a></div>
+          <div id="x149" class="c3"><a href="https://wikis.hu-berlin.de/mediathek/Bildsammlungen_Seminar_2018">Seminarprojekt 2018</a></div>
 
-          <div id="x14a" class="c3"><a href="https://wikis.hu-berlin.de/mediathek/">Events</a></div>
+          <div id="x14a" class="c3"><a href="https://wikis.hu-berlin.de/mediathek/Glasdias_Events">Events</a></div>
 
         </div>
 
-        <div id="x15" class="c2"><a href="https://wikis.hu-berlin.de/mediathek/"><h3>Kleinbilddias</h3></a>
-          <div id="x151" class="c3"><a href="https://wikis.hu-berlin.de/mediathek/">Bestandsübersicht</a></div>
+        <div id="x15" class="c2">Kleinbilddias
+          <div id="x151" class="c3"><a href="https://wikis.hu-berlin.de/mediathek/Bestands%C3%BCbersicht_Kleinbilddias">Bestandsübersicht</a></div>
 
-          <div id="x152" class="c3"><a href="https://wikis.hu-berlin.de/mediathek/">Dia-Magazine</a></div>
+          <div id="x152" class="c3"><a href="https://wikis.hu-berlin.de/mediathek/Dia-Magazine">Dia-Magazine</a></div>
 
-          <div id="x153" class="c3"><a href="https://wikis.hu-berlin.de/mediathek/">Projektoren</a></div>
+          <div id="x153" class="c3"><a href="https://wikis.hu-berlin.de/mediathek/Kleinbildprojektoren">Projektoren</a></div>
 
-          <div id="x154" class="c3"><a href="https://wikis.hu-berlin.de/mediathek/">Bredekamp</a>
-          <div id="x1541" class="c4"><a href="https://wikis.hu-berlin.de/mediathek/"> visuell</a>
+          <div id="x154" class="c3"><a href="https://wikis.hu-berlin.de/mediathek/Dias_Bredekamp_Bestands%C3%BCbersicht">Bredekamp</a>
+          <div id="x1541" class="c4"><a href="https://wikis.hu-berlin.de/mediathek/Dias_Bredekamp_Ordner_visuell"> visuell</a>
           </div>
 
-          <div id="x1542" class="int"><a href="https://wikis.hu-berlin.de/mediathek/">intern</a></div>
+          <div id="x1542" class="int"><a href="https://wikis.hu-berlin.de/mediathek/Dias_Bredekamp_-_intern">intern</a></div>
 
           </div>
 
-          <div id="x155" class="c3"><a href="https://wikis.hu-berlin.de/mediathek/">Feist</a>
-            <div id="x1551" class="c4"><a href="https://wikis.hu-berlin.de/mediathek/">Beispielabfragen</a>
-              <div id="x1552" class="int"><a href="https://wikis.hu-berlin.de/mediathek/">intern</a></div>
-            </div>
-            <div id="x1553" class="int"><a href="https://wikis.hu-berlin.de/mediathek/">intern</a></div>
+          <div id="x155" class="c3"><a href="https://wikis.hu-berlin.de/mediathek/Bestands%C3%BCbersicht_Dias_Feist">Feist</a>
+            <div id="x1551" class="c4"><a href="https://wikis.hu-berlin.de/mediathek/Beispielabfragen_Feist">Beispielabfragen</a>
+              <div id="x1552" class="int"><a href="https://wikis.hu-berlin.de/mediathek/Beispielabfragen_Feist_intern">intern</a></div></div>
+			<div id="x1553" class="c4"><a href="https://wikis.hu-berlin.de/mediathek/Denkmalbilder_Events">Events</a>
+            
+            <div id="x1553" class="int"><a href="https://wikis.hu-berlin.de/mediathek/Dias_Feist_-_intern">intern</a></div>
           </div>
-          <div id="x156" class="c3"><a href="https://wikis.hu-berlin.de/mediathek/">Bernau</a>
+		  </div>
+          <div id="x156" class="c3"><a href="https://wikis.hu-berlin.de/mediathek/Dias_Bernau_Bestands%C3%BCbersicht">Bernau</a>
             <div id="x1561" class="int"><a href="https://wikis.hu-berlin.de/mediathek/">intern</a></div>
           </div>
-          <div id="x157" class="c3"><a href="https://wikis.hu-berlin.de/mediathek/">Kappel</a></div>
-          <div id="x158" class="c3"><a href="https://wikis.hu-berlin.de/mediathek/">Schelbert</a></div>
+          <div id="x157" class="c3"><a href="https://wikis.hu-berlin.de/mediathek/Bestands%C3%BCbersicht_Dias_Kappel">Kappel</a></div>
+          <div id="x158" class="c3"><a href="https://wikis.hu-berlin.de/mediathek/Bestands%C3%BCbersicht_Dias_Schelbert">Schelbert</a></div>
         </div>
       </div>
 
       <div id="x2" class="c1">
 
         <h2>Infrastruktur</h2>
-        <div id="x21" class="c2"><a href="https://wikis.hu-berlin.de/mediathek/">Konzept Digitalangebot</a></div>
-        <div id="x22" class="c2"><a href="https://wikis.hu-berlin.de/mediathek/">Bilddatenbanksysteme</a></div>
-        <div id="x23" class="c2"><a href="https://wikis.hu-berlin.de/mediathek/">IMAGO</a></div>
+        <div id="x21" class="c2"><a href="https://wikis.hu-berlin.de/mediathek/Konzept_Digitalangebot">Konzept Digitalangebot</a></div>
+		<div id="x22" class="c2"><a href="https://wikis.hu-berlin.de/mediathek/">Datenbanken, Plattformen, Server</a>
+			<div id="x221" class="c3"><a href="https://wikis.hu-berlin.de/mediathek/Datenbanken_Sitemap">Bilddatenbanksysteme</a></div>
+			<div id="x222" class="c3"><a href="https://wikis.hu-berlin.de/mediathek/Imago">IMAGO</a></div>
 
-        <div id="x24" class="c2"><a href="https://wikis.hu-berlin.de/mediathek/">imeji</a>
-        <div id="x241" class="c3"><a href="https://wikis.hu-berlin.de/mediathek/">Mediathek - IKB</a></div>
-        </div>
+			<div id="x223" class="c3"><a href="https://wikis.hu-berlin.de/mediathek/Imeji">imeji</a>
+			<div id="x2231" class="c4"><a href="https://wikis.hu-berlin.de/mediathek/Imeji_Mediathek_-_IKB">Mediathek - IKB</a></div>
+			</div>
 
-        <div id="x25" class="c2"><a href="https://wikis.hu-berlin.de/mediathek/">Medienrepositorium</a>
-        <div id="x251" class="c3"><a href="https://wikis.hu-berlin.de/mediathek/">Bilddigitalisierung</a></div>
-          <div id="x2511" class="c3"><a href="https://wikis.hu-berlin.de/mediathek/">Sammlungsdokumentation</a></div>
-        </div>
+			<div id="x224" class="c3"><a href="https://wikis.hu-berlin.de/mediathek/Medien-Repositorium">Medienrepositorium</a>
+				<div id="x2241" class="c4"><a href="https://wikis.hu-berlin.de/mediathek/Bilddigitaliserung_und_Medienrepositorium">Bilddigitalisierung</a></div>
+				<div id="x2242" class="c4"><a href="https://wikis.hu-berlin.de/mediathek/Sammlungsdokumentation_mit_Medienrepositorium">Sammlungsdokumentation</a></div>
+			</div>
 
-        <div id="x26" class="c2"><a href="https://wikis.hu-berlin.de/mediathek/">ConedaKOR</a></div>
+			<div id="x225" class="c3"><a href="https://wikis.hu-berlin.de/mediathek/ConedaKor">ConedaKOR</a></div>
 
-        <div id="x27" class="c2"><a href="https://wikis.hu-berlin.de/mediathek/">CollectiveAccess</a></div>
+			<div id="x226" class="c3"><a href="https://wikis.hu-berlin.de/mediathek/CollectiveAccess">CollectiveAccess</a></div>
 
-        <div id="x28" class="c2"><a href="https://wikis.hu-berlin.de/mediathek/">digilib</a>
-        <div id="x281" class="c3"><a href="https://wikis.hu-berlin.de/mediathek/">Installationsanleitung</a></div>
-        </div>
+			<div id="x227" class="c3"><a href="https://wikis.hu-berlin.de/mediathek/Digilib">digilib</a></div>
 
-        <div id="x29" class="c2"><a href="https://wikis.hu-berlin.de/mediathek/">Server (imagelab)</a></div>
+			<div id="x228" class="c3"><a href="https://wikis.hu-berlin.de/mediathek/E-Science-Plattform/Server">Server (imagelab)</a></div>
+			<div id="x229" class="c3"><a href="https://wikis.hu-berlin.de/mediathek/E-Science-Plattform/Server">Server (ikbmedien)</a></div>
+		</div>
+		<div id="x23" class="c2"><a href="https://wikis.hu-berlin.de/mediathek/">Datenmodellierung</a>
+			<div id="x231" class="c3"><a href="https://wikis.hu-berlin.de/mediathek/Normdatenreferenzierung">Normdatenreferenzierung</a></div>
+		</div>
       </div>
 
-      <div id="x3" class="c1"><a href="https://wikis.hu-berlin.de/mediathek/">
+      <div id="x3" class="c1">
+	  <a href="https://wikis.hu-berlin.de/mediathek/Projekte">
 
-        <h2>Projekte</h2>
-        <div id="x31" class="c2"><a href="https://wikis.hu-berlin.de/mediathek/">Lehrbildsammlung digital (2012)</a></div>
+        <h2>Projekte</h2></a>
+        <div id="x31" class="c2"><a href="https://wikis.hu-berlin.de/mediathek/Lehrbildsammlung_Digital">Lehrbildsammlung digital (2012)</a></div>
 
-        <div id="x32" class="c2"><a href="https://wikis.hu-berlin.de/mediathek/">Durchblick (2016)</a>
+                <div id="x33" class="c2"><a href="https://wikis.hu-berlin.de/mediathek/Dias_Bredekamp_Bestands%C3%BCbersicht">Diasammlung Bredekamp (2012)</a>
+        <div id="x331" class="int"><a href="https://wikis.hu-berlin.de/mediathek/Dias_Bredekamp_-_intern">intern</a></div>
+        </div>
+
+        <div id="x32" class="c2"><a href="https://wikis.hu-berlin.de/mediathek/Durchblick_-_Glasdiasammlung">Durchblick (2016)</a>
         <div id="x321" class="int"><a href="https://wikis.hu-berlin.de/mediathek/">intern</a></div>
         </div>
 
-        <div id="x33" class="c2"><a href="https://wikis.hu-berlin.de/mediathek/">Diasammlung Bredekamp (2012)</a>
-        <div id="x331" class="int"><a href="https://wikis.hu-berlin.de/mediathek/">intern</a></div>
-        </div>
-
-        <div id="x34" class="c2"><a href="https://wikis.hu-berlin.de/mediathek/">Denkmalbilder (2018)</a>
+		<div id="x34" class="c2"><a href="https://wikis.hu-berlin.de/mediathek/Denkmalbilder_-_Sammlung_Feist">Denkmalbilder (2018)</a>
         <div id="x341" class="int"><a href="https://wikis.hu-berlin.de/mediathek/">intern</a></div>
         </div>
 
-        <div id="x35" class="c2"><a href="https://wikis.hu-berlin.de/mediathek/">Architekturbild (2019)</a>
+        <div id="x35" class="c2"><a href="https://wikis.hu-berlin.de/mediathek/Architekturbild">Architekturbild (2019)</a>
         <div id="x351" class="int"><a href="https://wikis.hu-berlin.de/mediathek/">intern</a></div>
         </div>
 
-        <div id="x36" class="c2"><a href="https://wikis.hu-berlin.de/mediathek/">KunsthistorikerInnen als FotografInnen</a></div>
+        <div id="x36" class="c2"><a href="https://wikis.hu-berlin.de/mediathek/KunsthistorikerInnen_als_FotografInnen">KunsthistorikerInnen als FotografInnen</a></div>
+		<div id="x36a" class="c2"><a href="https://wikis.hu-berlin.de/mediathek/Kunsthistorische_Diafotografie">Kunsthistorische Diafotografie</a></div>
 
-        <div id="x37" class="c2"><a href="https://wikis.hu-berlin.de/mediathek/">imagelab (2013/14)</a>
-        <div id="x371" class="c3"><a href="https://wikis.hu-berlin.de/mediathek/">Bildwerkzeuge</a></div>
+        <div id="x37" class="c2"><a href="https://wikis.hu-berlin.de/mediathek/Imagelab">imagelab (2013/14)</a>
+        <div id="x371" class="c3"><a href="https://wikis.hu-berlin.de/mediathek/Bildwerkzeuge/">Bildwerkzeuge</a></div>
         </div>
 
-        <div id="x38" class="c2"><a href="https://wikis.hu-berlin.de/mediathek/">Berliner Gespräche zur Digitalen Kunstgeschichte (2012 ff.)</a></div>
+        <div id="x38" class="c2"><a href="https://wikis.hu-berlin.de/mediathek/Berliner_Gespr%C3%A4che_zur_Digitalen_Kunstgeschichte">Berliner Gespräche zur Digitalen Kunstgeschichte (2012 ff.)</a></div>
 
-        <div id="x39" class="c2"><a href="https://wikis.hu-berlin.de/mediathek/">ZUCCARO</a> <span class="en"><a href="https://wikis.hu-berlin.de/mediathek/">en</a></span>
+        <div id="x39" class="c2"><a href="https://wikis.hu-berlin.de/mediathek/Zuccaro">ZUCCARO</a> <span class="en"><a href="https://wikis.hu-berlin.de/mediathek/Zuccaro_en">en</a></span>
         </div>
 
-        <div id="x3a" class="c2"><a href="https://wikis.hu-berlin.de/mediathek/">Campus Artium</a></div>
+        <div id="x3a" class="c2"><a href="https://wikis.hu-berlin.de/mediathek/Campus_Artium">Campus Artium</a></div>
 
-        <div id="x3b" class="c2"><a href="https://wikis.hu-berlin.de/mediathek/">Fotografie Geschichte konkret</a></div>
-
+        <div id="x3b" class="c2"><a href="https://wikis.hu-berlin.de/mediathek/Fotografie_Geschichte_konkret">Fotografie Geschichte konkret</a></div>
+		
+		<div id="x3c" class="c2"><a href="https://wikis.hu-berlin.de/mediathek/Wikidata">Sammlungserschließung mit Wikidata</a>
+			<div id="x3c1" class="c3"><a href="https://wikis.hu-berlin.de/mediathek/...Warum_nicht_gleich_Wikidata%3F">Warum nicht gleich Wikidata?!</a></div>
+		</div>
       </div>
-
-
-    </div>
-    <div id="x4" class="footer"><a href="https://wikis.hu-berlin.de/mediathek/">G. Schelbert 2019</a></div>
-  </body>
-</html>
+	  </div>
+	<div class="c0"><a href="https://www.hu-berlin.de/hu/impressum">Impressum</a> - <a href="https://www.hu-berlin.de/hu/impressum/datenschutzerklaerung">Datenschutzerklärung</a>
+    <div id="x4" class="footer">G. Schelbert / html-Design M. Raspe 2019</div>
+	</div>
+	
+  
+</body></html>
