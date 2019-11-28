@@ -1,27 +1,30 @@
 #!/usr/bin/env perl
 use Mojolicious::Lite;
 use Mojo::URL;
-use DDP;
 
+# use DDP;
+# print diagnostic output of JSON data to STDERR on server
+
+# HOW TO
 # install perl (should be already installed on a Linux machine)
 
 # install Mojolicious:
 #   cpan App::cpanminus
 #   cpanm Mojolicious
 
-# set up the server starting this script:
+# start the server program by running this script:
 #   morbo glasdias.mopl
 
 # surf to: http://localhost:3000/
 
 # Google Custom Search Engine
-# configuration: https://cse.google.com/cse/setup/basic?cx=013480587332708740449:k8-td6ptbg8
+# configuration: https://cse.google.com/cse/setup/basic?cx=[your configuration key]
 use constant CSE_URL => "https://www.googleapis.com/customsearch/v1";
 
-# my personal access data
+# get a Google CSE key use your personal access data
 use constant CSE_PARAMS => {
-  key => 'AIzaSyBG5HSkzOxKIO9W5284hvYtlgaaqAHm8d8',
-  cx => '013480587332708740449:k8-td6ptbg8',
+  key => # your personal Google API key,
+  cx => # your Google search configuration key,
   searchType => 'image',
   searchSite => 'wikipedia.org',
   searchSiteFilter => 'i',
@@ -36,11 +39,11 @@ use constant WD_URL
 use constant WD_SPARQL_WP
   => 'prefix schema:<http://schema.org/>SELECT * WHERE{<%s> schema:about ?item.}';
 
-# query for wikimedia commons depicting some item
+# query for wikimedia commons images depicting (P18) some item
 use constant WD_SPARQL_WM
   => 'SELECT * WHERE {?item wdt:P18 <http://commons.wikimedia.org/wiki/Special:FilePath/%s>}';
 
-# ugly hack, Wikidata SPARQL needs double encoding for some characters in URL strings
+# ugly hack: Wikidata SPARQL needed double encoding for some characters in URL strings (obsolete now)
 sub wiki_encode {
   my $link = shift;
   $link =~ s/_/%20/g;
@@ -49,11 +52,6 @@ sub wiki_encode {
   $link =~ s/\)/%29/g;
   return $link;
 };
-
-helper DEBUG => sub {
-  my $c = shift;
-  $c->app->log->debug(@_);
-  };
 
 # construct Wikidata SPARQL query from Google search result
 helper wikidata => sub {
@@ -97,6 +95,8 @@ helper wikidata => sub {
     });
   };
 
+# Routing starts here
+
 # start page (index.html includes the search form)
 get '/' => sub {
   my $c = shift;
@@ -110,14 +110,14 @@ get '/search' => sub {
   say CSE_PARAMS->{start} = $c->param('start') // 1;
   my $url = Mojo::URL->new(CSE_URL)->query(CSE_PARAMS);
   my ($items, $next, $prev);
-  # $c->DEBUG($url);
   $c->delay(
+    # send image query to Google CSE
     sub {
       my $delay = shift;
-      say "Sending Google query";
-      say $url; # send the Google query
+      say "Sending Google query\n$url";
       $c->ua->get($url => $delay->begin);
     },
+    # callback, executed after returning from the Google query
     sub {
       my ($delay, $tx) = @_;
       my $res = $tx->res;
@@ -125,23 +125,26 @@ get '/search' => sub {
         die "$err->{code} response: $err->{message}" if $err->{code};
         die "Connection error: $err->{message}";
       }
-      $items = $res->json('/items'); # the Google result
+      # get info from the returned JSON
+      say "Received Google query";
+      $items = $res->json('/items');
+      # ::p $items;
       $next = $res->json('/queries/nextPage/0/startIndex');
       $prev = $res->json('/queries/previousPage/0/startIndex');
-      say "Received Google query";
-      p $items;
-      # send Wikidata queries for all result items
+      # send queries to Wikidata for all result items
       $c->wikidata($delay, $_) for @$items;
     },
     sub {
-      # collect the results
-      say "All Wiki queries finished";
+      # callback, collect all the results and render
+      say "All Wikidata queries finished";
       $c->render(template => 'search', img => $items, prev => $prev, next => $next);
     },
   );
 };
 
 app->start;
+
+# Templates start here
 
 # the DATA section consists of virtual files (the name starts with '@@')
 # these are the HTML templates referenced above.
