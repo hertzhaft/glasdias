@@ -9,7 +9,6 @@ use IO::Socket::SSL;
 use DDP;
 use Digest::SHA qw(sha256_hex);
 use JSON;
-use URL::Encode 'url_encode';
 
 # Set the private API key for the user (from the user account page) and the user we're accessing the system as.
 # my $user = "admin";
@@ -38,7 +37,7 @@ sub apiCall {
 	# Sign the query using the private key
 	$url->query([sign => $sign]);
 	my $res = $ua->start($tx)->res;
-	return $res->body;
+	return $res->json;
 }
 
 sub getFieldOptions {
@@ -72,13 +71,13 @@ sub readDiaList {
 }
 
 sub getDiaCollection {
-	my $json = apiCall('do_search' => '!collection6129');
+	my $json = apiCall('do_search' => '!collection6129;field8:SCHG_*');
 	return c(@$json)
 		->grep( sub {
 			$_->{field8} =~ /^SCHG_/;
 			})
 		->map( sub {
-			+{ $_->{field8} => $_->{ref} }
+			+{ name => $_->{field8}, ref => $_->{ref}, date => $_->{date_added} }
 			});
 	}
 
@@ -102,6 +101,7 @@ sub getNodeID {
 # my $json = apiCall('update_field' => 43283, 87, q{Siena (Italien, Toskana) (Q2751)}), 0;
 
 # my $json = getNodeID(q{Siena}, '87');
-my $json = getFieldOptions(87);
+# my $json = getFieldOptions(87);
+my $json = getDiaCollection;
 
-p($json);
+say np($json);
