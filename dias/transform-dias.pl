@@ -12,12 +12,13 @@ no warnings 'uninitialized';
 use Data::Printer {
   output => 'stdout',
 	quote_keys => 1,
-	# filters => { SCALAR => [ sub { return "q{${$_[0]}}" },  ], },
+	filters => { SCALAR => [ sub { return "q{${$_[0]}}" },  ], },
 	hash_separator => ' => ',
 	align_hash => 0,
 };
 
 my $FILMS = {};
+my $DIAS = [];
 tie %$FILMS, 'Tie::IxHash';
 
 my $LAST;
@@ -80,7 +81,7 @@ $lines->each(sub {
       my $date = $_ || $LAST->[3];
       my ($d, $m, $y) = $date =~ /(\d+)\.(\d+)\.(\d{4})?/;
       $y ||= $year;
-      $slide->{calc} = $d ? sprintf("%04d-%02d-%02d", $y,$m,$d) : $y;
+      $slide->{datecalc} = $d ? sprintf("%04d-%02d-%02d", $y,$m,$d) : $y;
       }
     $count++;
     return
@@ -94,12 +95,18 @@ my $coder = JSON::XS->new->pretty;
 path('dias.json')->spurt($coder->encode($FILMS));
 
 my $handle = path('dias.tab')->open('w');
-$handle->say(join("\t", qw(filename place building detail date calc camera product year film nr)));
-for my $f (values %$FILMS) {
-  for my $s (1 .. 36) {
-    next unless exists($f->{$s}); 
-    my $d = $f->{$s};
-    $handle->say(join("\t", @$d{qw(filename place building detail date calc)}, @$f{qw(camera product year film)}, $s));
+$handle->say(join("\t", qw(filename place building detail date datecalc camera product year film nr)));
+for my $film (values %$FILMS) {
+  for my $nr (1 .. 40) {
+  	my $dia = $film->{$nr};
+    next unless $dia;
+    $handle->say(join("\t", @$dia{qw(filename place building detail date datecalc)}, @$film{qw(camera product year film)}, $nr));
+    my $slide = {};
+    $slide->{$_} = $film->{$_} for qw(camera product year film);
+    $slide->{$_} = $dia->{$_} for qw(filename place building detail date datecalc);
+    push @$DIAS, $slide;
   }
 }
 $handle->close;
+
+path('dias.pm')->spurt(np($DIAS));
