@@ -31,5 +31,5 @@ $renamed->each(sub {
 say scalar keys %$r_old;
 say scalar keys %$r_new;
 # my $repo = do './repo_all.pm';
-# my $dias = do './dias.pm';
+# my $dias = do './dia_katalog.pm';
 
