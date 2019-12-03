@@ -58,18 +58,18 @@ my $res = $text->sort->each( sub {
   my $thumb = $ref ? "${ikb}${ref}" : '';
   push @$final, c($count, $nr, $clk, $dia, $thumb, $ref, map { $_ // '' } @{$kat->{$dia}}{qw(datecalc place building detail camera product)} );
   });
-# b($final->map(join => "\t")->join("\n"))->say;
-say '<html><head>
-<style>
-  img { width: 150px; }
-  table, tr { border: 1px dotted gray; border-collapse: collapse; }
-</style>
-</head>
-<table>';
-
-b($final->map(sub { sprintf($html, @$_); })->join())->say;
-
-say '</table></html>';
+b($final->map(join => "\t")->join("\n"))->say;
+#say '<html><head>
+#<style>
+#  img { width: 150px; }
+#  table, tr, td { border: 1px dotted gray; border-collapse: collapse; vertical-align: top; }
+#</style>
+#</head>
+#<table>';
+#
+#b($final->map(sub { sprintf($html, @$_); })->join())->say;
+#
+#say '</table></html>';
 
 
 
