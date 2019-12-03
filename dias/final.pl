@@ -27,9 +27,10 @@ my $html = q|
 <tr>
 <td>%s</td>
 <td>%s</td>
+<td><img src="%s"></td>
 <td>%s</td>
 <td><img src="%s"></td>
-<td><img src="%s"></td>   
+<td>%s</td>
 <td>%s</td>
 <td>%s</td>
 <td>%s</td>
@@ -50,18 +51,18 @@ c(@$katfile)->each( sub { $kat->{$_->{name}} = $_; });
 
 my $text = b(path('./all_dias1.tab')->slurp)->split(qr{\R});
 my $res = $text->sort->each( sub {
+  my $count = $_[1];
   my ($dia, $nr) = (split /\s+/, $_);
   my $ref = $repo->{$dia}->{ref} // '';
   my $clk = "${clk}_${nr}_r.jpg";
   my $thumb = $ref ? "${ikb}${ref}" : '';
-  push @$final, c($dia, $nr, $ref, $clk, $thumb, map { $_ // '' } @{$kat->{$dia}}{qw(datecalc place building detail camera product)} );
+  push @$final, c($count, $nr, $clk, $dia, $thumb, $ref, map { $_ // '' } @{$kat->{$dia}}{qw(datecalc place building detail camera product)} );
   });
 # b($final->map(join => "\t")->join("\n"))->say;
 say '<html><head>
 <style>
-  td { width: 200px; }
   img { width: 150px; }
-  table { border: 1px dotted gray; border-collapse: collapse; }
+  table, tr { border: 1px dotted gray; border-collapse: collapse; }
 </style>
 </head>
 <table>';
