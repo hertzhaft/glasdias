@@ -61,11 +61,11 @@ use JSON;
 #  });
 
 # Eliminate duplicates
-my $h = {};
-my $text = b(path('./all_dias.tab')->slurp)->split(qr{\R});
-my $res = $text->sort->each( sub {
-  my ($dia, $nr) = (split /\s+/, $_);
-  my $prev = $h->{$dia};
-  say "$dia\t$nr" if $dia =~ /^\D/ || !$prev;
-  $h->{$dia} = $nr;
-  });
+#my $h = {};
+#my $text = b(path('./all_dias.tab')->slurp)->split(qr{\R});
+#my $res = $text->sort->each( sub {
+#  my ($dia, $nr) = (split /\s+/, $_);
+#  my $prev = $h->{$dia};
+#  say "$dia\t$nr" if $dia =~ /^\D/ || !$prev;
+#  $h->{$dia} = $nr;
+#  });
