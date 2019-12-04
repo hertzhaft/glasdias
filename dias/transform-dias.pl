@@ -23,7 +23,7 @@ tie %$FILMS, 'Tie::IxHash';
 
 my $LAST;
 
-my ($film, $year, $lfd, $slide, $slidenr, $filename, $item, $name, $count);
+my ($film, $year, $lfd, $slide, $slidenr, $filename, $item, $filmnr, $count);
 my $cols = [qw(place building detail date)];
 
 # raw data
@@ -42,13 +42,13 @@ $lines->each(sub {
     $year = /^0/ ? 2000 : 1900;
     $year += substr($_,0,2);
     $lfd = substr($_,2,3);
-    $name  = "$year-$lfd";
-    $film = $FILMS->{$name} = {};
+    $filmnr  = "$year-$lfd";
+    $film = $FILMS->{$filmnr} = {};
     tie %$film, 'Tie::IxHash';
     @$film{qw(year film)} = ($year, $lfd);
     $slide = undef;
     reset_last;
-    say STDERR $name;
+    say STDERR $filmnr;
     return
     }
 
@@ -61,10 +61,10 @@ $lines->each(sub {
   # slide number
   if (/^\d+$/) {
     $slidenr = substr($_,-2,2);
-    $filename = sprintf("SCHG_%d%s%02d_r", $year, $lfd, $slidenr);
+    $filename = sprintf("%d%s%02d", $year, $lfd, $slidenr);
     $slide = $film->{$slidenr} = {};
     tie %$slide, 'Tie::IxHash';
-    @$slide{qw(filename nr)} = ($filename, $slidenr);
+    @$slide{qw(name nr)} = ($filename, $slidenr);
     # say STDERR " $slidenr";
     $count = 0;
     return
@@ -72,7 +72,7 @@ $lines->each(sub {
 
   # slide field
   if ($slide) {
-    $item = ($_ eq '' || /^dto|_|\-/) ? $LAST->[$count] : $_;
+    $item = ($_ eq '' || /^dto|_|\-/i) ? $LAST->[$count] : $_;
     $slide->{$cols->[$count]} = $item;
     reset_place if ($count == 0 && $item ne $LAST->[0]); # new place
     $LAST->[$count] = $item unless $count == 2; # no saving for detail?
@@ -95,15 +95,15 @@ my $coder = JSON::XS->new->pretty;
 path('dias.json')->spurt($coder->encode($FILMS));
 
 my $handle = path('dias.tab')->open('w');
-$handle->say(join("\t", qw(filename place building detail date datecalc camera product year film nr)));
+$handle->say(join("\t", qw(name place building detail date datecalc camera product year film nr)));
 for my $film (values %$FILMS) {
   for my $nr (1 .. 40) {
   	my $dia = $film->{$nr};
     next unless $dia;
-    $handle->say(join("\t", @$dia{qw(filename place building detail date datecalc)}, @$film{qw(camera product year film)}, $nr));
+    $handle->say(join("\t", @$dia{qw(name place building detail date datecalc)}, @$film{qw(camera product year film)}, $nr));
     my $slide = {};
     $slide->{$_} = $film->{$_} for qw(camera product year film);
-    $slide->{$_} = $dia->{$_} for qw(filename place building detail date datecalc);
+    $slide->{$_} = $dia->{$_} for qw(name place building detail date datecalc);
     push @$DIAS, $slide;
   }
 }
