@@ -45,11 +45,11 @@ my $repofile = do './repo_all.pm';
 c(@$repofile)->each( sub { $repo->{$_->{name}} = $_; });
 
 my $kat = {};
-my $katfile = do './dias.pm';
+my $katfile = do './diakatalog.pm';
 c(@$katfile)->each( sub { $kat->{$_->{name}} = $_; });
 
 
-my $text = b(path('./all_dias1.tab')->slurp)->split(qr{\R});
+my $text = b(path('./diakatalog-repo-konkordanz.tab')->slurp)->split(qr{\R});
 my $res = $text->sort->each( sub {
   my $count = $_[1];
   my ($dia, $nr) = (split /\s+/, $_);
