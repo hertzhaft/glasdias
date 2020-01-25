@@ -23,8 +23,10 @@ use constant CSE_URL => "https://www.googleapis.com/customsearch/v1";
 
 # get a Google CSE key use your personal access data
 use constant CSE_PARAMS => {
-  key => # your personal Google API key,
-  cx => # your Google search configuration key,
+#  key => # your personal Google API key,
+#  cx => # your Google search configuration key,
+  key => 'AIzaSyBG5HSkzOxKIO9W5284hvYtlgaaqAHm8d8',
+  cx => '013480587332708740449:k8-td6ptbg8',
   searchType => 'image',
   searchSite => 'wikipedia.org',
   searchSiteFilter => 'i',
@@ -52,6 +54,14 @@ sub wiki_encode {
   $link =~ s/\)/%29/g;
   return $link;
 };
+
+helper delay => sub {
+  my $c  = shift;
+  my $tx = $c->render_later->tx;
+  Mojo::IOLoop->delay(@_)
+    ->catch(sub { $c->helpers->reply->exception(pop) and undef $tx })
+    ->wait;
+  };
 
 # construct Wikidata SPARQL query from Google search result
 helper wikidata => sub {
@@ -85,7 +95,7 @@ helper wikidata => sub {
   $c->ua->get($url => sub{
     my ($ua, $tx) = @_;
     my $json = $tx->res->json;
-    p $json;
+#    p $json;
     if (my $res = $tx->res->json('/results/bindings/0/item/value')) {
       $item->{wikidata} = $res;
       $item->{wiki_id} = (split(/\//, $res))[-1];
