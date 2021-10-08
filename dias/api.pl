@@ -16,17 +16,22 @@ use JSON;
 
 my $host = 'https://rs.cms.hu-berlin.de';
 my $path = 'ikb_mediathek/api';
-my $user = "imagelab";
-my $pass = "arDia*2019";
-my $private_key = "e92f87d9191e4c8509216d8ca918b679c60ece35ff8a6369e0df0eb2f2142d33";
+# my $user = "imagelab";
+# my $pass = "imgColl*21!";
+# my $private_key = "e92f87d9191e4c8509216d8ca918b679c60ece35ff8a6369e0df0eb2f2142d33";
+
+my $user = "Raspe";
+my $pass = "*ciQc7Ov";
+my $private_key = "1799bcaa1144f1b3f6d20a2c90917279271e66c2802193d2ffd4c694f2a599fb";
 
 # my $headers = {'Content-Type' => 'multipart/form-data'};
 # my $function = 'get_user_collections';
 
 sub apiCall {
-	my $function= shift;
+	my $function = shift;
 	my $count = 1;
-	my @params = map { 'param' . $count++ => $_ } @_;
+	my @params = @_;
+#	my @params = map { 'param' . $count++ => $_ } @_;
 	my $ua = Mojo::UserAgent->new;
 	my $tx = $ua->build_tx(GET => $host);
 	my $url = $tx->req->url
@@ -40,9 +45,19 @@ sub apiCall {
 	return $res->json;
 }
 
+# $search * 	The search string in the standard ResourceSpace format, see also special search terms.
+# $restypes 	A string of resource type IDs to include e.g. "1,2". Leave empty to return resources of all types.
+# $order_by 	A string indicating results order. Valid options are relevance, popularity, rating, date, colour, country, title, file_path, resourceid, resourcetype, titleandcountry, random, status. Leave empty for relevance ordering.
+# $archive 	The archive status of resources to return. 0=live assets (the default), 1=pending archive, 2=archived, 3=deleted, -1=pending review, -2 = pending submission.
+# $fetchrows 	Maximum number of rows to return. Leave blank to return all rows.
+# $sort 	Sort order, "asc"=ascending, "desc"=descending (default).
+sub search {
+	return apiCall('do_search' => @_);
+}
+
 sub getFieldOptions {
 	my $field = shift;
-	return apiCall('get_field_options' => $field, 'TRUE');
+	return apiCall('get_field_options', ref => $field, nodeinfo => 'TRUE');
 }
 
 sub getPlacesListApi {
@@ -55,6 +70,11 @@ sub getBuildingsListApi {
 	return getFieldOptions(86);
 }
 
+sub getArtistListApi {
+	# Artist - 89
+	return getFieldOptions(89);
+}
+	
 sub readPlacesList {
 	my $coll = do './places.pm';
 	return c(@$coll);
@@ -95,13 +115,24 @@ sub getNodeID {
 # my $json = apiCall('search_public_collections');
 # my $json = apiCall('do_search', '!collection6129;field8:SCHG_*');
 # my $json = apiCall('do_search', '!collection6129');
-# collection!6129
+
+# collection!6129 (exclude collection 6129?)
+
 # originalfilename - 51
 
 # my $json = apiCall('update_field' => 43283, 87, q{Siena (Italien, Toskana) (Q2751)}), 0;
 
 # my $json = getNodeID(q{Siena}, '87');
 # my $json = getFieldOptions(87);
-my $json = getDiaCollection;
+# my $json = getDiaCollection;
+
+# my $json = getPlacesListApi(); # Orte
+# my $json = getArtistListApi(); # Künstler
+# my $json = apiCall('do_search', '!collection6129;field89:Brueghel*');
+# my $json = apiCall('get_resource_field_data', resource => 43283);
+# my $json = apiCall('get_resource_log', resource => 43283); # log for Siena
+# my $json = apiCall('get_resource_data', resource => 43283); #  Siena
+my $json = apiCall('get_resource_field_data', resource => 43283); #  Siena
+# my $json = search(search => 'Borromini');
 
 say np($json);
