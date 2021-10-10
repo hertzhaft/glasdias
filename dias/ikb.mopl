@@ -54,7 +54,7 @@ my $logfile = "$home/tessera.log";
 my $appconfig = {
   hypnotoad => {
     listen => [
-      'https://*:443?cert=/etc/keys/bibl.crt&key=/etc/keys/bibl.key',
+      # 'https://*:443?cert=/etc/keys/bibl.crt&key=/etc/keys/bibl.key',
       'http://*:4000',
       ],
     }
