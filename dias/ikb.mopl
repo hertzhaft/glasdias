@@ -21,6 +21,7 @@ use Mojo::ByteStream 'b';
 use Mojo::Collection 'c';
 use Mojo::File 'path';
 use Mojo::Loader 'data_section';
+use Mojo::Log;
 use Mojo::SQLite;
 use Mojo::UserAgent;
 use Mojo::URL;
@@ -39,13 +40,30 @@ my $ikb = 'https://rs.cms.hu-berlin.de/ikb_mediathek/pages/search.php?search=%s'
 my $prom = 'https://prometheus.uni-koeln.de/de/searches/advanced?search_value[1]=%s';
 
 my $host = 'https://rs.cms.hu-berlin.de';
-my $path = 'ikb_mediathek/api';
+my $apipath = 'ikb_mediathek/api';
 
 my $tmppath = '/tmp';
+
+my $home = app->home;
+my $logfile = "$home/tessera.log";
 
 # my $user = "imagelab";
 # my $pass = "imgColl*21!";
 # my $private_key = "e92f87d9191e4c8509216d8ca918b679c60ece35ff8a6369e0df0eb2f2142d33";
+
+my $appconfig = {
+  hypnotoad => {
+    listen => [
+      'https://*:443?cert=/etc/keys/bibl.crt&key=/etc/keys/bibl.key',
+      'http://*:4000',
+      ],
+    }
+  };
+
+my $log = Mojo::Log->new(
+  path => $logfile,
+  level => 'info',
+  );
 
 my $user = "Raspe";
 my $pass = "*ciQc7Ov";
@@ -72,7 +90,7 @@ sub apiCall {
 	my $ua = Mojo::UserAgent->new;
 	my $tx = $ua->build_tx(GET => $host);
 	my $url = $tx->req->url
-	->path($path . '/')
+	->path($apipath . '/')
 	->query(user => $user, function => $function, @params);
 	# say $url->query;
 	my $sign = sha256_hex($private_key . $url->query);
@@ -152,6 +170,11 @@ sub getPlaces {
   return $items;
 }
 
+get '/' => sub {
+  my $c = shift;
+  $c->render(template => 'index');
+  };
+
 get '/artists' => sub {
   my $c = shift;
   my $items = getArtists();
@@ -168,12 +191,25 @@ get '/places' => sub {
   $c->render(template => 'places', items => $items, format => 'kml');
   };
 
+app->config($appconfig);
+app->log($log);
 app->types
   ->type(md => 'text/markdown')
   ->type(kml => 'application/vnd.google-earth.kml+xml');
+app->secrets(['daspferdfrisstkeinengurkensalat']);
 app->start;
 
 __DATA__
+
+@@index.html.ep
+<body>
+  <div>
+    <a href="/places">places.kml</a>
+  </div>
+  <div>
+    <a href="/artists">artists.md</a>
+  </div>
+</body>
 
 @@artists.md.ep
 % for my $item (@$items) {
