@@ -204,10 +204,10 @@ __DATA__
 @@index.html.ep
 <body>
   <div>
-    <a href="/places">places.kml</a>
+    <a href="places">places.kml</a>
   </div>
   <div>
-    <a href="/artists">artists.md</a>
+    <a href="artists">artists.md</a>
   </div>
 </body>
 
