@@ -74,6 +74,7 @@ my $private_key = "1799bcaa1144f1b3f6d20a2c90917279271e66c2802193d2ffd4c694f2a59
 
 my $RE_PLACES = qr|^(.+)\s+\((Q\d\d+)\)(?:\s+\(GC\s+([\d\.\-]+), ([\d\.\-]+)\)\s*)?$|;
 my $RE_ARTIST = qr|^([^\(]+)\s*(?:\s*\(([^\)]+)\))?\s*(?:\s*\((Q\d+)\))?\s*$|;
+my $RE_BUILDINGS = qr|^(.+)\s+\((Q\d\d+)\)(?:\s+\(GC\s+([\d\.\-]+), ([\d\.\-]+)\)\s*)?$|;
 
 my $rsfields = {
   artist => 89,
@@ -170,6 +171,19 @@ sub getPlaces {
   return $items;
 }
 
+sub getBuildings {
+  my $json = getBuildingsListApi();
+  my $coll = getSortedNames($json);
+  my $items = $coll
+  ->map( sub {
+    my ($name, $q, $lon, $lat) = $_ =~ $RE_BUILDINGS;
+    return { name => $name, q => $q, lon => $lon, lat => $lat };
+    })
+  ->grep( sub { $_->{lon} });
+  return $items;
+}
+
+
 get '/' => sub {
   my $c = shift;
   $c->render(template => 'index');
@@ -180,15 +194,23 @@ get '/artists' => sub {
   my $items = getArtists();
   $c->render(template => 'artists', items => $items, format => 'md');
   };
+  
+  get '/artists1' => sub {
+  my $c = shift;
+  my $items = getArtists();
+  $c->render(template => 'artists1', items => $items, format => 'txt');
+  };
 
 get '/buildings' => sub {
   my $c = shift;
+  my $items = getBuildings();
+  $c->render(template => 'placemarks', items => $items, format => 'kml');
   };
 
-get '/places' => sub {
+get '/places.kml' => sub {
   my $c = shift;
   my $items = getPlaces();
-  $c->render(template => 'places', items => $items, format => 'kml');
+  $c->render(template => 'placemarks', items => $items, format => 'kml');
   };
 
 app->config($appconfig);
@@ -207,6 +229,9 @@ __DATA__
     <a href="places">places.kml</a>
   </div>
   <div>
+    <a href="buildings">buildings.kml</a>
+  </div>
+  <div>
     <a href="artists">artists.md</a>
   </div>
 </body>
@@ -218,7 +243,15 @@ __DATA__
 [https://prometheus.uni-koeln.de/de/searches/advanced?search_value&#91;1&#93;=<%= $item->{q} %> Prometheus]"
 % }
 
-@@places.kml.ep
+@@artists1.txt.ep
+% for my $item (@$items) {
+<%= $item->{name} %> (<%= $item->{date} %>):
+[https://rs.cms.hu-berlin.de/ikb_mediathek/pages/search.php?search=<%= $item->{q} %> Medienrepositorium] /
+[https://prometheus.uni-koeln.de/de/searches/advanced?search_value[1]=<%= $item->{q} %> Prometheus]"
+% }
+
+
+@@placemarks.kml.ep
 % layout 'header';
 % for my $item (@$items) {
 <Placemark>
