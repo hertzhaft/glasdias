@@ -224,10 +224,10 @@ __DATA__
 <Placemark>
   <name><%= $item->{name} %></name>
   <description>
-    <![CDATA[<a href="https://rs.cms.hu-berlin.de/ikb_mediathek/pages/search.php?search=<%= $item->{term} %>">Link</a>]]>
+    <![CDATA[<a href="https://rs.cms.hu-berlin.de/ikb_mediathek/pages/search.php?search=<%= $item->{q} %>">Link</a>]]>
   </description>
   <link>
-    <a href="https://rs.cms.hu-berlin.de/ikb_mediathek/pages/search.php?search=<%= $item->{term} %>">Link</a>
+    <a href="https://rs.cms.hu-berlin.de/ikb_mediathek/pages/search.php?search=<%= $item->{q} %>">Link</a>
   </link>
   <styleUrl>#gv_waypoint</styleUrl>
   <Point>
