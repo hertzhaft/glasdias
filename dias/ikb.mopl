@@ -195,7 +195,7 @@ __DATA__
   </link>
   <styleUrl>#gv_waypoint</styleUrl>
   <Point>
-    <coordinates>GC <%= $item->{lon} %>, <%= $item->{lat} %></coordinates>
+    <coordinates><%= $item->{lon} %>, <%= $item->{lat} %></coordinates>
   </Point>
 </Placemark>
 % }
