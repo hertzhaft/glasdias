@@ -195,12 +195,12 @@ sub getBuildings {
   return $items;
 }
 
-sub getMuseums {
+sub getMuseumss {
   my $json = getMuseumsListApi();
   my $coll = getSortedNames($json);
   my $items = $coll
   ->map( sub {
-    my ($name, $q, $lon, $lat) = $_ =~ $RE_MUSEUMS;
+    my ($name, $q, $lon, $lat) = $_ =~ $RE_BUILDINGS;
     return { name => $name, q => $q };
     })
   ->grep( sub { $_->{q} });
