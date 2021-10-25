@@ -1,0 +1,374 @@
+#! /usr/bin/env perl
+
+# (c) Martin Raspe 2021
+
+# HOW TO
+# install perl (should be already installed on a Linux machine)
+
+# install Mojolicious:
+#   cpan App::cpanminus
+#   cpanm Mojolicious
+
+# start the server program by running this script:
+#   morbo ikb.mopl
+
+# surf to: http://localhost:3000/places or http://localhost:3000/artists
+
+use Mojolicious::Lite;
+
+use Mojo::Base '-strict';
+use Mojo::ByteStream 'b';
+use Mojo::Collection 'c';
+use Mojo::File 'path';
+use Mojo::Loader 'data_section';
+use Mojo::Log;
+use Mojo::SQLite;
+use Mojo::UserAgent;
+use Mojo::URL;
+
+use DDP;
+use Digest::SHA qw(sha256_hex);
+use Unicode::Collate;
+
+# make standard output (say, print) use UTF-8
+binmode(STDOUT, ":utf8");
+binmode(STDERR, ":utf8");
+
+*_f = \&CORE::sprintf;
+
+my $ikb = 'https://rs.cms.hu-berlin.de/ikb_mediathek/pages/search.php?search=%s';
+my $prom = 'https://prometheus.uni-koeln.de/de/searches/advanced?search_value[1]=%s';
+
+my $host = 'https://rs.cms.hu-berlin.de';
+my $apipath = 'ikb_mediathek/api';
+
+my $tmppath = '/tmp';
+
+my $home = app->home;
+my $logfile = "$home/tessera.log";
+
+# my $user = "imagelab";
+# my $pass = "imgColl*21!";
+# my $private_key = "e92f87d9191e4c8509216d8ca918b679c60ece35ff8a6369e0df0eb2f2142d33";
+
+my $appconfig = {
+  hypnotoad => {
+    listen => [
+      # 'https://*:443?cert=/etc/keys/bibl.crt&key=/etc/keys/bibl.key',
+      'http://*:4000',
+      ],
+    }
+  };
+
+my $log = Mojo::Log->new(
+  path => $logfile,
+  level => 'info',
+  );
+
+my $user = "Raspe";
+my $pass = "*ciQc7Ov";
+my $private_key = "1799bcaa1144f1b3f6d20a2c90917279271e66c2802193d2ffd4c694f2a599fb";
+
+# my $place= "Aksum (Äthiopien) (Q5832) (GC 14.1213, 38.7285)";
+# my $artist = "van Steenwinckel d.ä., Hans (1545-1601) (Q1369007)";
+
+my $RE_PLACES = qr|^(.+)\s+\((Q\d\d+)\)(?:\s+\(GC\s+([\d\.\-]+), ([\d\.\-]+)\)\s*)?$|;
+my $RE_ARTIST = qr|^([^\(]+)\s*(?:\s*\(([^\)]+)\))?\s*(?:\s*\((Q\d+)\))?\s*$|;
+my $RE_BUILDINGS = qr|^(.+)\s+\((Q\d\d+)\)(?:\s+\(GC\s+([\d\.\-]+), ([\d\.\-]+)\)\s*)?$|;
+my $RE_MUSEUMS = qr|^([^\(]+)\s*(?:\s*\((Q\d+)\))?\s*$|;
+
+my $rsfields = {
+  artist => 89,
+  building => 86,
+  places => 87,
+  museums => 102,
+};
+
+sub apiCall {
+	my $function = shift;
+	my $count = 1;
+	my @params = @_;
+  # how to understand the documentation? fieldnames or param1, param2?
+  #	my @params = map { 'param' . $count++ => $_ } @_;
+	my $ua = Mojo::UserAgent->new;
+	my $tx = $ua->build_tx(GET => $host);
+	my $url = $tx->req->url
+	->path($apipath . '/')
+	->query(user => $user, function => $function, @params);
+	# say $url->query;
+	my $sign = sha256_hex($private_key . $url->query);
+	# sign the query using the private key
+	$url->query([sign => $sign]);
+	my $res = $ua->start($tx)->res;
+	return $res->json;
+}
+
+sub getFieldOptions {
+	my $field = shift;
+	return apiCall('get_field_options', ref => $field, nodeinfo => 'TRUE');
+}
+
+# objektort - 87
+sub getPlacesListApi {
+	return getFieldOptions(87);
+}
+
+# objektbezeichnung - 86
+sub getBuildingsListApi {
+	return getFieldOptions(86);
+}
+
+# Artist - 89
+sub getArtistListApi {
+	return getFieldOptions(89);
+}
+
+# objektmuseumsammlung - 102
+sub getMuseumsListApi {
+	return getFieldOptions(102);
+}
+
+sub readPlacesList {
+	my $coll = do(_f($tmppath, 'places.pm'));
+	return c(@$coll);
+}
+
+sub readBuildingsList {
+	my $coll = do(_f($tmppath, 'buildings.pm'));
+	return c(@$coll);
+}
+
+sub readMuseumssList {
+	my $coll = do(_f($tmppath, 'museums.pm'));
+	return c(@$coll);
+}
+
+sub readDiaList {
+	my $coll = do(_f($tmppath, 'dias.pm'));
+	return c(@$coll);
+}
+
+sub getSortedNames {
+  my ($json) = @_;
+  my $uc = Unicode::Collate->new;
+  my $res = c(@$json)
+    ->each( sub { $_->{sort} = ucfirst($_->{name}) })
+    ->sort( sub { $uc->cmp($a->{sort}, $b->{sort}) })
+    ->map( sub { $_->{name} });
+  return $res;
+}
+
+sub getArtists {
+  my $json = getArtistListApi();
+  my $coll = getSortedNames($json);
+  my $items = $coll
+  ->map( sub {
+    my ($name, $date, $q) = $_ =~ $RE_ARTIST;
+    my $term = $q || $name; # Suchbegriff
+    return { name => $name, date => $date, term => $term, q => $q } ;
+    })
+  ->grep( sub { $_->{q} });
+  return $items;
+}
+
+sub getPlaces {
+  my $json = getPlacesListApi();
+  my $coll = getSortedNames($json);
+  my $items = $coll
+  ->map( sub {
+    my ($name, $q, $lon, $lat) = $_ =~ $RE_PLACES;
+    return { name => $name, q => $q, lon => $lon, lat => $lat };
+    })
+  ->grep( sub { $_->{lon} });
+  return $items;
+}
+
+sub getBuildings {
+  my $json = getBuildingsListApi();
+  my $coll = getSortedNames($json);
+  my $items = $coll
+  ->map( sub {
+    my ($name, $q, $lon, $lat) = $_ =~ $RE_BUILDINGS;
+    return { name => $name, q => $q, lon => $lon, lat => $lat };
+    })
+  ->grep( sub { $_->{lon} });
+  return $items;
+}
+
+sub getMuseumss {
+  my $json = getMuseumsListApi();
+  my $coll = getSortedNames($json);
+  my $items = $coll
+  ->map( sub {
+    my ($name, $q, $lon, $lat) = $_ =~ $RE_BUILDINGS;
+    return { name => $name, q => $q };
+    })
+  ->grep( sub { $_->{q} });
+  return $items;
+}
+
+
+
+get '/' => sub {
+  my $c = shift;
+  $c->render(template => 'index');
+  };
+
+get '/artists' => sub {
+  my $c = shift;
+  my $items = getArtists();
+  $c->render(template => 'artists', items => $items, format => 'md');
+  };
+  
+  get '/artists1' => sub {
+  my $c = shift;
+  my $items = getArtists();
+  $c->render(template => 'artists1', items => $items, format => 'txt');
+  };
+
+get '/buildings' => sub {
+  my $c = shift;
+  my $items = getBuildings();
+  $c->render(template => 'placemarks', items => $items, format => 'kml');
+  };
+
+get '/places.kml' => sub {
+  my $c = shift;
+  my $items = getPlaces();
+  $c->render(template => 'placemarks', items => $items, format => 'kml');
+  };
+  
+get '/museums' => sub {
+  my $c = shift;
+  my $items = getMuseums();
+  $c->render(template => 'museums', items => $items, format => 'md');
+  };
+
+app->config($appconfig);
+app->log($log);
+app->types
+  ->type(md => 'text/markdown')
+  ->type(kml => 'application/vnd.google-earth.kml+xml');
+app->secrets(['daspferdfrisstkeinengurkensalat']);
+app->start;
+
+__DATA__
+
+@@index.html.ep
+<body>
+  <div>
+    <a href="places">places.kml</a>
+  </div>
+  <div>
+    <a href="buildings">buildings.kml</a>
+  </div>
+  <div>
+    <a href="artists">artists.md</a>
+  </div>
+  <div>
+    <a href="museums">museums.md</a>
+  </div>
+</body>
+
+@@artists.md.ep
+% for my $item (@$items) {
+<%= $item->{name} %> (<%= $item->{date} %>):
+[https://rs.cms.hu-berlin.de/ikb_mediathek/pages/search.php?search=<%= $item->{q} %> Medienrepositorium] /
+[https://prometheus.uni-koeln.de/de/searches/advanced?search_value&#91;1&#93;=<%= $item->{q} %> Prometheus]"
+% }
+
+@@artists1.txt.ep
+% for my $item (@$items) {
+<%= $item->{name} %> (<%= $item->{date} %>):
+[https://rs.cms.hu-berlin.de/ikb_mediathek/pages/search.php?search=<%= $item->{q} %> Medienrepositorium] /
+[https://prometheus.uni-koeln.de/de/searches/advanced?search_value[1]=<%= $item->{q} %> Prometheus]"
+% }
+
+@@museums.md.ep
+% for my $item (@$items) {
+<%= $item->{name} %> (<%= $item->{date} %>):
+[https://rs.cms.hu-berlin.de/ikb_mediathek/pages/search.php?search=<%= $item->{q} %> Medienrepositorium] /
+[https://prometheus.uni-koeln.de/de/searches/advanced?search_value&#91;3&#93;=<%= $item->{q} %> Prometheus]"
+% }
+
+
+@@placemarks.kml.ep
+% layout 'header';
+% for my $item (@$items) {
+<Placemark>
+  <name><%= $item->{name} %></name>
+  <description>
+    <![CDATA[<a href="https://rs.cms.hu-berlin.de/ikb_mediathek/pages/search.php?search=<%= $item->{q} %>">Link</a>]]>
+  </description>
+  <link>
+    <a href="https://rs.cms.hu-berlin.de/ikb_mediathek/pages/search.php?search=<%= $item->{q} %>">Link</a>
+  </link>
+  <styleUrl>#gv_waypoint</styleUrl>
+  <Point>
+    <coordinates><%= $item->{lat} %>, <%= $item->{lon} %></coordinates>
+  </Point>
+</Placemark>
+% }
+
+@@balloonstyle.kml.ep
+    <BalloonStyle>
+      <text>
+        <![CDATA[
+        <div style="font-family:Arial,sans-serif; min-width:200px;">
+          <h3>$[name]</h3>
+          <div style="margin-top:8px;">$[description]</div>
+        </div>
+        ]]>
+      </text>
+    </BalloonStyle>
+
+@@iconstyle.kml.ep
+    <IconStyle>
+      <color>ff0000ff</color>
+      <scale><%= $scale %></scale>
+      <Icon>
+        <href>http://maps.google.com/mapfiles/kml/pal4/icon56.png</href>
+      </Icon>
+      <hotSpot x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
+    </IconStyle>
+
+@@labelstyle.kml.ep
+    <LabelStyle>
+      <color>ff0000ff</color>
+    </LabelStyle>
+
+@@layouts/header.kml.ep
+<?xml version="1.0" encoding="UTF-8"?>
+<kml
+  xmlns="http://www.opengis.net/kml/2.2"
+  xmlns:gx="http://www.google.com/kml/ext/2.2"
+  xmlns:kml="http://www.opengis.net/kml/2.2"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  >
+<Document>
+  <name>all places with links V.2021.10.08</name>
+  <StyleMap id="gv_waypoint">
+    <Pair>
+      <key>normal</key>
+      <styleUrl>#gv_waypoint_normal</styleUrl>
+    </Pair>
+    <Pair>
+      <key>highlight</key>
+      <styleUrl>#gv_waypoint_highlight</styleUrl>
+    </Pair>
+  </StyleMap>
+  <Style id="gv_waypoint_highlight">
+%= include 'iconstyle', scale => 1.2;
+%= include 'labelstyle';
+%= include 'balloonstyle';
+  </Style>
+  <Style id="gv_waypoint_normal">
+%= include 'iconstyle', scale => 1.0;
+%= include 'labelstyle';
+%= include 'balloonstyle';
+  </Style>
+  <Folder id="Waypoints">
+<%= content %>
+  </Folder>
+</Document>
+</kml>
