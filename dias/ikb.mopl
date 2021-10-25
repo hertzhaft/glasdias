@@ -288,7 +288,7 @@ __DATA__
 
 @@museums.md.ep
 % for my $item (@$items) {
-<%= $item->{name} %> (<%= $item->{date} %>):
+<%= $item->{name} %>:
 [https://rs.cms.hu-berlin.de/ikb_mediathek/pages/search.php?search=<%= $item->{q} %> Medienrepositorium] /
 [https://prometheus.uni-koeln.de/de/searches/advanced?search_value&#91;3&#93;=<%= $item->{q} %> Prometheus]"
 % }
