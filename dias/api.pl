@@ -132,7 +132,7 @@ sub getNodeID {
 # my $json = apiCall('get_resource_field_data', resource => 43283);
 # my $json = apiCall('get_resource_log', resource => 43283); # log for Siena
 # my $json = apiCall('get_resource_data', resource => 43283); #  Siena
-my $json = apiCall('get_resource_field_data', resource => 43283); #  Siena
-# my $json = search(search => 'Borromini');
+# my $json = apiCall('get_resource_field_data', resource => 43283); #  Siena
+my $json = search(search => 'Borromini', fetchrows => 5);
 
 say np($json);
