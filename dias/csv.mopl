@@ -108,7 +108,7 @@ sub getPlacesFromCSV {
   my $dbname = 'feist.db';
   my $db = Mojo::SQLite->new("sqlite:$home/db/$dbname")->db;
 #  my $data = $db->query(q{SELECT * from dias;})->array;
-  my $data = $db->query(q{Select "OBJEKT: Ort" AS ort from dias WHERE ort like '%bonn%' group by ort})->arrays;
+  my $data = $db->query(q{Select "OBJEKT: Ort" AS ort from dias WHERE ort > '' group by ort})->arrays;
   my $items = $data
   ->map( sub {
     my ($name, $q, $lon, $lat) = $_->[0] =~ $RE_PLACES;
