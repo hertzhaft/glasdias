@@ -45,7 +45,7 @@ my $apipath = 'ikb_mediathek/api';
 my $tmppath = '/tmp';
 
 my $home = app->home;
-my $logfile = "$home/tessera.log";
+my $logfile = "$home/ikb.log";
 
 # my $user = "imagelab";
 # my $pass = "imgColl*21!";
@@ -61,7 +61,7 @@ my $appconfig = {
   };
 
 my $log = Mojo::Log->new(
-  path => $logfile,
+#  path => $logfile,
   level => 'info',
   );
 
@@ -69,6 +69,7 @@ my $user = "Raspe";
 my $pass = "*ciQc7Ov";
 my $private_key = "1799bcaa1144f1b3f6d20a2c90917279271e66c2802193d2ffd4c694f2a599fb";
 
+# examples:
 # my $place= "Aksum (Äthiopien) (Q5832) (GC 14.1213, 38.7285)";
 # my $artist = "van Steenwinckel d.ä., Hans (1545-1601) (Q1369007)";
 
@@ -85,7 +86,8 @@ my $rsfields = {
 };
 
 sub apiCall {
-	my $function = shift;
+  # ATTENTION: update IO::Socket::SSL
+  my $function = shift;
 	my $count = 1;
 	my @params = @_;
   # how to understand the documentation? fieldnames or param1, param2?
@@ -99,6 +101,9 @@ sub apiCall {
 	# sign the query using the private key
 	$url->query([sign => $sign]);
 	my $res = $ua->start($tx)->res;
+	if ($res->is_error) {
+	  say $res->error->message;
+	  }
 	return $res->json;
 }
 
@@ -256,7 +261,7 @@ __DATA__
 @@index.html.ep
 <body>
   <div>
-    <a href="places">places.kml</a>
+    <a href="places.kml">places.kml</a>
   </div>
   <div>
     <a href="buildings">buildings.kml</a>
